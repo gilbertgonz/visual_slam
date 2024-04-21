@@ -1,2 +1,2 @@
-# visual_odom
-Experimenting VO algorithms with KITTI dataset
+# ORB-Based Visual Odometry
+Experimenting VO algorithms with KITTI dataset, still in progress

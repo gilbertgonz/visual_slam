@@ -1,20 +1,22 @@
 import os
 import numpy as np
 import cv2
-import random
-from matplotlib import pyplot as plt 
+from multiprocessing import Pool
 
-from lib.visualization import plotting
-from lib.visualization.video import play_trip
+import matplotlib
+matplotlib.use('TkAgg')  # Specify the backend
+import matplotlib.pyplot as plt
 
 from tqdm import tqdm
+
+import plotting
 
 
 class VisualOdometry():
     def __init__(self, data_dir):
         self.K, self.P = self._load_calib(os.path.join(data_dir, 'calib.txt'))
         self.gt_poses = self._load_poses(os.path.join(data_dir, 'poses.txt'))
-        self.images = self._load_images(os.path.join(data_dir, 'image_l'))
+        self.images = self._load_images(os.path.join(data_dir, 'image_0'))
         self.orb = cv2.ORB_create(3000)
         FLANN_INDEX_LSH = 6
         index_params = dict(algorithm=FLANN_INDEX_LSH, table_number=6, key_size=12, multi_probe_level=1)
@@ -35,9 +37,11 @@ class VisualOdometry():
         P (ndarray): Projection matrix
         """
         with open(filepath, 'r') as f:
-            params = np.fromstring(f.readline(), dtype=np.float64, sep=' ')
-            P = np.reshape(params, (3, 4))
-            K = P[0:3, 0:3]
+            for line in f:
+                if line.startswith('P0:'):
+                    params = np.fromstring(line.strip().split(': ')[1], dtype=np.float64, sep=' ')
+                    P = np.reshape(params, (3, 4))
+                    K = P[0:3, 0:3]
         return K, P
 
     @staticmethod
@@ -132,8 +136,6 @@ class VisualOdometry():
         q1 = np.float32([ keypoints1[m.queryIdx].pt for m in good ])
         q2 = np.float32([ keypoints2[m.trainIdx].pt for m in good ])
 
-        return q1, q2
-
         # draw_params = dict(matchColor = -1, # draw matches in green color
         #         singlePointColor = None,
         #         matchesMask = None, # draw only inliers
@@ -145,6 +147,8 @@ class VisualOdometry():
         # plt.imshow(img3, 'gray'),plt.show()
         # plt.imshow(self.images[i]),plt.show()
         # plt.imshow(self.images[i-1]),plt.show()
+
+        return q1, q2
 
 
 
@@ -252,33 +256,84 @@ class VisualOdometry():
             # print(t)
             return R2, np.ndarray.flatten(t)
 
+    def play_trip(self, l_frames, r_frames=None, lat_lon=None, timestamps=None, color_mode=False, waite_time=100, win_name="Trip"):
+        l_r_mode = r_frames is not None
 
+        if not l_r_mode:
+            r_frames = [None]*len(l_frames)
+
+        frame_count = 0
+        for i, frame_step in enumerate(zip(l_frames, r_frames)):
+            img_l, img_r = frame_step
+
+            if not color_mode:
+                img_l = cv2.cvtColor(img_l, cv2.COLOR_GRAY2BGR)
+                if img_r is not None:
+                    img_r = cv2.cvtColor(img_r, cv2.COLOR_GRAY2BGR)
+
+            cv2.imshow(win_name, img_l)
+
+            key = cv2.waitKey(waite_time)
+            if key == 27:  # ESC
+                break
+            frame_count += 1
+        cv2.destroyWindow(win_name)
+
+
+    def draw_matches_frame(self, img1, kp1, img2, kp2, matches):
+        """
+        Need to be call for each frame
+        """
+        matches = sorted(matches, key=lambda x: x.distance)
+        vis_img = cv2.drawMatches(img1, kp1, img2, kp2, matches, None,
+                                flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+        
+        cv2.imshow('Matches', vis_img)
+        cv2.waitKey(100)
 
 def main():
-    data_dir = 'KITTI_sequence_2'  # Try KITTI_sequence_2 too
+    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/06/'  # Try KITTI_sequence_2 too
     vo = VisualOdometry(data_dir)
 
-
-    # play_trip(vo.images)  # Comment out to not play the trip
+    vo.play_trip(vo.images)
 
     gt_path = []
     estimated_path = []
-    for i, gt_pose in enumerate(tqdm(vo.gt_poses, unit="pose")):
+
+    for i, gt_pose in enumerate(tqdm(vo.gt_poses)):
         if i == 0:
             cur_pose = gt_pose
         else:
             q1, q2 = vo.get_matches(i)
             transf = vo.get_pose(q1, q2)
             cur_pose = np.matmul(cur_pose, np.linalg.inv(transf))
-            print ("\nGround truth pose:\n" + str(gt_pose))
-            print ("\n Current pose:\n" + str(cur_pose))
-            print ("The current pose used x,y: \n" + str(cur_pose[0,3]) + "   " + str(cur_pose[2,3]) )
+            # print ("\nGround truth pose:\n" + str(gt_pose))
+            # print ("\n Current pose:\n" + str(cur_pose))
+            # print ("The current pose used x,y: \n" + str(cur_pose[0,3]) + "   " + str(cur_pose[2,3]) )
         gt_path.append((gt_pose[0, 3], gt_pose[2, 3]))
         estimated_path.append((cur_pose[0, 3], cur_pose[2, 3]))
-        
-  
-    
-    plotting.visualize_paths(gt_path, estimated_path, "Visual Odometry", file_out=os.path.basename(data_dir) + ".html")
+
+    x_est = [point[0] for point in estimated_path]
+    y_est = [point[1] for point in estimated_path]
+
+    x_gt = [point[0] for point in gt_path]
+    y_gt = [point[1] for point in gt_path]
+
+    plt.scatter(x_est, y_est, color='blue', marker='o', linewidths=1, label='Estimated points')
+    plt.scatter(x_gt, y_gt, color='red', marker='o', linewidths=1, label='Ground Truth')
+
+    plt.xlabel('X')
+    plt.ylabel('Y')
+    plt.title('Visual Odometry')
+
+    # Add legend
+    plt.legend()
+
+    # Display the plot
+    plt.grid(True)
+    plt.show()
+
+    # plotting.visualize_paths(gt_path, estimated_path, "Visual Odometry", file_out=os.path.basename(data_dir) + ".html")
 
 
 if __name__ == "__main__":
