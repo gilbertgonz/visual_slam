@@ -9,6 +9,12 @@ from tqdm import tqdm
 
 import plotting
 
+## TODO:
+# - implement SIFT and/or other feature detectors
+# - better user experience
+# - containerize
+# - keep digging for better estimation algorithms (loop closure?)
+
 class VisualOdometry():
     def __init__(self, data_dir):
         self.K, self.P = self._load_calib(os.path.join(data_dir, 'calib.txt'))
@@ -214,7 +220,7 @@ def main():
             cv2.imshow("VO", img)
 
             key = cv2.waitKey(1)
-            if cv2.waitKey(1) == 27:  # ESC
+            if key == 27:  # ESC
                 break
 
     cv2.destroyWindow("VO")
