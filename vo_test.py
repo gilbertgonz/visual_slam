@@ -117,16 +117,11 @@ class VisualOdometry():
 
         
 
-        #keypoints1 = self.orb.detect(self.images[i - 1], None)
         keypoints1, descriptors1 = self.orb.detectAndCompute(self.images[i - 1], None)
-        #keypoints2 = self.orb.detect(self.images[i], None)
         keypoints2, descriptors2 = self.orb.detectAndCompute(self.images[i], None)
-
-
 
         matches = self.flann.knnMatch(descriptors1, descriptors2, k=2)
         # store all the good matches as per Lowe's ratio test.
-        
         
         good = []
         for m,n in matches:
@@ -136,6 +131,7 @@ class VisualOdometry():
         q1 = np.float32([ keypoints1[m.queryIdx].pt for m in good ])
         q2 = np.float32([ keypoints2[m.trainIdx].pt for m in good ])
 
+        # # Draw matches
         # draw_params = dict(matchColor = -1, # draw matches in green color
         #         singlePointColor = None,
         #         matchesMask = None, # draw only inliers
@@ -292,10 +288,8 @@ class VisualOdometry():
         cv2.waitKey(100)
 
 def main():
-    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/06/'  # Try KITTI_sequence_2 too
+    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/07/'
     vo = VisualOdometry(data_dir)
-
-    vo.play_trip(vo.images)
 
     gt_path = []
     estimated_path = []
@@ -304,37 +298,60 @@ def main():
         if i == 0:
             cur_pose = gt_pose
         else:
+            if len(gt_path) != 0 and len(estimated_path) != 0:
+                x_est = [point[0] for point in estimated_path]
+                y_est = [point[1] for point in estimated_path]
+
+                x_gt = [point[0] for point in gt_path]
+                y_gt = [point[1] for point in gt_path]
+
+                plt.scatter(x_est, y_est, color='blue', marker='o', linewidths=1, label='Estimated points')
+                plt.scatter(x_gt, y_gt, color='red', marker='o', linewidths=1, label='Ground Truth')
+
+                plt.title('Visual Odometry')
+                plt.xlabel('X')
+                plt.ylabel('Y')
+                plt.grid(True)
+                plt.legend()
+                plt.pause(0.1)
+                plt.clf() 
+
             q1, q2 = vo.get_matches(i)
             transf = vo.get_pose(q1, q2)
             cur_pose = np.matmul(cur_pose, np.linalg.inv(transf))
-            # print ("\nGround truth pose:\n" + str(gt_pose))
-            # print ("\n Current pose:\n" + str(cur_pose))
-            # print ("The current pose used x,y: \n" + str(cur_pose[0,3]) + "   " + str(cur_pose[2,3]) )
-        gt_path.append((gt_pose[0, 3], gt_pose[2, 3]))
-        estimated_path.append((cur_pose[0, 3], cur_pose[2, 3]))
 
-    x_est = [point[0] for point in estimated_path]
-    y_est = [point[1] for point in estimated_path]
+            cur_x_est = cur_pose[0,3]
+            cur_y_est = cur_pose[2,3]
 
-    x_gt = [point[0] for point in gt_path]
-    y_gt = [point[1] for point in gt_path]
+            cur_x_gt = gt_pose[0,3]
+            cur_y_gt = gt_pose[2,3]
+        
+            gt_path.append((cur_x_gt, cur_y_gt))
+            estimated_path.append((cur_x_est, cur_y_est))
 
-    plt.scatter(x_est, y_est, color='blue', marker='o', linewidths=1, label='Estimated points')
-    plt.scatter(x_gt, y_gt, color='red', marker='o', linewidths=1, label='Ground Truth')
+            q1x = [q1_point[0] for q1_point in q1]
+            q1y = [q1_point[1] for q1_point in q1]
 
-    plt.xlabel('X')
-    plt.ylabel('Y')
-    plt.title('Visual Odometry')
+            q2x = [q2_point[0] for q2_point in q2]
+            q2y = [q2_point[1] for q2_point in q2]
 
-    # Add legend
-    plt.legend()
+            # Show optical flow
+            img = cv2.cvtColor(vo.images[i], cv2.COLOR_GRAY2BGR)
+            for i in range(len(q2)):
+                # Keypoints from the previous frame
+                cv2.circle(img, (int(q1x[i]), int(q1y[i])), 2, (0, 255, 0), -1)
+                # Motion vectors between matched keypoints
+                cv2.line(img, (int(q1x[i]), int(q1y[i])), (int(q2x[i]), int(q2y[i])), (0, 0, 255), 1)
+            
+            cv2.imshow("VO", img)
 
-    # Display the plot
-    plt.grid(True)
-    plt.show()
+            key = cv2.waitKey(1)
+            if key == 27:  # ESC
+                break
+
+    cv2.destroyWindow("VO")
 
     # plotting.visualize_paths(gt_path, estimated_path, "Visual Odometry", file_out=os.path.basename(data_dir) + ".html")
-
 
 if __name__ == "__main__":
     main()
