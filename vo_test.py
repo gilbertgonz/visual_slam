@@ -1,16 +1,13 @@
 import os
 import numpy as np
 import cv2
-from multiprocessing import Pool
 
 import matplotlib
-matplotlib.use('TkAgg')  # Specify the backend
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
-
 from tqdm import tqdm
 
 import plotting
-
 
 class VisualOdometry():
     def __init__(self, data_dir):
@@ -26,15 +23,7 @@ class VisualOdometry():
     @staticmethod
     def _load_calib(filepath):
         """
-        Loads the calibration of the camera
-        Parameters
-        ----------
-        filepath (str): The file path to the camera file
-
-        Returns
-        -------
-        K (ndarray): Intrinsic parameters
-        P (ndarray): Projection matrix
+        Load calibration of camera
         """
         with open(filepath, 'r') as f:
             for line in f:
@@ -47,15 +36,7 @@ class VisualOdometry():
     @staticmethod
     def _load_poses(filepath):
         """
-        Loads the GT poses
-
-        Parameters
-        ----------
-        filepath (str): The file path to the poses file
-
-        Returns
-        -------
-        poses (ndarray): The GT poses
+        Load GT poses
         """
         poses = []
         with open(filepath, 'r') as f:
@@ -69,15 +50,7 @@ class VisualOdometry():
     @staticmethod
     def _load_images(filepath):
         """
-        Loads the images
-
-        Parameters
-        ----------
-        filepath (str): The file path to image dir
-
-        Returns
-        -------
-        images (list): grayscale images
+        Load images
         """
         image_paths = [os.path.join(filepath, file) for file in sorted(os.listdir(filepath))]
         return [cv2.imread(path, cv2.IMREAD_GRAYSCALE) for path in image_paths]
@@ -85,16 +58,7 @@ class VisualOdometry():
     @staticmethod
     def _form_transf(R, t):
         """
-        Makes a transformation matrix from the given rotation matrix and translation vector
-
-        Parameters
-        ----------
-        R (ndarray): The rotation matrix
-        t (list): The translation vector
-
-        Returns
-        -------
-        T (ndarray): The transformation matrix
+        Form transformation matrix from R and t
         """
         T = np.eye(4, dtype=np.float64)
         T[:3, :3] = R
@@ -103,25 +67,13 @@ class VisualOdometry():
 
     def get_matches(self, i):
         """
-        This function detect and compute keypoints and descriptors from the i-1'th and i'th image using the class orb object
-
-        Parameters
-        ----------
-        i (int): The current frame
-
-        Returns
-        -------
-        q1 (ndarray): The good keypoints matches position in i-1'th image
-        q2 (ndarray): The good keypoints matches position in i'th image
+        Detect and compute keypoints and descriptors from the i-1'th and i'th img
         """
-
-        
 
         keypoints1, descriptors1 = self.orb.detectAndCompute(self.images[i - 1], None)
         keypoints2, descriptors2 = self.orb.detectAndCompute(self.images[i], None)
 
         matches = self.flann.knnMatch(descriptors1, descriptors2, k=2)
-        # store all the good matches as per Lowe's ratio test.
         
         good = []
         for m,n in matches:
@@ -131,71 +83,23 @@ class VisualOdometry():
         q1 = np.float32([ keypoints1[m.queryIdx].pt for m in good ])
         q2 = np.float32([ keypoints2[m.trainIdx].pt for m in good ])
 
-        # # Draw matches
-        # draw_params = dict(matchColor = -1, # draw matches in green color
-        #         singlePointColor = None,
-        #         matchesMask = None, # draw only inliers
-        #         flags = 2)
-
-        # img3 = cv2.drawMatches(self.images[i], keypoints1, self. images[i-1],keypoints2, good ,None,**draw_params)
-        # cv2.imshow("image", img3)
-        # cv2.waitKey(0)
-        # plt.imshow(img3, 'gray'),plt.show()
-        # plt.imshow(self.images[i]),plt.show()
-        # plt.imshow(self.images[i-1]),plt.show()
-
         return q1, q2
-
-
-
-        # This function should detect and compute keypoints and descriptors from the i-1'th and i'th image using the class orb object
-        # The descriptors should then be matched using the class flann object (knnMatch with k=2)
-        # Remove the matches not satisfying Lowe's ratio test
-        # Return a list of the good matches for each image, sorted such that the n'th descriptor in image i matches the n'th descriptor in image i-1
-        # https://docs.opencv.org/master/d1/de0/tutorial_py_feature_homography.html
-        pass
 
     def get_pose(self, q1, q2):
         """
-        Calculates the transformation matrix
-
-        Parameters
-        ----------
-        q1 (ndarray): The good keypoints matches position in i-1'th image
-        q2 (ndarray): The good keypoints matches position in i'th image
-
-        Returns
-        -------
-        transformation_matrix (ndarray): The transformation matrix
+        Calculate transformation from keypoints
         """
 
-        Essential, mask = cv2.findEssentialMat(q1, q2, self.K)
-        # print ("\nEssential matrix:\n" + str(Essential))
+        ess, mask = cv2.findEssentialMat(q1, q2, self.K)
 
-        R, t = self.decomp_essential_mat(Essential, q1, q2)
+        R, t = self.decomp_essential_mat(ess, q1, q2)
 
         return self._form_transf(R,t)
 
-        # Estimate the Essential matrix using built in OpenCV function
-        # Use decomp_essential_mat to decompose the Essential matrix into R and t
-        # Use the provided function to convert R and t to a transformation matrix T
-        pass
-
     def decomp_essential_mat(self, E, q1, q2):
         """
-        Decompose the Essential matrix
-
-        Parameters
-        ----------
-        E (ndarray): Essential matrix
-        q1 (ndarray): The good keypoints matches position in i-1'th image
-        q2 (ndarray): The good keypoints matches position in i'th image
-
-        Returns
-        -------
-        right_pair (list): Contains the rotation matrix and translation vector
+        Decompose the Essential matrix into R and t
         """
-
 
         R1, R2, t = cv2.decomposeEssentialMat(E)
         T1 = self._form_transf(R1,np.ndarray.flatten(t))
@@ -230,7 +134,6 @@ class VisualOdometry():
                                      np.linalg.norm(Q2.T[:-1] - Q2.T[1:], axis=-1))
             positives.append(total_sum + relative_scale)
             
-
         # Decompose the Essential matrix using built in OpenCV function
         # Form the 4 possible transformation matrix T from R1, R2, and t
         # Create projection matrix using each T, and triangulate points hom_Q1
@@ -251,41 +154,6 @@ class VisualOdometry():
         elif (max == 1):
             # print(t)
             return R2, np.ndarray.flatten(t)
-
-    def play_trip(self, l_frames, r_frames=None, lat_lon=None, timestamps=None, color_mode=False, waite_time=100, win_name="Trip"):
-        l_r_mode = r_frames is not None
-
-        if not l_r_mode:
-            r_frames = [None]*len(l_frames)
-
-        frame_count = 0
-        for i, frame_step in enumerate(zip(l_frames, r_frames)):
-            img_l, img_r = frame_step
-
-            if not color_mode:
-                img_l = cv2.cvtColor(img_l, cv2.COLOR_GRAY2BGR)
-                if img_r is not None:
-                    img_r = cv2.cvtColor(img_r, cv2.COLOR_GRAY2BGR)
-
-            cv2.imshow(win_name, img_l)
-
-            key = cv2.waitKey(waite_time)
-            if key == 27:  # ESC
-                break
-            frame_count += 1
-        cv2.destroyWindow(win_name)
-
-
-    def draw_matches_frame(self, img1, kp1, img2, kp2, matches):
-        """
-        Need to be call for each frame
-        """
-        matches = sorted(matches, key=lambda x: x.distance)
-        vis_img = cv2.drawMatches(img1, kp1, img2, kp2, matches, None,
-                                flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
-        
-        cv2.imshow('Matches', vis_img)
-        cv2.waitKey(100)
 
 def main():
     data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/07/'
@@ -346,7 +214,7 @@ def main():
             cv2.imshow("VO", img)
 
             key = cv2.waitKey(1)
-            if key == 27:  # ESC
+            if cv2.waitKey(1) == 27:  # ESC
                 break
 
     cv2.destroyWindow("VO")
