@@ -14,12 +14,13 @@ import plotting
 # - better user experience
 # - containerize
 # - keep digging for better estimation algorithms (loop closure?)
+# - add support for sequences with no GT
 
 class VisualOdometry():
     def __init__(self, data_dir):
         self.K, self.P = self._load_calib(os.path.join(data_dir, 'calib.txt'))
         self.gt_poses = self._load_poses(os.path.join(data_dir, 'poses.txt'))
-        self.images = self._load_images(os.path.join(data_dir, 'image_0'))
+        self.image_paths = self._load_images(os.path.join(data_dir, 'image_0'))
         self.orb = cv2.ORB_create(3000)
         FLANN_INDEX_LSH = 6
         index_params = dict(algorithm=FLANN_INDEX_LSH, table_number=6, key_size=12, multi_probe_level=1)
@@ -59,7 +60,7 @@ class VisualOdometry():
         Load images
         """
         image_paths = [os.path.join(filepath, file) for file in sorted(os.listdir(filepath))]
-        return [cv2.imread(path, cv2.IMREAD_GRAYSCALE) for path in image_paths]
+        return image_paths
 
     @staticmethod
     def _form_transf(R, t):
@@ -75,9 +76,8 @@ class VisualOdometry():
         """
         Detect and compute keypoints and descriptors from the i-1'th and i'th img
         """
-
-        keypoints1, descriptors1 = self.orb.detectAndCompute(self.images[i - 1], None)
-        keypoints2, descriptors2 = self.orb.detectAndCompute(self.images[i], None)
+        keypoints1, descriptors1 = self.orb.detectAndCompute(cv2.imread(self.image_paths[i - 1], cv2.IMREAD_GRAYSCALE), None)
+        keypoints2, descriptors2 = self.orb.detectAndCompute(cv2.imread(self.image_paths[i], cv2.IMREAD_GRAYSCALE), None)
 
         matches = self.flann.knnMatch(descriptors1, descriptors2, k=2)
         
@@ -148,21 +148,18 @@ class VisualOdometry():
         # Return R and t pair which resulted in the most points with positive z
 
         max = np.argmax(positives)
-        if (max == 2):
-            # print(-t)
-            return R1, np.ndarray.flatten(-t)
-        elif (max == 3):
-            # print(-t)
-            return R2, np.ndarray.flatten(-t)
-        elif (max == 0):
-            # print(t)
+        if (max == 0):
             return R1, np.ndarray.flatten(t)
         elif (max == 1):
-            # print(t)
             return R2, np.ndarray.flatten(t)
+        elif (max == 2):
+            return R1, np.ndarray.flatten(-t)
+        elif (max == 3):
+            return R2, np.ndarray.flatten(-t)
+        
 
 def main():
-    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/07/'
+    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/10/'
     vo = VisualOdometry(data_dir)
 
     gt_path = []
@@ -210,11 +207,9 @@ def main():
             q2y = [q2_point[1] for q2_point in q2]
 
             # Show optical flow
-            img = cv2.cvtColor(vo.images[i], cv2.COLOR_GRAY2BGR)
+            img = cv2.cvtColor(cv2.imread(vo.image_paths[i], cv2.IMREAD_GRAYSCALE), cv2.COLOR_GRAY2BGR)
             for i in range(len(q2)):
-                # Keypoints from the previous frame
-                cv2.circle(img, (int(q1x[i]), int(q1y[i])), 2, (0, 255, 0), -1)
-                # Motion vectors between matched keypoints
+                cv2.circle(img, (int(q2x[i]), int(q2y[i])), 2, (0, 255, 0), -1)
                 cv2.line(img, (int(q1x[i]), int(q1y[i])), (int(q2x[i]), int(q2y[i])), (0, 0, 255), 1)
             
             cv2.imshow("VO", img)
