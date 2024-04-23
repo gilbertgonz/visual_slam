@@ -88,7 +88,6 @@ class VisualOdometry():
                 kps1, features1 = self.orb.detectAndCompute(prev_frame, None)
                 kps2, features2 = self.orb.detectAndCompute(frame, None) 
             else:
-                print(i - 1, i)
                 kps1, features1 = self.orb.detectAndCompute(cv2.imread(self.image_paths[i - 1], cv2.IMREAD_GRAYSCALE), None)
                 kps2, features2 = self.orb.detectAndCompute(cv2.imread(self.image_paths[i], cv2.IMREAD_GRAYSCALE), None) 
 
@@ -149,7 +148,7 @@ class VisualOdometry():
             plt.plot(x_gt, y_gt, color='red')
             plt.plot([x_est, x_gt], [y_est, y_gt], linestyle='--', color='purple', linewidth=0.25) # plot error
         
-        plt.legend(['Estimated points', 'Ground Truth', 'Error'])
+        plt.legend(['Estimated path', 'Ground Truth', 'Error'])
         plt.title('Visual Odometry')
         plt.xlabel('X (meters)')
         plt.ylabel('Y (meters)')
@@ -158,52 +157,53 @@ class VisualOdometry():
         plt.clf() 
 
 def main():
-    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/05/'
+    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/04/'
     vo = VisualOdometry(data_dir)
 
     gt_path = []
     estimated_path = []
 
-    vid = None # cv2.VideoCapture('/home/gilberto/Downloads/test1.MOV')
-    prev_frame = None
+    vid = None # cv2.VideoCapture('/home/gilberto/Downloads/test2.MP4')
     vid_frame = None
-    cur_pose = None
-    
+    prev_frame = None
+
     counter = 0
     while True:
-        if vid is not None:
+        # Check if playing video
+        if vid:
             ret, vid_frame = vid.read()
-            scale = 0.5
-            vid_frame = cv2.resize(vid_frame, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
-
             if not ret:
-                break      
+                break 
+            scale = 0.5
+            vid_frame = cv2.resize(vid_frame, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)                 
 
-        if cur_pose is None:
-            if vo.gt_poses is not None:
-                cur_pose = vo.gt_poses[counter]
-            else:
-                cur_pose = np.eye(4) 
-            if vid is not None:
-                cur_pose = np.eye(4) 
+        # Initialize pose at start
+        if counter == 0:
+            cur_pose = np.eye(4) 
+            if vid:
                 prev_frame = vid_frame            
         else:
+            # Detect viable matches between frames
             q1, q2 = vo.get_matches(counter, "ORB", vid_frame, prev_frame)
 
+            # Compute transformation between frames
             transf = np.nan_to_num(vo.get_pose(q1, q2), neginf=0, posinf=0)
 
+            # Update current pose by multiplying inverse transformation
             cur_pose = cur_pose @ np.linalg.inv(transf)
             cur_x_est = cur_pose[0,3]
             cur_y_est = cur_pose[2,3]
-            # print(cur_x_est, cur_y_est)
+            
+            # Update estimated path 
+            estimated_path.append((cur_x_est, cur_y_est))
 
+            # Update ground truth path if exists in current data sequence
             if vo.gt_poses and vid is None:
                 cur_x_gt = vo.gt_poses[counter][0,3]
                 cur_y_gt = vo.gt_poses[counter][2,3]
                 gt_path.append((cur_x_gt, cur_y_gt))
             
-            estimated_path.append((cur_x_est, cur_y_est))
-
+            # Plot paths
             vo.plot(estimated_path, gt_path)
 
             '''
@@ -214,6 +214,7 @@ def main():
             diff = np.linalg.norm(gt_path_arr - estimated_path_arr, axis=1)
             '''
 
+            # Extract keypoints coordinates
             q1x = [q1_point[0] for q1_point in q1]
             q1y = [q1_point[1] for q1_point in q1]
 
@@ -231,19 +232,24 @@ def main():
             
             cv2.imshow("VO", frame)
 
+            # Update previous frame
             prev_frame = vid_frame
 
-            # Break if no more images
+            # Break loop if no more images in data sequence
             if vid is None:
                 if counter >= len(vo.image_paths):
                     break
 
             key = cv2.waitKey(1)
-            if key == 27:  # ESC
+            if key == 27: # ESC
                 break
         
+        # Update counter
         counter += 1
 
+    # Clean up
+    if vid:
+        vid.release()
     cv2.destroyWindow("VO")
 
 if __name__ == "__main__":
