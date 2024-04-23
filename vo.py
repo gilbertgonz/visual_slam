@@ -79,16 +79,20 @@ class VisualOdometry():
         T[:3, 3] = t
         return T
 
-    def get_matches(self, i, detector, ratio=0.5):
+    def get_matches(self, i, detector, frame, prev_frame, ratio=0.5):
         """
         Detect and compute keypoints and descriptors from the i-1'th and i'th img
         """
         if detector == "ORB": # faster (less computational overhead), less accurate
-            kps1, features1 = self.orb.detectAndCompute(cv2.imread(self.image_paths[i - 1], cv2.IMREAD_GRAYSCALE), None)
-            kps2, features2 = self.orb.detectAndCompute(cv2.imread(self.image_paths[i], cv2.IMREAD_GRAYSCALE), None)
+            if frame is not None:
+                kps1, features1 = self.orb.detectAndCompute(prev_frame, None)
+                kps2, features2 = self.orb.detectAndCompute(frame, None) 
+            else:
+                print(i - 1, i)
+                kps1, features1 = self.orb.detectAndCompute(cv2.imread(self.image_paths[i - 1], cv2.IMREAD_GRAYSCALE), None)
+                kps2, features2 = self.orb.detectAndCompute(cv2.imread(self.image_paths[i], cv2.IMREAD_GRAYSCALE), None) 
 
             matches = self.flann.knnMatch(features1, features2, k=2)
-            
             # Filter good matches
             good = []
             for m,n in matches:
@@ -101,8 +105,12 @@ class VisualOdometry():
 
             return q1, q2
         if detector == "SIFT": # slower (more computational overhead), more accurate
-            kps1, features1 = self.descriptor.detectAndCompute(cv2.imread(self.image_paths[i - 1], cv2.IMREAD_GRAYSCALE), None)
-            kps2, features2 = self.descriptor.detectAndCompute(cv2.imread(self.image_paths[i], cv2.IMREAD_GRAYSCALE), None)
+            if frame is not None:
+                kps1, features1 = self.descriptor.detectAndCompute(prev_frame, None)
+                kps2, features2 = self.descriptor.detectAndCompute(frame, None)
+            else:
+                kps1, features1 = self.descriptor.detectAndCompute(cv2.imread(self.image_paths[i - 1], cv2.IMREAD_GRAYSCALE), None)
+                kps2, features2 = self.descriptor.detectAndCompute(cv2.imread(self.image_paths[i], cv2.IMREAD_GRAYSCALE), None)
 
             matches = self.matcher.knnMatch(features1, features2, 2)
 
@@ -143,37 +151,55 @@ class VisualOdometry():
         
         plt.legend(['Estimated points', 'Ground Truth', 'Error'])
         plt.title('Visual Odometry')
-        plt.xlabel('X')
-        plt.ylabel('Y')
+        plt.xlabel('X (meters)')
+        plt.ylabel('Y (meters)')
         plt.grid(True)
         plt.pause(0.1)
         plt.clf() 
 
 def main():
-    data_dir = '/home/gilbertogonzalez/Downloads/KITTI_data_gray/dataset/sequences/01/'
+    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/05/'
     vo = VisualOdometry(data_dir)
 
     gt_path = []
     estimated_path = []
 
-    for i, paths in enumerate(tqdm(vo.image_paths)):
-        start = time.time()
-        if i == 0:
-            if vo.gt_poses is None:
-                cur_pose = np.eye(4) 
-            else:
-                cur_pose = vo.gt_poses[i]
-        else:
-            q1, q2 = vo.get_matches(i, "ORB")
-            transf = vo.get_pose(q1, q2)
+    vid = None # cv2.VideoCapture('/home/gilberto/Downloads/test1.MOV')
+    prev_frame = None
+    vid_frame = None
+    cur_pose = None
+    
+    counter = 0
+    while True:
+        if vid is not None:
+            ret, vid_frame = vid.read()
+            scale = 0.5
+            vid_frame = cv2.resize(vid_frame, None, fx=scale, fy=scale, interpolation=cv2.INTER_AREA)
 
-            cur_pose = np.matmul(cur_pose, np.linalg.inv(transf))
+            if not ret:
+                break      
+
+        if cur_pose is None:
+            if vo.gt_poses is not None:
+                cur_pose = vo.gt_poses[counter]
+            else:
+                cur_pose = np.eye(4) 
+            if vid is not None:
+                cur_pose = np.eye(4) 
+                prev_frame = vid_frame            
+        else:
+            q1, q2 = vo.get_matches(counter, "ORB", vid_frame, prev_frame)
+
+            transf = np.nan_to_num(vo.get_pose(q1, q2), neginf=0, posinf=0)
+
+            cur_pose = cur_pose @ np.linalg.inv(transf)
             cur_x_est = cur_pose[0,3]
             cur_y_est = cur_pose[2,3]
+            # print(cur_x_est, cur_y_est)
 
-            if vo.gt_poses:
-                cur_x_gt = vo.gt_poses[i][0,3]
-                cur_y_gt = vo.gt_poses[i][2,3]
+            if vo.gt_poses and vid is None:
+                cur_x_gt = vo.gt_poses[counter][0,3]
+                cur_y_gt = vo.gt_poses[counter][2,3]
                 gt_path.append((cur_x_gt, cur_y_gt))
             
             estimated_path.append((cur_x_est, cur_y_est))
@@ -195,19 +221,28 @@ def main():
             q2y = [q2_point[1] for q2_point in q2]
 
             # Show optical flow
-            img = cv2.cvtColor(cv2.imread(paths, cv2.IMREAD_GRAYSCALE), cv2.COLOR_GRAY2BGR)
+            if vid is None:
+                frame = cv2.cvtColor(cv2.imread(vo.image_paths[counter], cv2.IMREAD_GRAYSCALE), cv2.COLOR_GRAY2BGR)
+            else:
+                frame = vid_frame
             for i in range(len(q2)):
-                cv2.circle(img, (int(q2x[i]), int(q2y[i])), 2, (0, 255, 0), -1)
-                cv2.line(img, (int(q1x[i]), int(q1y[i])), (int(q2x[i]), int(q2y[i])), (0, 0, 255), 1)
+                cv2.circle(frame, (int(q2x[i]), int(q2y[i])), 2, (0, 255, 0), -1)
+                cv2.line(frame, (int(q1x[i]), int(q1y[i])), (int(q2x[i]), int(q2y[i])), (0, 0, 255), 1)
             
-            cv2.imshow("VO", img)
+            cv2.imshow("VO", frame)
 
-            end = time.time()
-            print(f"\ntime: {end - start}")
+            prev_frame = vid_frame
+
+            # Break if no more images
+            if vid is None:
+                if counter >= len(vo.image_paths):
+                    break
 
             key = cv2.waitKey(1)
             if key == 27:  # ESC
                 break
+        
+        counter += 1
 
     cv2.destroyWindow("VO")
 
