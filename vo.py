@@ -140,113 +140,6 @@ class VisualOdometry():
 
         return self._form_transf(R, t.squeeze())
         
-    def reprojection_residuals(self, dof, q1, q2, Q1, Q2):
-        """
-        Calculate the residuals
-
-        Parameters
-        ----------
-        dof (ndarray): Transformation between the two frames. First 3 elements are the rotation vector and the last 3 is the translation. Shape (6)
-        q1 (ndarray): Feature points in i-1'th image. Shape (n_points, 2)
-        q2 (ndarray): Feature points in i'th image. Shape (n_points, 2)
-        Q1 (ndarray): 3D points seen from the i-1'th image. Shape (n_points, 3)
-        Q2 (ndarray): 3D points seen from the i'th image. Shape (n_points, 3)
-
-        Returns
-        -------
-        residuals (ndarray): The residuals. In shape (2 * n_points * 2)
-        """
-        # Get the rotation vector
-        r = dof[:3]
-        # Create the rotation matrix from the rotation vector
-        R, _ = cv2.Rodrigues(r)
-        # Get the translation vector
-        t = dof[3:]
-        # Create the transformation matrix from the rotation matrix and translation vector
-        transf = self._form_transf(R, t)
-
-        # Create the projection matrix for the i-1'th image and i'th image
-        f_projection = np.matmul(self.P_l, transf)
-        b_projection = np.matmul(self.P_l, np.linalg.inv(transf))
-
-        # Make the 3D points homogenize
-        ones = np.ones((q1.shape[0], 1))
-        Q1 = np.hstack([Q1, ones])
-        Q2 = np.hstack([Q2, ones])
-
-        # Project 3D points from i'th image to i-1'th image
-        q1_pred = Q2.dot(f_projection.T)
-        # Un-homogenize
-        q1_pred = q1_pred[:, :2].T / q1_pred[:, 2]
-
-        # Project 3D points from i-1'th image to i'th image
-        q2_pred = Q1.dot(b_projection.T)
-        # Un-homogenize
-        q2_pred = q2_pred[:, :2].T / q2_pred[:, 2]
-
-        # Calculate the residuals
-        residuals = np.vstack([q1_pred - q1.T, q2_pred - q2.T]).flatten()
-        return residuals
-    
-    def estimate_pose(self, q1, q2, Q1, Q2, max_iter=100):
-            """
-            Estimates the transformation matrix
-
-            Parameters
-            ----------
-            q1 (ndarray): Feature points in i-1'th image. Shape (n, 2)
-            q2 (ndarray): Feature points in i'th image. Shape (n, 2)
-            Q1 (ndarray): 3D points seen from the i-1'th image. Shape (n, 3)
-            Q2 (ndarray): 3D points seen from the i'th image. Shape (n, 3)
-            max_iter (int): The maximum number of iterations
-
-            Returns
-            -------
-            transformation_matrix (ndarray): The transformation matrix. Shape (4,4)
-            """
-            early_termination_threshold = 5
-
-            # Initialize the min_error and early_termination counter
-            min_error = float('inf')
-            early_termination = 0
-
-            for _ in range(max_iter):
-                # Choose 6 random feature points
-                sample_idx = np.random.choice(range(q1.shape[0]), 6)
-                sample_q1, sample_q2, sample_Q1, sample_Q2 = q1[sample_idx], q2[sample_idx], Q1[sample_idx], Q2[sample_idx]
-
-                # Make the start guess
-                in_guess = np.zeros(6)
-                # Perform least squares optimization
-                opt_res = least_squares(self.reprojection_residuals, in_guess, method='lm', max_nfev=200,
-                                        args=(sample_q1, sample_q2, sample_Q1, sample_Q2))
-
-                # Calculate the error for the optimized transformation
-                error = self.reprojection_residuals(opt_res.x, q1, q2, Q1, Q2)
-                error = error.reshape((Q1.shape[0] * 2, 2))
-                error = np.sum(np.linalg.norm(error, axis=1))
-
-                # Check if the error is less the the current min error. Save the result if it is
-                if error < min_error:
-                    min_error = error
-                    out_pose = opt_res.x
-                    early_termination = 0
-                else:
-                    early_termination += 1
-                if early_termination == early_termination_threshold:
-                    # If we have not fund any better result in early_termination_threshold iterations
-                    break
-
-            # Get the rotation vector
-            r = out_pose[:3]
-            # Make the rotation matrix
-            R, _ = cv2.Rodrigues(r)
-            # Get the translation vector
-            t = out_pose[3:]
-            # Make the transformation matrix
-            transformation_matrix = self._form_transf(R, t)
-            return transformation_matrix
-
     def plot(self, estimated_path, gt_path):
         # Extract coordinates of estimated_path
         x_est = [point[0] for point in estimated_path]
@@ -268,245 +161,6 @@ class VisualOdometry():
         plt.grid(True)
         plt.pause(0.1)
         plt.clf() 
-
-    def reindex(self, idxs):
-        keys = np.sort(np.unique(idxs))
-        key_dict = {key: value for key, value in zip(keys, range(keys.shape[0]))}
-        return [key_dict[idx] for idx in idxs]
-
-    def shrink_problem(self, n, cam_params, Qs, cam_idxs, Q_idxs, qs):
-        """
-        Shrinks the problem to be n points
-
-        Parameters
-        ----------
-        n (int): Number of points the shrink problem should be
-        cam_params (ndarray): Shape (n_cameras, 9) contains initial estimates of parameters for all cameras. First 3 components in each row form a rotation vector (https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula), next 3 components form a translation vector, then a focal distance and two distortion parameters.
-        Qs (ndarray): Shape (n_points, 3) contains initial estimates of point coordinates in the world frame.
-        cam_idxs (ndarray): Shape (n_observations,) contains indices of cameras (from 0 to n_cameras - 1) involved in each observation.
-        Q_idxs (ndarray): Shape (n_observations,) contatins indices of points (from 0 to n_points - 1) involved in each observation.
-        qs (ndarray): Shape (n_observations, 2) contains measured 2-D coordinates of points projected on images in each observations.
-
-        Returns
-        -------
-        cam_params (ndarray): Shape (n_cameras, 9) contains initial estimates of parameters for all cameras. First 3 components in each row form a rotation vector (https://en.wikipedia.org/wiki/Rodrigues%27_rotation_formula), next 3 components form a translation vector, then a focal distance and two distortion parameters.
-        Qs (ndarray): Shape (n_points, 3) contains initial estimates of point coordinates in the world frame.
-        cam_idxs (ndarray): Shape (n,) contains indices of cameras (from 0 to n_cameras - 1) involved in each observation.
-        Q_idxs (ndarray): Shape (n,) contatins indices of points (from 0 to n_points - 1) involved in each observation.
-        qs (ndarray): Shape (n, 2) contains measured 2-D coordinates of points projected on images in each observations.
-        """
-        cam_idxs = cam_idxs[:n]
-        Q_idxs = Q_idxs[:n]
-        qs = qs[:n]
-        cam_params = cam_params[np.isin(np.arange(cam_params.shape[0]), cam_idxs)]
-        Qs = Qs[np.isin(np.arange(Qs.shape[0]), Q_idxs)]
-
-        cam_idxs = self.reindex(cam_idxs)
-        Q_idxs = self.reindex(Q_idxs)
-        return cam_params, Qs, cam_idxs, Q_idxs, qs
-
-    def sparsity_matrix(self, n_cams, n_Qs, cam_idxs, Q_idxs):
-        """
-        Create the sparsity matrix
-
-        Parameters
-        ----------
-        n_cams (int): Number of cameras
-        n_Qs (int): Number of points
-        cam_idxs (list): Indices of cameras for image points
-        Q_idxs (list): Indices of 3D points for image points
-
-        Returns
-        -------
-        sparse_mat (ndarray): The sparsity matrix
-        """
-        
-        # m = cam_idxs.size * 2  # number of residuals
-        # n = n_cams * 9 + n_Qs * 3  # number of parameters
-        # print("m:\n" + str(m) + "\nn:\n" + str(n))
-        # sparse_mat = lil_matrix((m, n), dtype=int)
-        # # Fill the sparse matrix with 1 at the locations where the parameters affects the residuals
-
-        # i = np.arange(cam_idxs.size)
-        # # Sparsity from camera parameters
-        # for s in range(9):
-        #     sparse_mat[2 * i, cam_idxs * 9 + s] = 1
-        #     sparse_mat[2 * i + 1, cam_idxs * 9 + s] = 1
-        # #print (sparse_mat)
-        # # Sparsity from 3D points
-        # for s in range(3):
-        #     sparse_mat[2 * i, n_cams * 9 + Q_idxs * 3 + s] = 1
-        #     sparse_mat[2 * i + 1, n_cams * 9 + Q_idxs * 3 + s] = 1
-
-
-        m = cam_idxs.size * 2  # number of residuals
-        n = n_Qs * 3  # number of parameters
-        print("m:\n" + str(m) + "\nn:\n" + str(n))
-        sparse_mat = lil_matrix((m, n), dtype=int)
-        # Fill the sparse matrix with 1 at the locations where the parameters affects the residuals
-
-        i = np.arange(cam_idxs.size)
-        # Sparsity from camera parameters
-        for s in range(9):
-            sparse_mat[2 * i, cam_idxs * 9 + s] = 1
-            sparse_mat[2 * i + 1, cam_idxs * 9 + s] = 1
-        #print (sparse_mat)
-        # Sparsity from 3D points
-        for s in range(3):
-            sparse_mat[2 * i, Q_idxs * 3 + s] = 1
-            sparse_mat[2 * i + 1,  Q_idxs * 3 + s] = 1
-
-        return sparse_mat
-
-    def rotate(self, Qs, rot_vecs):
-        """
-        Rotate points by given rotation vectors.
-        Rodrigues' rotation formula is used.
-
-        Parameters
-        ----------
-        Qs (ndarray): The 3D points
-        rot_vecs (ndarray): The rotation vectors
-
-        Returns
-        -------
-        Qs_rot (ndarray): The rotated 3D points
-        """
-        theta = np.linalg.norm(rot_vecs, axis=1)[:, np.newaxis]
-        with np.errstate(invalid='ignore'):
-            v = rot_vecs / theta
-            v = np.nan_to_num(v)
-        dot = np.sum(Qs * v, axis=1)[:, np.newaxis]
-        cos_theta = np.cos(theta)
-        sin_theta = np.sin(theta)
-
-        return cos_theta * Qs + sin_theta * np.cross(v, Qs) + dot * (1 - cos_theta) * v
-
-    def objective(self, params, cam_param, n_cams, n_Qs, cam_idxs, Q_idxs, qs):
-        """
-        The objective function for the bundle adjustment
-
-        Parameters
-        ----------
-        params (ndarray): Camera parameters and 3-D coordinates.
-        n_cams (int): Number of cameras
-        n_Qs (int): Number of points
-        cam_idxs (list): Indices of cameras for image points
-        Q_idxs (list): Indices of 3D points for image points
-        qs (ndarray): The image points
-
-        Returns
-        -------
-        residuals (ndarray): The residuals
-        """
-        # Should return the residuals consisting of the difference between the observations qs and the reporjected points
-        # Params is passed from bundle_adjustment() and contains the camera parameters and 3D points
-        # project() expects an arrays of shape (len(qs), 3) indexed using Q_idxs and (len(qs), 9) indexed using cam_idxs
-        # Copy the elements of the camera parameters and 3D points based on cam_idxs and Q_idxs
-
-        # Get the camera parameters
-        # cam_params = params[:n_cams * 9].reshape((n_cams, 9))
-        K = np.array((718.856,0,0),(0,718.856,0),(0,0,1))
-
-        cam_params = cam_param.reshape((n_cams,9))
-
-        # Get the 3D points
-        Qs = params.reshape((n_Qs, 3))
-        # Qs = params[n_cams * 9:].reshape((n_Qs, 3))
-
-        # Project the 3D points into the image planes
-        qs_proj = self.project(Qs[Q_idxs], cam_params[cam_idxs])
-
-        # Calculate the residuals
-        residuals = (qs_proj - qs).ravel()
-
-        #q = K* [R t] * Qs
-        return residuals
-        
-    def project(self, Qs, cam_params):
-        """
-        Convert 3-D points to 2-D by projecting onto images.
-
-        Parameters
-        ----------
-        Qs (ndarray): The 3D points
-        cam_params (ndarray): Initial parameters for cameras
-
-        Returns
-        -------
-        qs_proj (ndarray): The projectet 2D points
-        """
-        # Rotate the points
-        qs_proj = self.rotate(Qs, cam_params[:, :3])
-        # Translat the points
-        qs_proj += cam_params[:, 3:6]
-        # Un-homogenized the points
-        qs_proj = -qs_proj[:, :2] / qs_proj[:, 2, np.newaxis]
-        # Distortion
-        f, k1, k2 = cam_params[:, 6:].T
-        n = np.sum(qs_proj ** 2, axis=1)
-        r = 1 + k1 * n + k2 * n ** 2
-        qs_proj *= (r * f)[:, np.newaxis]
-        # return qs_proj
-
-        cam_params = cam_param.reshape((n_cams,9))
-
-        # Get the 3D points
-        Qs = params.reshape((n_Qs, 3))
-        # Qs = params[n_cams * 9:].reshape((n_Qs, 3))
-
-        # Project the 3D points into the image planes
-        qs_proj = project(Qs[Q_idxs], cam_params[cam_idxs])
-
-        # Calculate the residuals
-        residuals = (qs_proj - qs).ravel()
-
-        #q = K* [R t] * Qs
-        return residuals
-
-    def bundle_adjustment_with_sparsity(self, cam_params, Qs, cam_idxs, Q_idxs, qs, sparse_mat):
-        """
-        Preforms bundle adjustment with sparsity
-
-        Parameters
-        ----------
-        cam_params (ndarray): Initial parameters for cameras
-        Qs (ndarray): The 3D points
-        cam_idxs (list): Indices of cameras for image points
-        Q_idxs (list): Indices of 3D points for image points
-        qs (ndarray): The image points
-        sparse_mat (ndarray): The sparsity matrix
-
-        Returns
-        -------
-        residual_init (ndarray): Initial residuals
-        residuals_solu (ndarray): Residuals at the solution
-        solu (ndarray): Solution
-        """
-
-        transformations = []
-        for i in range(len(cam_params)):
-            R ,_ = cv2.Rodrigues( cam_params[:3])
-            t = cam_params[3:6]
-            transformations.append(np.column_stack((R,t)))
-
-        # Stack the camera parameters and the 3D points
-        params = np.hstack((cam_params.ravel(), Qs.ravel()))
-        params2 = Qs.ravel()
-
-        # Save the initial residuals
-        residual_init = self.objective(params2, cam_params.ravel() , cam_params.shape[0], Qs.shape[0], cam_idxs, Q_idxs, qs)
-
-        # Perform the least_squares optimization with sparsity
-        res = least_squares(self.objective, params2, jac_sparsity=sparse_mat, verbose=2, x_scale='jac', ftol=1e-6, method='trf', max_nfev=50,
-                            args=(cam_params.ravel(), cam_params.shape[0], Qs.shape[0], cam_idxs, Q_idxs, qs))
-
-        # Get the residuals at the solution and the solution
-        residuals_solu = res.fun
-        solu = res.x
-        # normalized_cost = res.cost / res.x.size()
-        # print ("\nAverage cost for each point (solution with sparsity): " +  str(normalized_cost))
-        return residual_init, residuals_solu, solu
 
     def bundle_adjustment(self, cam_params, Qs, cam_idxs, Q_idxs, qs):
         """
@@ -536,7 +190,7 @@ class VisualOdometry():
         params = np.hstack((cam_params.ravel(), Qs.ravel()))
 
         # Save the initial residuals
-        residual_init = self.objective(params, cam_params.shape[0], Qs.shape[0], cam_idxs, Q_idxs, qs)
+        residual_init = self.objective(params, cam_params, cam_params.shape[0], Qs.shape[0], cam_idxs, Q_idxs, qs)
 
         # Perform the least_squares optimization
         res = least_squares(self.objective, params, verbose=2, x_scale='jac', ftol=1e-4, method='trf', max_nfev=50,
@@ -549,29 +203,6 @@ class VisualOdometry():
         # print ("\nNormalized cost with reduced points: " +  str(normalized_cost))
         return residual_init, residuals_solu, solu
 
-    def calc_3d(self, undistort_q1, undistort_q2, prev_pose, cur_pose):
-        """
-        Triangulate points from previous and current image 
-        
-        Parameters
-        ----------
-        q1 (ndarray): Feature points in i-1'th image
-        q2 (ndarray): Feature points in i'th image
-        prev_pose: camera pose of i-1'th image frame
-        cur_pose: camera pose of i'th image frame
-
-        Returns
-        -------
-        Q (ndarray): 3D points seen from the i'th image
-        """
-
-        # Triangulate points from i-1'th image
-        Q = cv2.triangulatePoints(prev_pose, cur_pose, undistort_q1.T, undistort_q2.T)
-        # Un-homogenize
-        Q = np.transpose(Q[:3] / Q[3])
-
-        return Q
-    
     def triangulate(self, undistort_img_pt0, undistort_img_pt1, world_T_cam0, world_T_cam1):
         A = np.zeros((3, 2))
         b = np.zeros((3, 1))
@@ -593,7 +224,6 @@ class VisualOdometry():
         X1 = world_T_cam1[:3, 3] + ray1*x[1]
 
         return (X0 + X1)*0.5
-
 
 def main():
     data_dir = '/home/gilbertogonzalez/Downloads/KITTI_data_gray/dataset/sequences/09/'
@@ -634,26 +264,28 @@ def main():
             cur_pose = cur_pose @ np.linalg.inv(transf)
 
 
-
             ######################################
-            Q = []
-            undistort_q1 = cv2.undistortPoints(q1, vo.K, vo.D)
-            undistort_q2 = cv2.undistortPoints(q2, vo.K, vo.D)
-            for u_q1, u_q2 in zip(undistort_q1, undistort_q2):
-                Q.append(vo.triangulate(u_q1[0], u_q2[0], prev_pose, cur_pose))
-            # print(undistort_q2[0])
-            # print(Q[0])
+            # Q = []
+            # undistort_q1 = cv2.undistortPoints(q1, vo.K, vo.D)
+            # undistort_q2 = cv2.undistortPoints(q2, vo.K, vo.D)
+            # for u_q1, u_q2 in zip(undistort_q1, undistort_q2):
+            #     Q.append(vo.triangulate(u_q1[0], u_q2[0], prev_pose, cur_pose))
+            # Q = np.array(Q)
+            # # print(undistort_q2[0])
+            # # print(Q[0])
 
 
-            cam_params, Qs, cam_idxs, Q_idxs, qs = vo.shrink_problem
+            # rotation_vector, _ = cv2.Rodrigues(transf[:3, :3])
+            # translation_vector = transf[:3, 3].flatten()
+            # # print(rotation_vector[0][0], rotation_vector[1][0], rotation_vector[2][0], translation_vector[0], translation_vector[1], translation_vector[2],vo.K[0, 0], vo.K[0, 2], vo.K[1, 2])
 
-            rotation_vector, _ = cv2.Rodrigues(transf[:3, :3]).flatten()
-            translation_vector = transf[:3, 3].flatten()
-            
-            cam_params = [rotation_vector[0], rotation_vector[1], rotation_vector[2], translation_vector[0], translation_vector[1], translation_vector[2], focal_distance, distortion_param_1, distortion_param_2]
-            
-            residual_init, residual_minimized, opt_params = vo.bundle_adjustment(cam_params, Q, (np.empty(len(Q), dtype=int)), Q_idxs, q2)
+            # cam_params = np.array([rotation_vector[0][0], rotation_vector[1][0], rotation_vector[2][0], 
+            #                         translation_vector[0], translation_vector[1], translation_vector[2], 
+            #                         vo.K[0, 0], vo.K[0, 2], vo.K[1, 2]])
+            # cam_params = cam_params.reshape((1, 9))
 
+            # residual_init, residual_minimized, opt_params = vo.bundle_adjustment(cam_params, Q, 2, (np.empty(len(Q), dtype=int)), q2)
+            # print(opt_params)
 
             #######################################
 
