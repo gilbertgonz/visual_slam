@@ -176,13 +176,13 @@ class VisualOdometry():
 
         # Extract coordinates of estimated_path
         x_est = [point[0] for point in estimated_path]
-        y_est = [point[1] for point in estimated_path]
+        y_est = [point[2] for point in estimated_path]
         ax_2d.plot(x_est, y_est, color='blue')
 
         # Extract coordinates of ground truth path if exists
         if gt_path:
             x_gt = [point[0] for point in gt_path]
-            y_gt = [point[1] for point in gt_path]
+            y_gt = [point[2] for point in gt_path]
 
             ax_2d.plot(x_gt, y_gt, color='red')
             ax_2d.plot([x_est, x_gt], [y_est, y_gt], linestyle='--', color='purple', linewidth=0.2) # plot error
@@ -193,17 +193,23 @@ class VisualOdometry():
         ax_2d.set_ylabel('Y (meters)')
         ax_2d.grid(True)
 
-    def plot_3d(self, ax_3d, Q):
+    def plot_3d(self, ax_3d, est, gt):
         # Clear axis
-        ax_3d.clear()
+        # ax_3d.clear()
 
         # Extract X, Y, Z coordinates from Q
-        X = Q[:, 0]
-        Y = Q[:, 1]
-        Z = Q[:, 2]
+        X = est[0]
+        Y = est[2]
+        Z = est[1]
+
+        # Extract X, Y, Z coordinates from gt
+        X2 = gt[0]
+        Y2 = gt[2]
+        Z2 = gt[1]
 
         # Plot points
         ax_3d.scatter(X, Y, Z, c='b', marker='o')
+        ax_3d.scatter(X2, Y2, Z2, c='r', marker='o')
 
         ax_3d.set_xlabel('X')
         ax_3d.set_ylabel('Y')
@@ -265,25 +271,8 @@ class VisualOdometry():
 
         return points_3D.flatten()
 
-    def generate_point_cloud(self, Q):
-        # Create an Open3D point cloud
-        point_cloud = o3d.geometry.PointCloud()
-        point_cloud.points = o3d.utility.Vector3dVector(Q)
-
-        # Return the point cloud object
-        return point_cloud
-
-    def update_point_cloud(self, vis, Q):
-        # Generate the updated point cloud
-        point_cloud = self.generate_point_cloud(Q)
-        
-        # Update the visualization
-        vis.update_geometry(point_cloud)
-        vis.poll_events()
-        vis.update_renderer()
-
 def main():
-    data_dir = '/home/gilbertogonzalez/Downloads/KITTI_data_gray/dataset/sequences/14/'
+    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/02/'
     '''
     Sequences for demo:
         - sequence 09: 0-257
@@ -296,7 +285,7 @@ def main():
     time_list = []
     Q = []
 
-    vid = None #cv2.VideoCapture('/home/gilbertogonzalez/Downloads/test.MOV')
+    vid = None #cv2.VideoCapture('/home/gilberto/Downloads/test.MOV')
     vid_frame = None
     prev_frame = None
 
@@ -305,8 +294,16 @@ def main():
     ax_2d = fig.add_subplot(2, 1, 1)
     ax_3d = fig.add_subplot(2, 1, 2, projection='3d')
 
-    # Adjust layout and display the plots
-    fig.tight_layout()
+    # # Initialize Open3d visualizer
+    # vis = o3d.visualization.Visualizer()
+    # vis.create_window(visible=True)
+    # vis.get_render_option().background_color = [0, 0, 0]
+
+    # pcd_gt = o3d.geometry.PointCloud()
+    # pcd_gt.paint_uniform_color([1, 0, 0])
+
+    # pcd_est = o3d.geometry.PointCloud()
+    # pcd_est.paint_uniform_color([0, 0, 1])
 
     counter = 0
     m = 2
@@ -330,7 +327,7 @@ def main():
                 prev_frame = vid_frame            
         else:
             # Detect viable matches between frames
-            q1, q2 = vo.get_matches(counter, "SIFT", vid_frame, prev_frame)
+            q1, q2 = vo.get_matches(counter, "ORB", vid_frame, prev_frame)
 
             # Compute transformation between frames
             transf = np.nan_to_num(vo.get_pose(q1, q2), neginf=0, posinf=0)
@@ -344,16 +341,54 @@ def main():
                 Q.append(vo.triangulate(u_q1, u_q2, prev_pose, cur_pose))
             Q_local_arr = np.array(Q_local)
             Q_local_arr_downsampled = Q_local_arr[::3]
-            
-            vo.plot_3d(ax_3d, Q_local_arr_downsampled)
 
-            # Saving all 3d points to txt file
-            Q_arr = np.array(Q)
-            Q_arr_downsampled = Q_arr[::3]
-            with open("3d_pts.txt", 'w') as file:
-                np.savetxt(file, Q_arr, fmt='%f')
+            # # Saving all 3d points to txt file
+            # Q_arr = np.array(Q)
+            # Q_arr_downsampled = Q_arr[::3]
+            # with open("3d_pts.txt", 'w') as file:
+            #     np.savetxt(file, Q_arr, fmt='%f')
+
+            # Update translation vector
+            t_vec = cur_pose[:3, 3]
+
+            # Update estimated path 
+            estimated_path.append(t_vec)
+
+            # Update ground truth path if exists in current data sequence
+            if vo.gt_poses and vid is None:
+                gt_path.append(vo.gt_poses[counter][:3, 3])
+            
+            # Plot
+            vo.plot(ax_2d, estimated_path, gt_path)
+            vo.plot_3d(ax_3d, t_vec, gt_path[-1])
+
+            # # Open3D points
+            # pcd_est.points.extend(np.array(estimated_path))
+            # pcd_gt.points.extend(np.array(gt_path))
+
+            # vis.add_geometry(pcd_est)
+            # vis.add_geometry(pcd_gt)
+
+            # vis.update_geometry(pcd_est)
+            # vis.update_geometry(pcd_gt)          
+
            
 
+            '''
+            **DRAWING CAMERA LINES IN OPEN3D**
+
+            # Get the standard camera parameters
+            standardCameraParametersObj = vis.get_view_control().convert_to_pinhole_camera_parameters()
+            standardCameraParametersObj.extrinsic = cur_pose
+
+            # Create camera lines visualization
+            cameraLines = o3d.geometry.LineSet.create_camera_visualization(
+                intrinsic=standardCameraParametersObj.intrinsic,
+                extrinsic=standardCameraParametersObj.extrinsic
+            )
+            vis.clear_geometries()
+            vis.add_geometry(cameraLines)
+            '''
 
             '''
             **PENDING BUNDLE ADJUSTMENT**
@@ -371,30 +406,15 @@ def main():
             # print(opt_params)
 
             '''
-
-
-            cur_x_est = cur_pose[0,3]
-            cur_y_est = cur_pose[2,3]
             
-            # Update estimated path 
-            estimated_path.append((cur_x_est, cur_y_est))
-
-            # Update ground truth path if exists in current data sequence
-            if vo.gt_poses and vid is None:
-                cur_x_gt = vo.gt_poses[counter][0,3]
-                cur_y_gt = vo.gt_poses[counter][2,3]
-                gt_path.append((cur_x_gt, cur_y_gt))
             
-            # Plot paths
-            vo.plot(ax_2d, estimated_path, gt_path)
-            plt.pause(0.1)
             
-            # # Scalar error value between each point, can be used for histogram or something similar
-            # gt_path_arr = np.array(gt_path)
-            # estimated_path_arr = np.array(estimated_path)
-            # diff = np.linalg.norm(gt_path_arr - estimated_path_arr, axis=1)
-            # diff_arr = np.array([diff])
-            # print(f"average error: {np.mean(diff_arr)}")
+            # Scalar error value between each point
+            gt_path_arr = np.array(gt_path)
+            estimated_path_arr = np.array(estimated_path)
+            diff = np.linalg.norm(gt_path_arr - estimated_path_arr, axis=1)
+            diff_arr = np.array([diff])
+            print(f"average error: {np.mean(diff_arr)}")
 
             # Extract keypoints coordinates
             q1x = [q1_point[0] for q1_point in q1]
@@ -407,9 +427,8 @@ def main():
             if vid is None:
                 frame = cv2.cvtColor(cv2.imread(vo.image_paths[counter], cv2.IMREAD_GRAYSCALE), cv2.COLOR_GRAY2BGR)
                 
-                # # Draw frame axis (for debugging)
-                # rvec, _ = cv2.Rodrigues(cur_pose[:3, :3])
-                # tvec = np.zeros((3, 1)) # cur_pose[:3, 3]
+                # rvec, _ = cv2.Rodrigues(transf[:3, :3])
+                # tvec = transf[:3, 3]
                 # cv2.drawFrameAxes(frame, vo.K, vo.D, rvec, tvec, 0.5, 2)
             else:
                 frame = vid_frame
@@ -435,6 +454,13 @@ def main():
             if key == 27: # ESC
                 break
         
+        # Update plot
+        plt.pause(0.1)
+
+        # # Update open3d render
+        # vis.poll_events()
+        # vis.update_renderer()
+        
         # Update counter
         counter += 1
 
@@ -446,6 +472,7 @@ def main():
     # Clean up
     if vid:
         vid.release()
+    # vis.destroy_window()
     cv2.destroyWindow("VO")
 
 if __name__ == "__main__":
