@@ -91,7 +91,7 @@ class VisualOdometry():
         T[:3, 3] = t
         return T
 
-    def get_matches(self, i, detector, frame, prev_frame, ratio=0.45):
+    def get_matches(self, i, detector, frame, prev_frame, ratio=0.3):
         """
         Detect and compute matching keypoints and descriptors from the i-1'th and i'th img
         """
@@ -296,8 +296,10 @@ class VisualOdometry():
 
         return reproj_errors
 
+
+
 def main():
-    data_dir = '/home/gilbertogonzalez/Downloads/KITTI_data_gray/dataset/sequences/02/'
+    data_dir = '/home/gilbertogonzalez/Downloads/KITTI_data_gray/dataset/sequences/09/'
     '''
     Sequences for demo:
         - sequence 09: 0-257
@@ -332,7 +334,7 @@ def main():
     # pcd_est.paint_uniform_color([0, 0, 1])
 
     counter = 0
-    m = 2
+    m = 1
     while True:
         if debug:
             print(f"\nframe: {counter}")
@@ -356,36 +358,24 @@ def main():
                 prev_frame = vid_frame            
         else:
             # Detect viable matches between frames
-            q1, q2 = vo.get_matches(counter, "ORB", vid_frame, prev_frame)
+            q1, q2 = vo.get_matches(counter, "SIFT", vid_frame, prev_frame)
 
             # Compute transformation between frames
             transf = np.nan_to_num(vo.get_pose(q1, q2), neginf=0, posinf=0)
-
-            # Update current pose by multiplying inverse transformation
-            cur_pose = cur_pose @ np.linalg.inv(transf)
 
             # Update extrinsic vectors vector
             rvec_tf, _ = cv2.Rodrigues(transf[:3, :3])
             tvec_tf = transf[:3, 3]
 
-            rvec_pose, _ = cv2.Rodrigues(cur_pose[:3, :3])
-            tvec_pose = cur_pose[:3, 3]
-
-            Q_local = []
-            for u_q1, u_q2 in zip(q1, q2):
-                Q_local.append(vo.triangulate(u_q1, u_q2, prev_pose, cur_pose))
-                Q.append(vo.triangulate(u_q1, u_q2, prev_pose, cur_pose))
-            Q_local_arr = np.array(Q_local)
-            Q_local_arr_downsampled = Q_local_arr[::3]
-
-            if debug:
-                reprj_err = vo.calc_reprojection_error(vo.K, vo.D, rvec_pose, tvec_pose, Q_local_arr, q2)
-                print(f"* reprj_err: {np.mean(reprj_err)}")
-
             # Bundle adjustment using least squares
             if ba:       
-                camera_params = np.array([rvec_pose[0][0], rvec_pose[1][0], rvec_pose[2][0], 
-                                        tvec_pose[0], tvec_pose[1], tvec_pose[2]]).reshape((1, 6))
+                Q_local = []
+                for u_q1, u_q2 in zip(q1, q2):
+                    Q_local.append(vo.triangulate(u_q1, u_q2, prev_pose, transf))
+                Q_local_arr = np.array(Q_local)
+                
+                camera_params = np.array([rvec_tf[0][0], rvec_tf[1][0], rvec_tf[2][0], 
+                                        tvec_tf[0], tvec_tf[1], tvec_tf[2]]).reshape((1, 6))
 
                 initial_params = np.hstack((camera_params.ravel(), Q_local_arr.ravel()))
 
@@ -394,19 +384,70 @@ def main():
                 
                 # Extract the optimized camera pose and 3D points from the result
                 optimized_params = result.x
-                optimized_cam_pose = optimized_params[:6]
+                optimized_transf = optimized_params[:6]
                 optimized_points3d = optimized_params[6:].reshape((-1, 3))
 
-                tvec_pose = optimized_cam_pose[3:]
-                optimized_Q.append(optimized_points3d)
-                optimized_Q_arr = np.concatenate(optimized_Q, axis=0)
+                new_R, _ = cv2.Rodrigues(optimized_transf[:3])
 
-                reprj_err = vo.calc_reprojection_error(vo.K, vo.D, optimized_cam_pose[:3], optimized_cam_pose[3:], np.array(optimized_points3d), q2)
+                new_transf = np.eye(4)
+                new_transf[:3, :3] = new_R
+                new_transf[:3, 3] = optimized_transf[3:].squeeze() 
+           
+                reprj_err = vo.calc_reprojection_error(vo.K, vo.D, optimized_transf[:3], optimized_transf[3:], np.array(optimized_points3d), q2)
 
                 if debug:
                     print(f"* post_ba_reprj_err: {np.mean(reprj_err)}")
-                    print(f"- prev pose: {cur_pose[:3, 3]}")
-                    print(f"- new pose : {optimized_cam_pose[3:]}")
+                    print(f"- prev pose: {transf}")
+                    print(f"- new pose : {new_transf}")
+
+
+            # Update current pose by multiplying inverse transformation
+            cur_pose = cur_pose @ np.linalg.inv(new_transf)
+
+            # # Update extrinsic vectors vector
+            # rvec_tf, _ = cv2.Rodrigues(transf[:3, :3])
+            # tvec_tf = transf[:3, 3]
+
+            rvec_pose, _ = cv2.Rodrigues(cur_pose[:3, :3])
+            tvec_pose = cur_pose[:3, 3]
+
+            # Q_local = []
+            # for u_q1, u_q2 in zip(q1, q2):
+            #     Q_local.append(vo.triangulate(u_q1, u_q2, prev_pose, cur_pose))
+            #     Q.append(vo.triangulate(u_q1, u_q2, prev_pose, cur_pose))
+            # Q_local_arr = np.array(Q_local)
+            # Q_local_arr_downsampled = Q_local_arr[::3]
+
+            reprj_err = vo.calc_reprojection_error(vo.K, vo.D, rvec_pose, tvec_pose, Q_local_arr, q2)
+            # if debug:
+            #     print(f"* reprj_err: {np.mean(reprj_err)}")
+
+
+            # # Bundle adjustment using least squares
+            # if ba:       
+            #     camera_params = np.array([rvec_pose[0][0], rvec_pose[1][0], rvec_pose[2][0], 
+            #                             tvec_pose[0], tvec_pose[1], tvec_pose[2]]).reshape((1, 6))
+
+            #     initial_params = np.hstack((camera_params.ravel(), Q_local_arr.ravel()))
+
+            #     result = least_squares(vo.bundle_adjustment_residuals, initial_params, jac_sparsity=None, verbose=0, 
+            #                            x_scale='jac', ftol=1e-3, method='trf', args=(vo.K, vo.D, q2))
+                
+            #     # Extract the optimized camera pose and 3D points from the result
+            #     optimized_params = result.x
+            #     optimized_cam_pose = optimized_params[:6]
+            #     optimized_points3d = optimized_params[6:].reshape((-1, 3))
+
+            #     tvec_pose = optimized_cam_pose[3:]
+            #     optimized_Q.append(optimized_points3d)
+            #     optimized_Q_arr = np.concatenate(optimized_Q, axis=0)
+
+            #     if debug:
+            #         reprj_err = vo.calc_reprojection_error(vo.K, vo.D, optimized_cam_pose[:3], optimized_cam_pose[3:], np.array(optimized_points3d), q2)
+
+            #         print(f"* post_ba_reprj_err: {np.mean(reprj_err)}")
+            #         print(f"- prev pose: {cur_pose[:3, 3]}")
+            #         print(f"- new pose : {optimized_cam_pose[3:]}")
 
             if output_txt:
                 # Saving all 3d points to txt file
@@ -456,9 +497,19 @@ def main():
             
             
             # Scalar error value between each point
-            diff = np.linalg.norm(np.array(gt_path) - np.array(estimated_path), axis=1)
+            gt_path_arr = np.array(gt_path)
+            estimated_path_arr = np.array(estimated_path)
+            diff = np.linalg.norm(gt_path_arr - estimated_path_arr, axis=1)
+            diff_arr = np.array([diff])
             if debug:
-                print(f"gt error: {np.mean(diff)}")
+                print(f"gt error: {np.mean(diff_arr)}")
+
+            # Extract keypoints coordinates
+            q1x = [q1_point[0] for q1_point in q1]
+            q1y = [q1_point[1] for q1_point in q1]
+
+            q2x = [q2_point[0] for q2_point in q2]
+            q2y = [q2_point[1] for q2_point in q2]
 
             # Show optical flow
             if vid is None:
@@ -468,8 +519,8 @@ def main():
                 frame = vid_frame
 
             for i in range(len(q2)):
-                cv2.circle(frame, (int(q2[i][0]), int(q2[i][1])), 2, (0, 255, 0), -1)
-                cv2.line(frame, (int(q1[i][0]), int(q1[i][1])), (int(q2[i][0]), int(q2[i][1])), (0, 0, 255), 1)
+                cv2.circle(frame, (int(q2x[i]), int(q2y[i])), 2, (0, 255, 0), -1)
+                cv2.line(frame, (int(q1x[i]), int(q1y[i])), (int(q2x[i]), int(q2y[i])), (0, 0, 255), 1)
             
             cv2.imshow("VO", frame)
 
@@ -478,7 +529,8 @@ def main():
                 prev_frame = vid_frame
 
             # Update previous pose
-            prev_pose = cur_pose
+            # prev_pose = cur_pose
+            prev_pose = transf
 
             # Break loop if no more images in data sequence
             if vid is None:
