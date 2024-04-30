@@ -172,6 +172,18 @@ class VisualOdometry():
         _, R, tvec, _ = cv2.recoverPose(E, q1, q2, self.K, mask)
 
         return self.form_transf(R, tvec.squeeze())
+    
+    def refine_pose(self, init_3dpoints, img_pts):
+        ret, rvec, tvec = cv2.solvePnP(init_3dpoints, img_pts, self.K, self.D, flags=cv2.SOLVEPNP_ITERATIVE) #cv2.SOLVEPNP_EPNP
+        if ret:
+            R, _ = cv2.Rodrigues(rvec)
+            
+            return self.form_transf(R, tvec.squeeze())
+        else:
+            if debug:
+                print("\n\nCound not refine pose")
+            exit()
+             
         
     def plot(self, ax_2d, estimated_path, gt_path):
         # Clear axis
@@ -297,7 +309,7 @@ class VisualOdometry():
         return reproj_errors
 
 def main():
-    data_dir = '/home/gilbertogonzalez/Downloads/KITTI_data_gray/dataset/sequences/02/'
+    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/02/'
     '''
     Sequences for demo:
         - sequence 09: 0-257
@@ -311,7 +323,7 @@ def main():
     Q = []
     optimized_Q = []
 
-    vid = None #cv2.VideoCapture('/home/gilbertogonzalez/Downloads/test.MOV')
+    vid = None #cv2.VideoCapture('/home/gilberto/Downloads/test.MOV')
     vid_frame = None
     prev_frame = None
 
@@ -361,6 +373,15 @@ def main():
             # Compute transformation between frames
             transf = np.nan_to_num(vo.get_pose(q1, q2), neginf=0, posinf=0)
 
+            # Refine transformation
+            init_3dpts = []
+            for u_q1, u_q2 in zip(q1, q2):
+                init_3dpts.append(vo.triangulate(u_q1, u_q2, prev_pose, cur_pose))
+            init_3dpts = np.array(init_3dpts)
+
+            transf = np.nan_to_num(vo.refine_pose(init_3dpts, q2), neginf=0, posinf=0)
+            print("")
+
             # Update current pose by multiplying inverse transformation
             cur_pose = cur_pose @ np.linalg.inv(transf)
 
@@ -370,6 +391,7 @@ def main():
 
             rvec_pose, _ = cv2.Rodrigues(cur_pose[:3, :3])
             tvec_pose = cur_pose[:3, 3]
+            # print(tvec_pose)
 
             Q_local = []
             for u_q1, u_q2 in zip(q1, q2):
@@ -512,8 +534,8 @@ def main():
     cv2.destroyWindow("VO")
 
 if __name__ == "__main__":
-    debug = True
+    debug = False
     output_txt = False
-    ba = True
+    ba = False
 
     main()
