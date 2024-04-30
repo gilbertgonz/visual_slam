@@ -7,20 +7,22 @@ import time
 from libs.plotter import Plotter
 from libs.vo_utils import VisualOdometry
 
+from scipy.optimize import least_squares
+from scipy.sparse import lil_matrix
 
 ## TODO:
 # - better user experience
 # - keep digging for better estimation algorithms (loop closure?) (BA?)
 
 
-def main(q, debug, output_txt, ba):
-    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/02/'
+def main(q, debug, ba):
+    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/09/'
     '''
     Sequences for demo:
         - sequence 09: 0-257
         - sequence 02: 0-300
     '''
-    vo = VisualOdometry(data_dir, debug, output_txt, ba)
+    vo = VisualOdometry(data_dir, debug, ba)
 
     gt_path = []
     estimated_path = []
@@ -92,7 +94,7 @@ def main(q, debug, output_txt, ba):
                 initial_params = np.hstack((camera_params.ravel(), Q_local_arr.ravel()))
 
                 result = least_squares(vo.bundle_adjustment_residuals, initial_params, jac_sparsity=None, verbose=2, 
-                                       x_scale='jac', ftol=1e-3, method='trf', args=(vo.K, vo.D, q2))
+                                       x_scale='jac', ftol=1e-1, method='trf', args=(vo.K, vo.D, q2))
                 
                 # Extract the optimized camera pose and 3D points from the result
                 optimized_params = result.x
@@ -115,7 +117,7 @@ def main(q, debug, output_txt, ba):
                 Q_arr = np.array(Q)
                 Q_arr_downsampled = Q_arr[::3]
                 with open("3d_pts.txt", 'w') as file:
-                    np.savetxt(file, optimized_Q_arr, fmt='%f')
+                    np.savetxt(file, Q_arr, fmt='%f')
             
             # Update estimated path 
             estimated_path.append(tvec_pose)
@@ -124,10 +126,10 @@ def main(q, debug, output_txt, ba):
             if vo.gt_poses and vid is None:
                 gt_path.append(vo.gt_poses[counter][:3, 3])
             
-            # Scalar error value between each point
-            diff = np.linalg.norm(np.array(gt_path) - np.array(estimated_path), axis=1)
-            if debug:
-                print(f"gt error: {np.mean(diff)}")
+                # Scalar error value between each point
+                diff = np.linalg.norm(np.array(gt_path) - np.array(estimated_path), axis=1)
+                if debug:
+                    print(f"gt error: {np.mean(diff)}")
 
             # Show optical flow
             if vid is None:
@@ -140,7 +142,7 @@ def main(q, debug, output_txt, ba):
                 cv2.circle(frame, (int(q2[i][0]), int(q2[i][1])), 2, (0, 255, 0), -1)
                 cv2.line(frame, (int(q1[i][0]), int(q1[i][1])), (int(q2[i][0]), int(q2[i][1])), (0, 0, 255), 1)
                         
-            cv2.imshow("VO", frame)
+            cv2.imshow("Image", frame)
 
             # Update previous frame ever m frames
             if counter % m == 0:
@@ -172,7 +174,6 @@ def main(q, debug, output_txt, ba):
     # Clean up
     if vid:
         vid.release()
-    # vis.destroy_window()
     cv2.destroyWindow("VO")
 
 def plotter_target(q):
@@ -180,10 +181,11 @@ def plotter_target(q):
     Plot target function
     '''
     plotter = Plotter(q)
+    # plotter.plot_opencv()
     plotter.plot()
 
 if __name__ == "__main__":
-    debug = True
+    debug = False
     output_txt = False
     ba = False
 
@@ -194,7 +196,7 @@ if __name__ == "__main__":
         plot_process = Process(target=plotter_target, args=(q,))
         plot_process.start()
 
-        main(q, debug, output_txt, ba)
+        main(q, debug, ba)
 
     finally:
         if plot_process.is_alive():

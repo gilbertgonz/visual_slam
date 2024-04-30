@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 class VisualOdometry():
-    def __init__(self, data_dir, debug, output_txt, ba):
+    def __init__(self, data_dir, debug, ba):
         # Params
         self.K, self.P   = self.load_calib(os.path.join(data_dir, 'calib.txt'))
         self.D           = np.zeros(5)
@@ -11,7 +11,6 @@ class VisualOdometry():
         self.image_paths = self.load_image_paths(os.path.join(data_dir, 'image_0'))
 
         self.debug      = debug
-        self.output_txt = output_txt
         self.ba         = ba
 
         # ORB
