@@ -12,23 +12,28 @@ from scipy.sparse import lil_matrix
 
 ## TODO:
 # - better user experience
-# - keep digging for better estimation algorithms (loop closure?) (BA?)
+# - keep digging for fixing 3d pointcloud SFM problem (remove clear outliers?) (different triangulation algo?)
 
 
-def main(q, debug, ba):
-    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/09/'
+def main(q, debug):
+    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/07/'
     '''
     Sequences for demo:
         - sequence 09: 0-257
         - sequence 02: 0-300
+        - sequence 14: broken
+        - sequence 20: broken
+        - sequence 07: pretty good
     '''
-    vo = VisualOdometry(data_dir, debug, ba)
+    vo = VisualOdometry(data_dir, debug)
 
     gt_path = []
     estimated_path = []
     time_list = []
     Q = []
     optimized_Q = []
+    Q_arr_downsampled = []
+    poses = []
 
     vid = None #cv2.VideoCapture('/home/gilberto/Downloads/test.MOV')
     vid_frame = None
@@ -56,6 +61,7 @@ def main(q, debug, ba):
         if counter == 0:
             cur_pose = np.eye(4)
             prev_pose = np.eye(4)
+            frame = cv2.cvtColor(cv2.imread(vo.image_paths[counter], cv2.IMREAD_GRAYSCALE), cv2.COLOR_GRAY2BGR)
             if vid:
                 prev_frame = vid_frame            
         else:
@@ -67,6 +73,7 @@ def main(q, debug, ba):
             
             # Update current pose by multiplying inverse transformation
             cur_pose = cur_pose @ np.linalg.inv(transf)
+            poses.append(cur_pose)
             
             # Update extrinsic vectors
             rvec_tf, _ = cv2.Rodrigues(transf[:3, :3])
@@ -103,7 +110,7 @@ def main(q, debug, ba):
 
                 tvec_pose = optimized_cam_pose[3:]
                 optimized_Q.append(optimized_points3d)
-                optimized_Q_arr = np.concatenate(optimized_Q, axis=0)
+                optimized_Q_arr = np.array(optimized_Q)
 
                 reprj_err = vo.calc_reprojection_error(vo.K, vo.D, optimized_cam_pose[:3], optimized_cam_pose[3:], np.array(optimized_points3d), q2)
 
@@ -113,9 +120,9 @@ def main(q, debug, ba):
                     print(f"- new pose : {optimized_cam_pose[3:]}")
 
             # Save all 3d points to txt file
+            Q_arr = np.array(Q)
+            Q_arr_downsampled = Q_arr[::4]
             if output_txt:
-                Q_arr = np.array(Q)
-                Q_arr_downsampled = Q_arr[::3]
                 with open("3d_pts.txt", 'w') as file:
                     np.savetxt(file, Q_arr, fmt='%f')
             
@@ -160,7 +167,7 @@ def main(q, debug, ba):
             if key == 27: # ESC
                 break
 
-        q.put((estimated_path, gt_path))
+        q.put((estimated_path, gt_path, Q_arr_downsampled, poses, frame))
 
         # Update counter
         counter += 1
@@ -182,10 +189,11 @@ def plotter_target(q):
     '''
     plotter = Plotter(q)
     # plotter.plot_opencv()
-    plotter.plot()
+    # plotter.plot()
+    plotter.plot_pang()
 
 if __name__ == "__main__":
-    debug = False
+    debug = True
     output_txt = False
     ba = False
 
@@ -196,7 +204,7 @@ if __name__ == "__main__":
         plot_process = Process(target=plotter_target, args=(q,))
         plot_process.start()
 
-        main(q, debug, ba)
+        main(q, debug)
 
     finally:
         if plot_process.is_alive():

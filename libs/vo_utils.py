@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 
 class VisualOdometry():
-    def __init__(self, data_dir, debug, ba):
+    def __init__(self, data_dir, debug):
         # Params
         self.K, self.P   = self.load_calib(os.path.join(data_dir, 'calib.txt'))
         self.D           = np.zeros(5)
@@ -11,7 +11,6 @@ class VisualOdometry():
         self.image_paths = self.load_image_paths(os.path.join(data_dir, 'image_0'))
 
         self.debug      = debug
-        self.ba         = ba
 
         # ORB
         self.orb = cv2.ORB_create(3000)
@@ -159,7 +158,7 @@ class VisualOdometry():
 
         return self.form_transf(R, tvec.squeeze())
 
-    def triangulate(self, pts1, pts2, P1, P2):       
+    def triangulate(self, pts1, pts2, P1, P2, threshold=3.0):       
         P1 = P1[:3, :]
         P2 = P2[:3, :]
 
@@ -172,7 +171,7 @@ class VisualOdometry():
         points_3D = points_3D[:3, :].T
 
         return points_3D.flatten()
-
+    
     def calc_reprojection_error(self, K, D, rvec, tvec, objp, imgpoints):
         """Calculates reprojection error using 2D Euclidean distance
 

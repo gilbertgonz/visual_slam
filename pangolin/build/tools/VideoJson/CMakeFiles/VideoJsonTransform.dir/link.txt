@@ -1,0 +1,1 @@
+/usr/bin/c++ -std=c++14 -Wall -Wextra  -fPIC -O3 -DNDEBUG -rdynamic CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o -o VideoJsonTransform  ../../src/lib_pangolin.a -lGL -lGLU -lGLEW -lX11 -lrt -lpthread -lpython3.10 

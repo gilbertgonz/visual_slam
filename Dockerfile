@@ -6,6 +6,8 @@ RUN apt update && apt install -y \
     python3-pip libgl1 libglib2.0-0 x11-apps \
     && pip install -r requirements.txt
 
+# TODO: Clone, build, and install pangolin
+
 COPY vo.py /app/vo.py
 
 RUN chmod +x /app/vo.py
