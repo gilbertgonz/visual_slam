@@ -3,6 +3,7 @@ import numpy as np
 import cv2
 from multiprocessing import Process, Queue
 import time
+import os
 
 from libs.plotter import Plotter
 from libs.vo_utils import VisualOdometry
@@ -11,12 +12,12 @@ from scipy.optimize import least_squares
 from scipy.sparse import lil_matrix
 
 ## TODO:
-# - better user experience
-# - keep digging for fixing 3d pointcloud SFM problem (remove clear outliers?) (different triangulation algo?)
+# - fix buggy image
+# - keep digging for fixing 3d pointcloud SFM problem (remove obvious outliers?) (different triangulation algo?)
 
 
 def main(q, debug):
-    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/07/'
+    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/09/'
     '''
     Sequences for demo:
         - sequence 09: 0-257
@@ -140,7 +141,7 @@ def main(q, debug):
 
             # Show optical flow
             if vid is None:
-                frame = cv2.cvtColor(cv2.imread(vo.image_paths[counter], cv2.IMREAD_GRAYSCALE), cv2.COLOR_GRAY2BGR)
+                frame = cv2.cvtColor(cv2.imread(vo.image_paths[counter], cv2.IMREAD_GRAYSCALE), cv2.COLOR_GRAY2RGB)
                 # cv2.drawFrameAxes(frame, vo.K, vo.D, rvec, tvec, 0.5, 2)
             else:
                 frame = vid_frame
@@ -149,7 +150,7 @@ def main(q, debug):
                 cv2.circle(frame, (int(q2[i][0]), int(q2[i][1])), 2, (0, 255, 0), -1)
                 cv2.line(frame, (int(q1[i][0]), int(q1[i][1])), (int(q2[i][0]), int(q2[i][1])), (0, 0, 255), 1)
                         
-            cv2.imshow("Image", frame)
+            # cv2.imshow("Image", frame)
 
             # Update previous frame ever m frames
             if counter % m == 0:
@@ -178,6 +179,10 @@ def main(q, debug):
         if debug:
             print(f"avg time: {np.mean(time_arr)}")
 
+        # Check if plotter process is dead
+        if not plot_process.is_alive():
+            os._exit(-1)
+
     # Clean up
     if vid:
         vid.release()
@@ -193,7 +198,7 @@ def plotter_target(q):
     plotter.plot_pang()
 
 if __name__ == "__main__":
-    debug = True
+    debug = False
     output_txt = False
     ba = False
 
