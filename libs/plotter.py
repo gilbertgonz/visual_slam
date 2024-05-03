@@ -41,11 +41,11 @@ class Plotter():
         panel = pangolin.CreatePanel('ui')
         panel.SetBounds(0.0, 1.0, 0.0, 130/640.)
 
-        self.img_button = pangolin.VarBool('ui.Show Image', value=False, toggle=False)
+        self.img_button = pangolin.VarBool('ui.Show Image', value=True, toggle=False)
         self.show_img = False
-        self.pts_button = pangolin.VarBool('ui.Show Points', value=False, toggle=False)
+        self.pts_button = pangolin.VarBool('ui.Show Points', value=True, toggle=False)
         self.show_pts = False
-        self.gt_button = pangolin.VarBool('ui.Show GT', value=False, toggle=False)
+        self.gt_button = pangolin.VarBool('ui.Show GT', value=True, toggle=False)
         self.show_gt = False
         self.exit_button = pangolin.VarBool('ui.Exit', value=False, toggle=False)
 
