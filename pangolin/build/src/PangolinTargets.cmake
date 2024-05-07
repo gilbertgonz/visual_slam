@@ -49,7 +49,7 @@ set_property(TARGET _pangolin APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(_pangolin PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "C;CXX"
   IMPORTED_LINK_INTERFACE_LIBRARIES_RELEASE "/usr/lib/x86_64-linux-gnu/libGL.so;/usr/lib/x86_64-linux-gnu/libGLU.so;/usr/lib/x86_64-linux-gnu/libGLEW.so;/usr/lib/x86_64-linux-gnu/libX11.so;rt;pthread;/usr/lib/x86_64-linux-gnu/libpython3.10.so"
-  IMPORTED_LOCATION_RELEASE "/home/gilberto/projects/pangolin/build/src/lib_pangolin.a"
+  IMPORTED_LOCATION_RELEASE "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/lib_pangolin.a"
   )
 
 # This file does not depend on other imported targets which have

@@ -1,3 +1,3 @@
 src/CMakeFiles/_pangolin.dir/fonts.c.o: \
- /home/gilberto/projects/pangolin/build/src/fonts.c \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/fonts.c \
  /usr/include/stdc-predef.h

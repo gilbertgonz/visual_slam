@@ -1,8 +1,8 @@
 src/CMakeFiles/_pangolin.dir/video/video_interface_factory.cpp.o: \
- /home/gilberto/projects/pangolin/src/video/video_interface_factory.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/video/video_interface_factory.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_interface.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/picojson.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_interface.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/picojson.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/utility \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -174,13 +174,13 @@ src/CMakeFiles/_pangolin.dir/video/video_interface_factory.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/compat/type_traits.h \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/compat/type_traits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -191,13 +191,13 @@ src/CMakeFiles/_pangolin.dir/video/video_interface_factory.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h /usr/include/inttypes.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/stream_info.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/memcpy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/stream_info.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/memcpy.h \
  /usr/include/c++/11/cstddef /usr/include/c++/11/functional \
  /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/pixel_format.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/pixel_format.h \
  /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -210,7 +210,7 @@ src/CMakeFiles/_pangolin.dir/video/video_interface_factory.cpp.o: \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h \
- /home/gilberto/projects/pangolin/include/pangolin/factory/factory_registry.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/uri.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/params.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/type_convert.h
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/factory/factory_registry.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/uri.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/params.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/type_convert.h

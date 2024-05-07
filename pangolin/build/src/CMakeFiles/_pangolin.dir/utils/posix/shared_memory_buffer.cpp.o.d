@@ -1,7 +1,7 @@
 src/CMakeFiles/_pangolin.dir/utils/posix/shared_memory_buffer.cpp.o: \
- /home/gilberto/projects/pangolin/src/utils/posix/shared_memory_buffer.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/utils/posix/shared_memory_buffer.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/posix/shared_memory_buffer.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/posix/shared_memory_buffer.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

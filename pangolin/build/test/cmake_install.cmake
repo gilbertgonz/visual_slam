@@ -1,4 +1,4 @@
-# Install script for directory: /home/gilberto/projects/pangolin/test
+# Install script for directory: /home/gilbertogonzalez/projects/visual_odom/pangolin/test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gilberto/projects/pangolin/build/test/log/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/test/log/cmake_install.cmake")
 
 endif()
 

@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/home/gilberto/projects/pangolin/include -I/home/gilberto/projects/pangolin/build/src/include -I/usr/include/eigen3 -I/usr/include/python3.10
+C_INCLUDES = -I/home/gilbertogonzalez/projects/visual_odom/pangolin/include -I/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/include -I/usr/include/eigen3 -I/usr/include/python3.10
 
 C_FLAGS = -O3 -DNDEBUG   -w
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/gilberto/projects/pangolin/include -I/home/gilberto/projects/pangolin/build/src/include -I/usr/include/eigen3 -I/usr/include/python3.10
+CXX_INCLUDES = -I/home/gilbertogonzalez/projects/visual_odom/pangolin/include -I/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/include -I/usr/include/eigen3 -I/usr/include/python3.10
 
 CXX_FLAGS = -Wall -Wno-error=deprecated-declarations -std=c++14 -Wall -Wextra  -fPIC -O3 -DNDEBUG   -w
 

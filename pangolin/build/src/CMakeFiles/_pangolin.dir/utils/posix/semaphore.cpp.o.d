@@ -1,7 +1,7 @@
 src/CMakeFiles/_pangolin.dir/utils/posix/semaphore.cpp.o: \
- /home/gilberto/projects/pangolin/src/utils/posix/semaphore.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/utils/posix/semaphore.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/posix/semaphore.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/posix/semaphore.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

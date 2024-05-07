@@ -34,15 +34,10 @@ class Plotter():
         self.dcam.SetBounds(0.0, 1.0, 0.0, 1.0, -window_h/window_w)
         self.dcam.SetHandler(handler)
 
-        # Create display image
-        self.dimg = pangolin.Display('image')
-
         # Panel
         panel = pangolin.CreatePanel('ui')
-        panel.SetBounds(0.0, 1.0, 0.0, 130/640.)
+        panel.SetBounds(0.0, 0.12, 0.0, 130/640.)
 
-        self.img_button = pangolin.VarBool('ui.Show Image', value=True, toggle=False)
-        self.show_img = False
         self.pts_button = pangolin.VarBool('ui.Show Points', value=True, toggle=False)
         self.show_pts = False
         self.gt_button = pangolin.VarBool('ui.Show GT', value=True, toggle=False)
@@ -146,7 +141,7 @@ class Plotter():
 
             # Clear plot
             gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
-            gl.glClearColor(1.0, 1.0, 1.0, 1.0)
+            gl.glClearColor(0.0, 0.0, 0.0, 0.0)
             self.dcam.Activate(self.scam) 
             # self.update_model_view(self.scam.GetModelViewMatrix(), cur_pose)
             
@@ -168,16 +163,16 @@ class Plotter():
             # Draw camera pose
             for pose in new_poses:
                 gl.glLineWidth(1)
-                gl.glColor3f(0.0, 0.0, 1.0)
+                gl.glColor3f(0.0, 1.0, 1.0)
                 pangolin.DrawCamera(pose, 0.5, 0.75, 0.8)
 
             # Handle points toggle
             if pangolin.Pushed(self.pts_button):
                 self.show_pts = not self.show_pts
             if self.show_pts:
-                # Draw Point Cloud
+                # Draw 3d points
                 gl.glPointSize(1)
-                gl.glColor3f(1.0, 0.0, 0.0)
+                gl.glColor3f(0.3099, 0.3099,0.184314)
                 pangolin.DrawPoints(Q_reshaped)
 
             # Handle gt toggle
@@ -187,21 +182,8 @@ class Plotter():
                 if gt:
                     # Draw gt line
                     gl.glLineWidth(2)
-                    gl.glColor3f(1.0, 0.0, 0.0)
+                    gl.glColor3f(0.0, 1.0, 0.0)
                     pangolin.DrawLine(gt_reshaped)
-
-            # Handle image toggle
-            if pangolin.Pushed(self.img_button):
-                self.show_img = not self.show_img
-            if self.show_img:
-                # Display the image
-                img_h, img_w, _ = flipped_img.shape
-                self.dimg.SetBounds(0.3, 0.0, 1.0, 0.2, img_w/img_h)
-                texture = pangolin.GlTexture(img_w, img_h, gl.GL_RGB, False, 0, gl.GL_RGB, gl.GL_UNSIGNED_BYTE)
-                texture.Upload(flipped_img, gl.GL_RGB, gl.GL_UNSIGNED_BYTE)
-                self.dimg.Activate()
-                gl.glColor3f(1.0, 1.0, 1.0)
-                texture.RenderToViewport()
 
             # Handle exit toggle
             if pangolin.Pushed(self.exit_button):

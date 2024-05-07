@@ -1,10 +1,10 @@
 src/CMakeFiles/_pangolin.dir/image/image_io_tga.cpp.o: \
- /home/gilberto/projects/pangolin/src/image/image_io_tga.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/image/image_io_tga.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -155,12 +155,12 @@ src/CMakeFiles/_pangolin.dir/image/image_io_tga.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image_io.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/typed_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/managed_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/memcpy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image_io.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/typed_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/managed_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/memcpy.h \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
@@ -170,6 +170,6 @@ src/CMakeFiles/_pangolin.dir/image/image_io_tga.cpp.o: \
  /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/limits \
- /home/gilberto/projects/pangolin/include/pangolin/image/copy.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/pixel_format.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_extension.h
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/copy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/pixel_format.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_extension.h

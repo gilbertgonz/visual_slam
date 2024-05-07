@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gilberto/projects/pangolin
+CMAKE_SOURCE_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
+CMAKE_BINARY_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/gilberto/projects/pangolin/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/gilberto/projects/pangolin/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/gilberto/projects/pangolin/build/CPackSourceConfig.cmake
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles /home/gilberto/projects/pangolin/build/examples/SimpleDisplay//CMakeFiles/progress.marks
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles /home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleDisplay//CMakeFiles/progress.marks
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/clean
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/preinstall
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/preinstall
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/rule:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/rule
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/rule
 .PHONY : examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/rule
 
 # Convenience name for target.
@@ -192,7 +192,7 @@ SimpleDisplay: examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/rule
 
 # fast build rule for target.
 SimpleDisplay/fast:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build.make examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build.make examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build
 .PHONY : SimpleDisplay/fast
 
 main.o: main.cpp.o
@@ -200,7 +200,7 @@ main.o: main.cpp.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build.make examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/main.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build.make examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -208,7 +208,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build.make examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/main.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build.make examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -216,7 +216,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build.make examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/main.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build.make examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -248,6 +248,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

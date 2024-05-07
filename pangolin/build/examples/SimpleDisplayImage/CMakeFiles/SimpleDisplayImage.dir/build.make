@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gilberto/projects/pangolin
+CMAKE_SOURCE_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
+CMAKE_BINARY_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin/build
 
 # Include any dependencies generated for this target.
 include examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/depend.make
@@ -72,16 +72,16 @@ include examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/flags.make
 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/main.cpp.o: examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/flags.make
 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/main.cpp.o: ../examples/SimpleDisplayImage/main.cpp
 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/main.cpp.o: examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/main.cpp.o"
-	cd /home/gilberto/projects/pangolin/build/examples/SimpleDisplayImage && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/main.cpp.o -MF CMakeFiles/SimpleDisplayImage.dir/main.cpp.o.d -o CMakeFiles/SimpleDisplayImage.dir/main.cpp.o -c /home/gilberto/projects/pangolin/examples/SimpleDisplayImage/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/main.cpp.o"
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleDisplayImage && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/main.cpp.o -MF CMakeFiles/SimpleDisplayImage.dir/main.cpp.o.d -o CMakeFiles/SimpleDisplayImage.dir/main.cpp.o -c /home/gilbertogonzalez/projects/visual_odom/pangolin/examples/SimpleDisplayImage/main.cpp
 
 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/SimpleDisplayImage.dir/main.cpp.i"
-	cd /home/gilberto/projects/pangolin/build/examples/SimpleDisplayImage && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gilberto/projects/pangolin/examples/SimpleDisplayImage/main.cpp > CMakeFiles/SimpleDisplayImage.dir/main.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleDisplayImage && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gilbertogonzalez/projects/visual_odom/pangolin/examples/SimpleDisplayImage/main.cpp > CMakeFiles/SimpleDisplayImage.dir/main.cpp.i
 
 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/SimpleDisplayImage.dir/main.cpp.s"
-	cd /home/gilberto/projects/pangolin/build/examples/SimpleDisplayImage && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gilberto/projects/pangolin/examples/SimpleDisplayImage/main.cpp -o CMakeFiles/SimpleDisplayImage.dir/main.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleDisplayImage && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gilbertogonzalez/projects/visual_odom/pangolin/examples/SimpleDisplayImage/main.cpp -o CMakeFiles/SimpleDisplayImage.dir/main.cpp.s
 
 # Object files for target SimpleDisplayImage
 SimpleDisplayImage_OBJECTS = \
@@ -99,18 +99,18 @@ examples/SimpleDisplayImage/SimpleDisplayImage: /usr/lib/x86_64-linux-gnu/libGLE
 examples/SimpleDisplayImage/SimpleDisplayImage: /usr/lib/x86_64-linux-gnu/libX11.so
 examples/SimpleDisplayImage/SimpleDisplayImage: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 examples/SimpleDisplayImage/SimpleDisplayImage: examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SimpleDisplayImage"
-	cd /home/gilberto/projects/pangolin/build/examples/SimpleDisplayImage && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SimpleDisplayImage.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable SimpleDisplayImage"
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleDisplayImage && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/SimpleDisplayImage.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/build: examples/SimpleDisplayImage/SimpleDisplayImage
 .PHONY : examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/build
 
 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/clean:
-	cd /home/gilberto/projects/pangolin/build/examples/SimpleDisplayImage && $(CMAKE_COMMAND) -P CMakeFiles/SimpleDisplayImage.dir/cmake_clean.cmake
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleDisplayImage && $(CMAKE_COMMAND) -P CMakeFiles/SimpleDisplayImage.dir/cmake_clean.cmake
 .PHONY : examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/clean
 
 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/depend:
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilberto/projects/pangolin /home/gilberto/projects/pangolin/examples/SimpleDisplayImage /home/gilberto/projects/pangolin/build /home/gilberto/projects/pangolin/build/examples/SimpleDisplayImage /home/gilberto/projects/pangolin/build/examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilbertogonzalez/projects/visual_odom/pangolin /home/gilbertogonzalez/projects/visual_odom/pangolin/examples/SimpleDisplayImage /home/gilbertogonzalez/projects/visual_odom/pangolin/build /home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleDisplayImage /home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/depend
 

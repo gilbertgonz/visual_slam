@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gilberto/projects/pangolin
+CMAKE_SOURCE_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
+CMAKE_BINARY_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/gilberto/projects/pangolin/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/gilberto/projects/pangolin/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/gilberto/projects/pangolin/build/CPackSourceConfig.cmake
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles /home/gilberto/projects/pangolin/build/src//CMakeFiles/progress.marks
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles /home/gilbertogonzalez/projects/visual_odom/pangolin/build/src//CMakeFiles/progress.marks
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/CMakeFiles/_pangolin.dir/rule:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/_pangolin.dir/rule
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/_pangolin.dir/rule
 .PHONY : src/CMakeFiles/_pangolin.dir/rule
 
 # Convenience name for target.
@@ -192,7 +192,7 @@ _pangolin: src/CMakeFiles/_pangolin.dir/rule
 
 # fast build rule for target.
 _pangolin/fast:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/build
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/build
 .PHONY : _pangolin/fast
 
 console/ConsoleView.o: console/ConsoleView.cpp.o
@@ -200,7 +200,7 @@ console/ConsoleView.o: console/ConsoleView.cpp.o
 
 # target to build an object file
 console/ConsoleView.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.o
 .PHONY : console/ConsoleView.cpp.o
 
 console/ConsoleView.i: console/ConsoleView.cpp.i
@@ -208,7 +208,7 @@ console/ConsoleView.i: console/ConsoleView.cpp.i
 
 # target to preprocess a source file
 console/ConsoleView.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.i
 .PHONY : console/ConsoleView.cpp.i
 
 console/ConsoleView.s: console/ConsoleView.cpp.s
@@ -216,7 +216,7 @@ console/ConsoleView.s: console/ConsoleView.cpp.s
 
 # target to generate assembly for a file
 console/ConsoleView.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.s
 .PHONY : console/ConsoleView.cpp.s
 
 display/device/display_x11.o: display/device/display_x11.cpp.o
@@ -224,7 +224,7 @@ display/device/display_x11.o: display/device/display_x11.cpp.o
 
 # target to build an object file
 display/device/display_x11.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/device/display_x11.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/device/display_x11.cpp.o
 .PHONY : display/device/display_x11.cpp.o
 
 display/device/display_x11.i: display/device/display_x11.cpp.i
@@ -232,7 +232,7 @@ display/device/display_x11.i: display/device/display_x11.cpp.i
 
 # target to preprocess a source file
 display/device/display_x11.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/device/display_x11.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/device/display_x11.cpp.i
 .PHONY : display/device/display_x11.cpp.i
 
 display/device/display_x11.s: display/device/display_x11.cpp.s
@@ -240,7 +240,7 @@ display/device/display_x11.s: display/device/display_x11.cpp.s
 
 # target to generate assembly for a file
 display/device/display_x11.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/device/display_x11.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/device/display_x11.cpp.s
 .PHONY : display/device/display_x11.cpp.s
 
 display/display.o: display/display.cpp.o
@@ -248,7 +248,7 @@ display/display.o: display/display.cpp.o
 
 # target to build an object file
 display/display.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/display.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/display.cpp.o
 .PHONY : display/display.cpp.o
 
 display/display.i: display/display.cpp.i
@@ -256,7 +256,7 @@ display/display.i: display/display.cpp.i
 
 # target to preprocess a source file
 display/display.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/display.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/display.cpp.i
 .PHONY : display/display.cpp.i
 
 display/display.s: display/display.cpp.s
@@ -264,7 +264,7 @@ display/display.s: display/display.cpp.s
 
 # target to generate assembly for a file
 display/display.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/display.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/display.cpp.s
 .PHONY : display/display.cpp.s
 
 display/image_view.o: display/image_view.cpp.o
@@ -272,7 +272,7 @@ display/image_view.o: display/image_view.cpp.o
 
 # target to build an object file
 display/image_view.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/image_view.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/image_view.cpp.o
 .PHONY : display/image_view.cpp.o
 
 display/image_view.i: display/image_view.cpp.i
@@ -280,7 +280,7 @@ display/image_view.i: display/image_view.cpp.i
 
 # target to preprocess a source file
 display/image_view.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/image_view.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/image_view.cpp.i
 .PHONY : display/image_view.cpp.i
 
 display/image_view.s: display/image_view.cpp.s
@@ -288,7 +288,7 @@ display/image_view.s: display/image_view.cpp.s
 
 # target to generate assembly for a file
 display/image_view.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/image_view.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/image_view.cpp.s
 .PHONY : display/image_view.cpp.s
 
 display/opengl_render_state.o: display/opengl_render_state.cpp.o
@@ -296,7 +296,7 @@ display/opengl_render_state.o: display/opengl_render_state.cpp.o
 
 # target to build an object file
 display/opengl_render_state.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/opengl_render_state.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/opengl_render_state.cpp.o
 .PHONY : display/opengl_render_state.cpp.o
 
 display/opengl_render_state.i: display/opengl_render_state.cpp.i
@@ -304,7 +304,7 @@ display/opengl_render_state.i: display/opengl_render_state.cpp.i
 
 # target to preprocess a source file
 display/opengl_render_state.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/opengl_render_state.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/opengl_render_state.cpp.i
 .PHONY : display/opengl_render_state.cpp.i
 
 display/opengl_render_state.s: display/opengl_render_state.cpp.s
@@ -312,7 +312,7 @@ display/opengl_render_state.s: display/opengl_render_state.cpp.s
 
 # target to generate assembly for a file
 display/opengl_render_state.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/opengl_render_state.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/opengl_render_state.cpp.s
 .PHONY : display/opengl_render_state.cpp.s
 
 display/view.o: display/view.cpp.o
@@ -320,7 +320,7 @@ display/view.o: display/view.cpp.o
 
 # target to build an object file
 display/view.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/view.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/view.cpp.o
 .PHONY : display/view.cpp.o
 
 display/view.i: display/view.cpp.i
@@ -328,7 +328,7 @@ display/view.i: display/view.cpp.i
 
 # target to preprocess a source file
 display/view.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/view.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/view.cpp.i
 .PHONY : display/view.cpp.i
 
 display/view.s: display/view.cpp.s
@@ -336,7 +336,7 @@ display/view.s: display/view.cpp.s
 
 # target to generate assembly for a file
 display/view.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/view.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/view.cpp.s
 .PHONY : display/view.cpp.s
 
 display/viewport.o: display/viewport.cpp.o
@@ -344,7 +344,7 @@ display/viewport.o: display/viewport.cpp.o
 
 # target to build an object file
 display/viewport.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/viewport.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/viewport.cpp.o
 .PHONY : display/viewport.cpp.o
 
 display/viewport.i: display/viewport.cpp.i
@@ -352,7 +352,7 @@ display/viewport.i: display/viewport.cpp.i
 
 # target to preprocess a source file
 display/viewport.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/viewport.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/viewport.cpp.i
 .PHONY : display/viewport.cpp.i
 
 display/viewport.s: display/viewport.cpp.s
@@ -360,7 +360,7 @@ display/viewport.s: display/viewport.cpp.s
 
 # target to generate assembly for a file
 display/viewport.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/viewport.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/viewport.cpp.s
 .PHONY : display/viewport.cpp.s
 
 display/widgets/widgets.o: display/widgets/widgets.cpp.o
@@ -368,7 +368,7 @@ display/widgets/widgets.o: display/widgets/widgets.cpp.o
 
 # target to build an object file
 display/widgets/widgets.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/widgets/widgets.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/widgets/widgets.cpp.o
 .PHONY : display/widgets/widgets.cpp.o
 
 display/widgets/widgets.i: display/widgets/widgets.cpp.i
@@ -376,7 +376,7 @@ display/widgets/widgets.i: display/widgets/widgets.cpp.i
 
 # target to preprocess a source file
 display/widgets/widgets.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/widgets/widgets.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/widgets/widgets.cpp.i
 .PHONY : display/widgets/widgets.cpp.i
 
 display/widgets/widgets.s: display/widgets/widgets.cpp.s
@@ -384,7 +384,7 @@ display/widgets/widgets.s: display/widgets/widgets.cpp.s
 
 # target to generate assembly for a file
 display/widgets/widgets.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/widgets/widgets.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/display/widgets/widgets.cpp.s
 .PHONY : display/widgets/widgets.cpp.s
 
 fonts.o: fonts.c.o
@@ -392,7 +392,7 @@ fonts.o: fonts.c.o
 
 # target to build an object file
 fonts.c.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/fonts.c.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/fonts.c.o
 .PHONY : fonts.c.o
 
 fonts.i: fonts.c.i
@@ -400,7 +400,7 @@ fonts.i: fonts.c.i
 
 # target to preprocess a source file
 fonts.c.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/fonts.c.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/fonts.c.i
 .PHONY : fonts.c.i
 
 fonts.s: fonts.c.s
@@ -408,7 +408,7 @@ fonts.s: fonts.c.s
 
 # target to generate assembly for a file
 fonts.c.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/fonts.c.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/fonts.c.s
 .PHONY : fonts.c.s
 
 gl/glchar.o: gl/glchar.cpp.o
@@ -416,7 +416,7 @@ gl/glchar.o: gl/glchar.cpp.o
 
 # target to build an object file
 gl/glchar.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glchar.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glchar.cpp.o
 .PHONY : gl/glchar.cpp.o
 
 gl/glchar.i: gl/glchar.cpp.i
@@ -424,7 +424,7 @@ gl/glchar.i: gl/glchar.cpp.i
 
 # target to preprocess a source file
 gl/glchar.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glchar.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glchar.cpp.i
 .PHONY : gl/glchar.cpp.i
 
 gl/glchar.s: gl/glchar.cpp.s
@@ -432,7 +432,7 @@ gl/glchar.s: gl/glchar.cpp.s
 
 # target to generate assembly for a file
 gl/glchar.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glchar.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glchar.cpp.s
 .PHONY : gl/glchar.cpp.s
 
 gl/gldraw.o: gl/gldraw.cpp.o
@@ -440,7 +440,7 @@ gl/gldraw.o: gl/gldraw.cpp.o
 
 # target to build an object file
 gl/gldraw.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gldraw.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gldraw.cpp.o
 .PHONY : gl/gldraw.cpp.o
 
 gl/gldraw.i: gl/gldraw.cpp.i
@@ -448,7 +448,7 @@ gl/gldraw.i: gl/gldraw.cpp.i
 
 # target to preprocess a source file
 gl/gldraw.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gldraw.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gldraw.cpp.i
 .PHONY : gl/gldraw.cpp.i
 
 gl/gldraw.s: gl/gldraw.cpp.s
@@ -456,7 +456,7 @@ gl/gldraw.s: gl/gldraw.cpp.s
 
 # target to generate assembly for a file
 gl/gldraw.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gldraw.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gldraw.cpp.s
 .PHONY : gl/gldraw.cpp.s
 
 gl/glfont.o: gl/glfont.cpp.o
@@ -464,7 +464,7 @@ gl/glfont.o: gl/glfont.cpp.o
 
 # target to build an object file
 gl/glfont.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glfont.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glfont.cpp.o
 .PHONY : gl/glfont.cpp.o
 
 gl/glfont.i: gl/glfont.cpp.i
@@ -472,7 +472,7 @@ gl/glfont.i: gl/glfont.cpp.i
 
 # target to preprocess a source file
 gl/glfont.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glfont.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glfont.cpp.i
 .PHONY : gl/glfont.cpp.i
 
 gl/glfont.s: gl/glfont.cpp.s
@@ -480,7 +480,7 @@ gl/glfont.s: gl/glfont.cpp.s
 
 # target to generate assembly for a file
 gl/glfont.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glfont.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glfont.cpp.s
 .PHONY : gl/glfont.cpp.s
 
 gl/glpangoglu.o: gl/glpangoglu.cpp.o
@@ -488,7 +488,7 @@ gl/glpangoglu.o: gl/glpangoglu.cpp.o
 
 # target to build an object file
 gl/glpangoglu.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glpangoglu.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glpangoglu.cpp.o
 .PHONY : gl/glpangoglu.cpp.o
 
 gl/glpangoglu.i: gl/glpangoglu.cpp.i
@@ -496,7 +496,7 @@ gl/glpangoglu.i: gl/glpangoglu.cpp.i
 
 # target to preprocess a source file
 gl/glpangoglu.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glpangoglu.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glpangoglu.cpp.i
 .PHONY : gl/glpangoglu.cpp.i
 
 gl/glpangoglu.s: gl/glpangoglu.cpp.s
@@ -504,7 +504,7 @@ gl/glpangoglu.s: gl/glpangoglu.cpp.s
 
 # target to generate assembly for a file
 gl/glpangoglu.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glpangoglu.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/glpangoglu.cpp.s
 .PHONY : gl/glpangoglu.cpp.s
 
 gl/gltext.o: gl/gltext.cpp.o
@@ -512,7 +512,7 @@ gl/gltext.o: gl/gltext.cpp.o
 
 # target to build an object file
 gl/gltext.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltext.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltext.cpp.o
 .PHONY : gl/gltext.cpp.o
 
 gl/gltext.i: gl/gltext.cpp.i
@@ -520,7 +520,7 @@ gl/gltext.i: gl/gltext.cpp.i
 
 # target to preprocess a source file
 gl/gltext.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltext.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltext.cpp.i
 .PHONY : gl/gltext.cpp.i
 
 gl/gltext.s: gl/gltext.cpp.s
@@ -528,7 +528,7 @@ gl/gltext.s: gl/gltext.cpp.s
 
 # target to generate assembly for a file
 gl/gltext.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltext.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltext.cpp.s
 .PHONY : gl/gltext.cpp.s
 
 gl/gltexturecache.o: gl/gltexturecache.cpp.o
@@ -536,7 +536,7 @@ gl/gltexturecache.o: gl/gltexturecache.cpp.o
 
 # target to build an object file
 gl/gltexturecache.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltexturecache.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltexturecache.cpp.o
 .PHONY : gl/gltexturecache.cpp.o
 
 gl/gltexturecache.i: gl/gltexturecache.cpp.i
@@ -544,7 +544,7 @@ gl/gltexturecache.i: gl/gltexturecache.cpp.i
 
 # target to preprocess a source file
 gl/gltexturecache.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltexturecache.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltexturecache.cpp.i
 .PHONY : gl/gltexturecache.cpp.i
 
 gl/gltexturecache.s: gl/gltexturecache.cpp.s
@@ -552,7 +552,7 @@ gl/gltexturecache.s: gl/gltexturecache.cpp.s
 
 # target to generate assembly for a file
 gl/gltexturecache.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltexturecache.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/gl/gltexturecache.cpp.s
 .PHONY : gl/gltexturecache.cpp.s
 
 handler/handler.o: handler/handler.cpp.o
@@ -560,7 +560,7 @@ handler/handler.o: handler/handler.cpp.o
 
 # target to build an object file
 handler/handler.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler.cpp.o
 .PHONY : handler/handler.cpp.o
 
 handler/handler.i: handler/handler.cpp.i
@@ -568,7 +568,7 @@ handler/handler.i: handler/handler.cpp.i
 
 # target to preprocess a source file
 handler/handler.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler.cpp.i
 .PHONY : handler/handler.cpp.i
 
 handler/handler.s: handler/handler.cpp.s
@@ -576,7 +576,7 @@ handler/handler.s: handler/handler.cpp.s
 
 # target to generate assembly for a file
 handler/handler.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler.cpp.s
 .PHONY : handler/handler.cpp.s
 
 handler/handler_glbuffer.o: handler/handler_glbuffer.cpp.o
@@ -584,7 +584,7 @@ handler/handler_glbuffer.o: handler/handler_glbuffer.cpp.o
 
 # target to build an object file
 handler/handler_glbuffer.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_glbuffer.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_glbuffer.cpp.o
 .PHONY : handler/handler_glbuffer.cpp.o
 
 handler/handler_glbuffer.i: handler/handler_glbuffer.cpp.i
@@ -592,7 +592,7 @@ handler/handler_glbuffer.i: handler/handler_glbuffer.cpp.i
 
 # target to preprocess a source file
 handler/handler_glbuffer.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_glbuffer.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_glbuffer.cpp.i
 .PHONY : handler/handler_glbuffer.cpp.i
 
 handler/handler_glbuffer.s: handler/handler_glbuffer.cpp.s
@@ -600,7 +600,7 @@ handler/handler_glbuffer.s: handler/handler_glbuffer.cpp.s
 
 # target to generate assembly for a file
 handler/handler_glbuffer.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_glbuffer.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_glbuffer.cpp.s
 .PHONY : handler/handler_glbuffer.cpp.s
 
 handler/handler_image.o: handler/handler_image.cpp.o
@@ -608,7 +608,7 @@ handler/handler_image.o: handler/handler_image.cpp.o
 
 # target to build an object file
 handler/handler_image.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_image.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_image.cpp.o
 .PHONY : handler/handler_image.cpp.o
 
 handler/handler_image.i: handler/handler_image.cpp.i
@@ -616,7 +616,7 @@ handler/handler_image.i: handler/handler_image.cpp.i
 
 # target to preprocess a source file
 handler/handler_image.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_image.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_image.cpp.i
 .PHONY : handler/handler_image.cpp.i
 
 handler/handler_image.s: handler/handler_image.cpp.s
@@ -624,7 +624,7 @@ handler/handler_image.s: handler/handler_image.cpp.s
 
 # target to generate assembly for a file
 handler/handler_image.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_image.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/handler/handler_image.cpp.s
 .PHONY : handler/handler_image.cpp.s
 
 image/image_io.o: image/image_io.cpp.o
@@ -632,7 +632,7 @@ image/image_io.o: image/image_io.cpp.o
 
 # target to build an object file
 image/image_io.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io.cpp.o
 .PHONY : image/image_io.cpp.o
 
 image/image_io.i: image/image_io.cpp.i
@@ -640,7 +640,7 @@ image/image_io.i: image/image_io.cpp.i
 
 # target to preprocess a source file
 image/image_io.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io.cpp.i
 .PHONY : image/image_io.cpp.i
 
 image/image_io.s: image/image_io.cpp.s
@@ -648,7 +648,7 @@ image/image_io.s: image/image_io.cpp.s
 
 # target to generate assembly for a file
 image/image_io.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io.cpp.s
 .PHONY : image/image_io.cpp.s
 
 image/image_io_exr.o: image/image_io_exr.cpp.o
@@ -656,7 +656,7 @@ image/image_io_exr.o: image/image_io_exr.cpp.o
 
 # target to build an object file
 image/image_io_exr.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_exr.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_exr.cpp.o
 .PHONY : image/image_io_exr.cpp.o
 
 image/image_io_exr.i: image/image_io_exr.cpp.i
@@ -664,7 +664,7 @@ image/image_io_exr.i: image/image_io_exr.cpp.i
 
 # target to preprocess a source file
 image/image_io_exr.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_exr.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_exr.cpp.i
 .PHONY : image/image_io_exr.cpp.i
 
 image/image_io_exr.s: image/image_io_exr.cpp.s
@@ -672,7 +672,7 @@ image/image_io_exr.s: image/image_io_exr.cpp.s
 
 # target to generate assembly for a file
 image/image_io_exr.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_exr.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_exr.cpp.s
 .PHONY : image/image_io_exr.cpp.s
 
 image/image_io_jpg.o: image/image_io_jpg.cpp.o
@@ -680,7 +680,7 @@ image/image_io_jpg.o: image/image_io_jpg.cpp.o
 
 # target to build an object file
 image/image_io_jpg.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_jpg.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_jpg.cpp.o
 .PHONY : image/image_io_jpg.cpp.o
 
 image/image_io_jpg.i: image/image_io_jpg.cpp.i
@@ -688,7 +688,7 @@ image/image_io_jpg.i: image/image_io_jpg.cpp.i
 
 # target to preprocess a source file
 image/image_io_jpg.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_jpg.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_jpg.cpp.i
 .PHONY : image/image_io_jpg.cpp.i
 
 image/image_io_jpg.s: image/image_io_jpg.cpp.s
@@ -696,7 +696,7 @@ image/image_io_jpg.s: image/image_io_jpg.cpp.s
 
 # target to generate assembly for a file
 image/image_io_jpg.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_jpg.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_jpg.cpp.s
 .PHONY : image/image_io_jpg.cpp.s
 
 image/image_io_pango.o: image/image_io_pango.cpp.o
@@ -704,7 +704,7 @@ image/image_io_pango.o: image/image_io_pango.cpp.o
 
 # target to build an object file
 image/image_io_pango.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_pango.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_pango.cpp.o
 .PHONY : image/image_io_pango.cpp.o
 
 image/image_io_pango.i: image/image_io_pango.cpp.i
@@ -712,7 +712,7 @@ image/image_io_pango.i: image/image_io_pango.cpp.i
 
 # target to preprocess a source file
 image/image_io_pango.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_pango.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_pango.cpp.i
 .PHONY : image/image_io_pango.cpp.i
 
 image/image_io_pango.s: image/image_io_pango.cpp.s
@@ -720,7 +720,7 @@ image/image_io_pango.s: image/image_io_pango.cpp.s
 
 # target to generate assembly for a file
 image/image_io_pango.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_pango.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_pango.cpp.s
 .PHONY : image/image_io_pango.cpp.s
 
 image/image_io_png.o: image/image_io_png.cpp.o
@@ -728,7 +728,7 @@ image/image_io_png.o: image/image_io_png.cpp.o
 
 # target to build an object file
 image/image_io_png.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_png.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_png.cpp.o
 .PHONY : image/image_io_png.cpp.o
 
 image/image_io_png.i: image/image_io_png.cpp.i
@@ -736,7 +736,7 @@ image/image_io_png.i: image/image_io_png.cpp.i
 
 # target to preprocess a source file
 image/image_io_png.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_png.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_png.cpp.i
 .PHONY : image/image_io_png.cpp.i
 
 image/image_io_png.s: image/image_io_png.cpp.s
@@ -744,7 +744,7 @@ image/image_io_png.s: image/image_io_png.cpp.s
 
 # target to generate assembly for a file
 image/image_io_png.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_png.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_png.cpp.s
 .PHONY : image/image_io_png.cpp.s
 
 image/image_io_ppm.o: image/image_io_ppm.cpp.o
@@ -752,7 +752,7 @@ image/image_io_ppm.o: image/image_io_ppm.cpp.o
 
 # target to build an object file
 image/image_io_ppm.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_ppm.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_ppm.cpp.o
 .PHONY : image/image_io_ppm.cpp.o
 
 image/image_io_ppm.i: image/image_io_ppm.cpp.i
@@ -760,7 +760,7 @@ image/image_io_ppm.i: image/image_io_ppm.cpp.i
 
 # target to preprocess a source file
 image/image_io_ppm.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_ppm.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_ppm.cpp.i
 .PHONY : image/image_io_ppm.cpp.i
 
 image/image_io_ppm.s: image/image_io_ppm.cpp.s
@@ -768,7 +768,7 @@ image/image_io_ppm.s: image/image_io_ppm.cpp.s
 
 # target to generate assembly for a file
 image/image_io_ppm.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_ppm.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_ppm.cpp.s
 .PHONY : image/image_io_ppm.cpp.s
 
 image/image_io_raw.o: image/image_io_raw.cpp.o
@@ -776,7 +776,7 @@ image/image_io_raw.o: image/image_io_raw.cpp.o
 
 # target to build an object file
 image/image_io_raw.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_raw.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_raw.cpp.o
 .PHONY : image/image_io_raw.cpp.o
 
 image/image_io_raw.i: image/image_io_raw.cpp.i
@@ -784,7 +784,7 @@ image/image_io_raw.i: image/image_io_raw.cpp.i
 
 # target to preprocess a source file
 image/image_io_raw.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_raw.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_raw.cpp.i
 .PHONY : image/image_io_raw.cpp.i
 
 image/image_io_raw.s: image/image_io_raw.cpp.s
@@ -792,7 +792,7 @@ image/image_io_raw.s: image/image_io_raw.cpp.s
 
 # target to generate assembly for a file
 image/image_io_raw.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_raw.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_raw.cpp.s
 .PHONY : image/image_io_raw.cpp.s
 
 image/image_io_tga.o: image/image_io_tga.cpp.o
@@ -800,7 +800,7 @@ image/image_io_tga.o: image/image_io_tga.cpp.o
 
 # target to build an object file
 image/image_io_tga.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_tga.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_tga.cpp.o
 .PHONY : image/image_io_tga.cpp.o
 
 image/image_io_tga.i: image/image_io_tga.cpp.i
@@ -808,7 +808,7 @@ image/image_io_tga.i: image/image_io_tga.cpp.i
 
 # target to preprocess a source file
 image/image_io_tga.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_tga.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_tga.cpp.i
 .PHONY : image/image_io_tga.cpp.i
 
 image/image_io_tga.s: image/image_io_tga.cpp.s
@@ -816,7 +816,7 @@ image/image_io_tga.s: image/image_io_tga.cpp.s
 
 # target to generate assembly for a file
 image/image_io_tga.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_tga.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_tga.cpp.s
 .PHONY : image/image_io_tga.cpp.s
 
 image/image_io_zstd.o: image/image_io_zstd.cpp.o
@@ -824,7 +824,7 @@ image/image_io_zstd.o: image/image_io_zstd.cpp.o
 
 # target to build an object file
 image/image_io_zstd.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_zstd.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_zstd.cpp.o
 .PHONY : image/image_io_zstd.cpp.o
 
 image/image_io_zstd.i: image/image_io_zstd.cpp.i
@@ -832,7 +832,7 @@ image/image_io_zstd.i: image/image_io_zstd.cpp.i
 
 # target to preprocess a source file
 image/image_io_zstd.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_zstd.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_zstd.cpp.i
 .PHONY : image/image_io_zstd.cpp.i
 
 image/image_io_zstd.s: image/image_io_zstd.cpp.s
@@ -840,7 +840,7 @@ image/image_io_zstd.s: image/image_io_zstd.cpp.s
 
 # target to generate assembly for a file
 image/image_io_zstd.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_zstd.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/image_io_zstd.cpp.s
 .PHONY : image/image_io_zstd.cpp.s
 
 image/pixel_format.o: image/pixel_format.cpp.o
@@ -848,7 +848,7 @@ image/pixel_format.o: image/pixel_format.cpp.o
 
 # target to build an object file
 image/pixel_format.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/pixel_format.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/pixel_format.cpp.o
 .PHONY : image/pixel_format.cpp.o
 
 image/pixel_format.i: image/pixel_format.cpp.i
@@ -856,7 +856,7 @@ image/pixel_format.i: image/pixel_format.cpp.i
 
 # target to preprocess a source file
 image/pixel_format.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/pixel_format.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/pixel_format.cpp.i
 .PHONY : image/pixel_format.cpp.i
 
 image/pixel_format.s: image/pixel_format.cpp.s
@@ -864,7 +864,7 @@ image/pixel_format.s: image/pixel_format.cpp.s
 
 # target to generate assembly for a file
 image/pixel_format.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/pixel_format.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/image/pixel_format.cpp.s
 .PHONY : image/pixel_format.cpp.s
 
 log/packet.o: log/packet.cpp.o
@@ -872,7 +872,7 @@ log/packet.o: log/packet.cpp.o
 
 # target to build an object file
 log/packet.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packet.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packet.cpp.o
 .PHONY : log/packet.cpp.o
 
 log/packet.i: log/packet.cpp.i
@@ -880,7 +880,7 @@ log/packet.i: log/packet.cpp.i
 
 # target to preprocess a source file
 log/packet.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packet.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packet.cpp.i
 .PHONY : log/packet.cpp.i
 
 log/packet.s: log/packet.cpp.s
@@ -888,7 +888,7 @@ log/packet.s: log/packet.cpp.s
 
 # target to generate assembly for a file
 log/packet.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packet.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packet.cpp.s
 .PHONY : log/packet.cpp.s
 
 log/packetstream.o: log/packetstream.cpp.o
@@ -896,7 +896,7 @@ log/packetstream.o: log/packetstream.cpp.o
 
 # target to build an object file
 log/packetstream.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream.cpp.o
 .PHONY : log/packetstream.cpp.o
 
 log/packetstream.i: log/packetstream.cpp.i
@@ -904,7 +904,7 @@ log/packetstream.i: log/packetstream.cpp.i
 
 # target to preprocess a source file
 log/packetstream.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream.cpp.i
 .PHONY : log/packetstream.cpp.i
 
 log/packetstream.s: log/packetstream.cpp.s
@@ -912,7 +912,7 @@ log/packetstream.s: log/packetstream.cpp.s
 
 # target to generate assembly for a file
 log/packetstream.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream.cpp.s
 .PHONY : log/packetstream.cpp.s
 
 log/packetstream_reader.o: log/packetstream_reader.cpp.o
@@ -920,7 +920,7 @@ log/packetstream_reader.o: log/packetstream_reader.cpp.o
 
 # target to build an object file
 log/packetstream_reader.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_reader.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_reader.cpp.o
 .PHONY : log/packetstream_reader.cpp.o
 
 log/packetstream_reader.i: log/packetstream_reader.cpp.i
@@ -928,7 +928,7 @@ log/packetstream_reader.i: log/packetstream_reader.cpp.i
 
 # target to preprocess a source file
 log/packetstream_reader.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_reader.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_reader.cpp.i
 .PHONY : log/packetstream_reader.cpp.i
 
 log/packetstream_reader.s: log/packetstream_reader.cpp.s
@@ -936,7 +936,7 @@ log/packetstream_reader.s: log/packetstream_reader.cpp.s
 
 # target to generate assembly for a file
 log/packetstream_reader.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_reader.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_reader.cpp.s
 .PHONY : log/packetstream_reader.cpp.s
 
 log/packetstream_writer.o: log/packetstream_writer.cpp.o
@@ -944,7 +944,7 @@ log/packetstream_writer.o: log/packetstream_writer.cpp.o
 
 # target to build an object file
 log/packetstream_writer.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.o
 .PHONY : log/packetstream_writer.cpp.o
 
 log/packetstream_writer.i: log/packetstream_writer.cpp.i
@@ -952,7 +952,7 @@ log/packetstream_writer.i: log/packetstream_writer.cpp.i
 
 # target to preprocess a source file
 log/packetstream_writer.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.i
 .PHONY : log/packetstream_writer.cpp.i
 
 log/packetstream_writer.s: log/packetstream_writer.cpp.s
@@ -960,7 +960,7 @@ log/packetstream_writer.s: log/packetstream_writer.cpp.s
 
 # target to generate assembly for a file
 log/packetstream_writer.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.s
 .PHONY : log/packetstream_writer.cpp.s
 
 log/playback_session.o: log/playback_session.cpp.o
@@ -968,7 +968,7 @@ log/playback_session.o: log/playback_session.cpp.o
 
 # target to build an object file
 log/playback_session.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/playback_session.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/playback_session.cpp.o
 .PHONY : log/playback_session.cpp.o
 
 log/playback_session.i: log/playback_session.cpp.i
@@ -976,7 +976,7 @@ log/playback_session.i: log/playback_session.cpp.i
 
 # target to preprocess a source file
 log/playback_session.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/playback_session.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/playback_session.cpp.i
 .PHONY : log/playback_session.cpp.i
 
 log/playback_session.s: log/playback_session.cpp.s
@@ -984,7 +984,7 @@ log/playback_session.s: log/playback_session.cpp.s
 
 # target to generate assembly for a file
 log/playback_session.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/playback_session.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/log/playback_session.cpp.s
 .PHONY : log/playback_session.cpp.s
 
 plot/datalog.o: plot/datalog.cpp.o
@@ -992,7 +992,7 @@ plot/datalog.o: plot/datalog.cpp.o
 
 # target to build an object file
 plot/datalog.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/datalog.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/datalog.cpp.o
 .PHONY : plot/datalog.cpp.o
 
 plot/datalog.i: plot/datalog.cpp.i
@@ -1000,7 +1000,7 @@ plot/datalog.i: plot/datalog.cpp.i
 
 # target to preprocess a source file
 plot/datalog.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/datalog.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/datalog.cpp.i
 .PHONY : plot/datalog.cpp.i
 
 plot/datalog.s: plot/datalog.cpp.s
@@ -1008,7 +1008,7 @@ plot/datalog.s: plot/datalog.cpp.s
 
 # target to generate assembly for a file
 plot/datalog.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/datalog.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/datalog.cpp.s
 .PHONY : plot/datalog.cpp.s
 
 plot/plotter.o: plot/plotter.cpp.o
@@ -1016,7 +1016,7 @@ plot/plotter.o: plot/plotter.cpp.o
 
 # target to build an object file
 plot/plotter.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/plotter.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/plotter.cpp.o
 .PHONY : plot/plotter.cpp.o
 
 plot/plotter.i: plot/plotter.cpp.i
@@ -1024,7 +1024,7 @@ plot/plotter.i: plot/plotter.cpp.i
 
 # target to preprocess a source file
 plot/plotter.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/plotter.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/plotter.cpp.i
 .PHONY : plot/plotter.cpp.i
 
 plot/plotter.s: plot/plotter.cpp.s
@@ -1032,7 +1032,7 @@ plot/plotter.s: plot/plotter.cpp.s
 
 # target to generate assembly for a file
 plot/plotter.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/plotter.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/plot/plotter.cpp.s
 .PHONY : plot/plotter.cpp.s
 
 python/PyInterpreter.o: python/PyInterpreter.cpp.o
@@ -1040,7 +1040,7 @@ python/PyInterpreter.o: python/PyInterpreter.cpp.o
 
 # target to build an object file
 python/PyInterpreter.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyInterpreter.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyInterpreter.cpp.o
 .PHONY : python/PyInterpreter.cpp.o
 
 python/PyInterpreter.i: python/PyInterpreter.cpp.i
@@ -1048,7 +1048,7 @@ python/PyInterpreter.i: python/PyInterpreter.cpp.i
 
 # target to preprocess a source file
 python/PyInterpreter.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyInterpreter.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyInterpreter.cpp.i
 .PHONY : python/PyInterpreter.cpp.i
 
 python/PyInterpreter.s: python/PyInterpreter.cpp.s
@@ -1056,7 +1056,7 @@ python/PyInterpreter.s: python/PyInterpreter.cpp.s
 
 # target to generate assembly for a file
 python/PyInterpreter.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyInterpreter.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyInterpreter.cpp.s
 .PHONY : python/PyInterpreter.cpp.s
 
 python/PyModulePangolin.o: python/PyModulePangolin.cpp.o
@@ -1064,7 +1064,7 @@ python/PyModulePangolin.o: python/PyModulePangolin.cpp.o
 
 # target to build an object file
 python/PyModulePangolin.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyModulePangolin.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyModulePangolin.cpp.o
 .PHONY : python/PyModulePangolin.cpp.o
 
 python/PyModulePangolin.i: python/PyModulePangolin.cpp.i
@@ -1072,7 +1072,7 @@ python/PyModulePangolin.i: python/PyModulePangolin.cpp.i
 
 # target to preprocess a source file
 python/PyModulePangolin.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyModulePangolin.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyModulePangolin.cpp.i
 .PHONY : python/PyModulePangolin.cpp.i
 
 python/PyModulePangolin.s: python/PyModulePangolin.cpp.s
@@ -1080,7 +1080,7 @@ python/PyModulePangolin.s: python/PyModulePangolin.cpp.s
 
 # target to generate assembly for a file
 python/PyModulePangolin.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyModulePangolin.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/python/PyModulePangolin.cpp.s
 .PHONY : python/PyModulePangolin.cpp.s
 
 tools/video_viewer.o: tools/video_viewer.cpp.o
@@ -1088,7 +1088,7 @@ tools/video_viewer.o: tools/video_viewer.cpp.o
 
 # target to build an object file
 tools/video_viewer.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/tools/video_viewer.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/tools/video_viewer.cpp.o
 .PHONY : tools/video_viewer.cpp.o
 
 tools/video_viewer.i: tools/video_viewer.cpp.i
@@ -1096,7 +1096,7 @@ tools/video_viewer.i: tools/video_viewer.cpp.i
 
 # target to preprocess a source file
 tools/video_viewer.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/tools/video_viewer.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/tools/video_viewer.cpp.i
 .PHONY : tools/video_viewer.cpp.i
 
 tools/video_viewer.s: tools/video_viewer.cpp.s
@@ -1104,7 +1104,7 @@ tools/video_viewer.s: tools/video_viewer.cpp.s
 
 # target to generate assembly for a file
 tools/video_viewer.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/tools/video_viewer.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/tools/video_viewer.cpp.s
 .PHONY : tools/video_viewer.cpp.s
 
 utils/file_extension.o: utils/file_extension.cpp.o
@@ -1112,7 +1112,7 @@ utils/file_extension.o: utils/file_extension.cpp.o
 
 # target to build an object file
 utils/file_extension.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_extension.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_extension.cpp.o
 .PHONY : utils/file_extension.cpp.o
 
 utils/file_extension.i: utils/file_extension.cpp.i
@@ -1120,7 +1120,7 @@ utils/file_extension.i: utils/file_extension.cpp.i
 
 # target to preprocess a source file
 utils/file_extension.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_extension.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_extension.cpp.i
 .PHONY : utils/file_extension.cpp.i
 
 utils/file_extension.s: utils/file_extension.cpp.s
@@ -1128,7 +1128,7 @@ utils/file_extension.s: utils/file_extension.cpp.s
 
 # target to generate assembly for a file
 utils/file_extension.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_extension.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_extension.cpp.s
 .PHONY : utils/file_extension.cpp.s
 
 utils/file_utils.o: utils/file_utils.cpp.o
@@ -1136,7 +1136,7 @@ utils/file_utils.o: utils/file_utils.cpp.o
 
 # target to build an object file
 utils/file_utils.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_utils.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_utils.cpp.o
 .PHONY : utils/file_utils.cpp.o
 
 utils/file_utils.i: utils/file_utils.cpp.i
@@ -1144,7 +1144,7 @@ utils/file_utils.i: utils/file_utils.cpp.i
 
 # target to preprocess a source file
 utils/file_utils.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_utils.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_utils.cpp.i
 .PHONY : utils/file_utils.cpp.i
 
 utils/file_utils.s: utils/file_utils.cpp.s
@@ -1152,7 +1152,7 @@ utils/file_utils.s: utils/file_utils.cpp.s
 
 # target to generate assembly for a file
 utils/file_utils.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_utils.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/file_utils.cpp.s
 .PHONY : utils/file_utils.cpp.s
 
 utils/posix/condition_variable.o: utils/posix/condition_variable.cpp.o
@@ -1160,7 +1160,7 @@ utils/posix/condition_variable.o: utils/posix/condition_variable.cpp.o
 
 # target to build an object file
 utils/posix/condition_variable.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/condition_variable.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/condition_variable.cpp.o
 .PHONY : utils/posix/condition_variable.cpp.o
 
 utils/posix/condition_variable.i: utils/posix/condition_variable.cpp.i
@@ -1168,7 +1168,7 @@ utils/posix/condition_variable.i: utils/posix/condition_variable.cpp.i
 
 # target to preprocess a source file
 utils/posix/condition_variable.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/condition_variable.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/condition_variable.cpp.i
 .PHONY : utils/posix/condition_variable.cpp.i
 
 utils/posix/condition_variable.s: utils/posix/condition_variable.cpp.s
@@ -1176,7 +1176,7 @@ utils/posix/condition_variable.s: utils/posix/condition_variable.cpp.s
 
 # target to generate assembly for a file
 utils/posix/condition_variable.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/condition_variable.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/condition_variable.cpp.s
 .PHONY : utils/posix/condition_variable.cpp.s
 
 utils/posix/semaphore.o: utils/posix/semaphore.cpp.o
@@ -1184,7 +1184,7 @@ utils/posix/semaphore.o: utils/posix/semaphore.cpp.o
 
 # target to build an object file
 utils/posix/semaphore.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/semaphore.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/semaphore.cpp.o
 .PHONY : utils/posix/semaphore.cpp.o
 
 utils/posix/semaphore.i: utils/posix/semaphore.cpp.i
@@ -1192,7 +1192,7 @@ utils/posix/semaphore.i: utils/posix/semaphore.cpp.i
 
 # target to preprocess a source file
 utils/posix/semaphore.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/semaphore.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/semaphore.cpp.i
 .PHONY : utils/posix/semaphore.cpp.i
 
 utils/posix/semaphore.s: utils/posix/semaphore.cpp.s
@@ -1200,7 +1200,7 @@ utils/posix/semaphore.s: utils/posix/semaphore.cpp.s
 
 # target to generate assembly for a file
 utils/posix/semaphore.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/semaphore.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/semaphore.cpp.s
 .PHONY : utils/posix/semaphore.cpp.s
 
 utils/posix/shared_memory_buffer.o: utils/posix/shared_memory_buffer.cpp.o
@@ -1208,7 +1208,7 @@ utils/posix/shared_memory_buffer.o: utils/posix/shared_memory_buffer.cpp.o
 
 # target to build an object file
 utils/posix/shared_memory_buffer.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/shared_memory_buffer.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/shared_memory_buffer.cpp.o
 .PHONY : utils/posix/shared_memory_buffer.cpp.o
 
 utils/posix/shared_memory_buffer.i: utils/posix/shared_memory_buffer.cpp.i
@@ -1216,7 +1216,7 @@ utils/posix/shared_memory_buffer.i: utils/posix/shared_memory_buffer.cpp.i
 
 # target to preprocess a source file
 utils/posix/shared_memory_buffer.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/shared_memory_buffer.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/shared_memory_buffer.cpp.i
 .PHONY : utils/posix/shared_memory_buffer.cpp.i
 
 utils/posix/shared_memory_buffer.s: utils/posix/shared_memory_buffer.cpp.s
@@ -1224,7 +1224,7 @@ utils/posix/shared_memory_buffer.s: utils/posix/shared_memory_buffer.cpp.s
 
 # target to generate assembly for a file
 utils/posix/shared_memory_buffer.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/shared_memory_buffer.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/posix/shared_memory_buffer.cpp.s
 .PHONY : utils/posix/shared_memory_buffer.cpp.s
 
 utils/sigstate.o: utils/sigstate.cpp.o
@@ -1232,7 +1232,7 @@ utils/sigstate.o: utils/sigstate.cpp.o
 
 # target to build an object file
 utils/sigstate.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/sigstate.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/sigstate.cpp.o
 .PHONY : utils/sigstate.cpp.o
 
 utils/sigstate.i: utils/sigstate.cpp.i
@@ -1240,7 +1240,7 @@ utils/sigstate.i: utils/sigstate.cpp.i
 
 # target to preprocess a source file
 utils/sigstate.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/sigstate.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/sigstate.cpp.i
 .PHONY : utils/sigstate.cpp.i
 
 utils/sigstate.s: utils/sigstate.cpp.s
@@ -1248,7 +1248,7 @@ utils/sigstate.s: utils/sigstate.cpp.s
 
 # target to generate assembly for a file
 utils/sigstate.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/sigstate.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/sigstate.cpp.s
 .PHONY : utils/sigstate.cpp.s
 
 utils/threadedfilebuf.o: utils/threadedfilebuf.cpp.o
@@ -1256,7 +1256,7 @@ utils/threadedfilebuf.o: utils/threadedfilebuf.cpp.o
 
 # target to build an object file
 utils/threadedfilebuf.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/threadedfilebuf.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/threadedfilebuf.cpp.o
 .PHONY : utils/threadedfilebuf.cpp.o
 
 utils/threadedfilebuf.i: utils/threadedfilebuf.cpp.i
@@ -1264,7 +1264,7 @@ utils/threadedfilebuf.i: utils/threadedfilebuf.cpp.i
 
 # target to preprocess a source file
 utils/threadedfilebuf.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/threadedfilebuf.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/threadedfilebuf.cpp.i
 .PHONY : utils/threadedfilebuf.cpp.i
 
 utils/threadedfilebuf.s: utils/threadedfilebuf.cpp.s
@@ -1272,7 +1272,7 @@ utils/threadedfilebuf.s: utils/threadedfilebuf.cpp.s
 
 # target to generate assembly for a file
 utils/threadedfilebuf.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/threadedfilebuf.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/threadedfilebuf.cpp.s
 .PHONY : utils/threadedfilebuf.cpp.s
 
 utils/timer.o: utils/timer.cpp.o
@@ -1280,7 +1280,7 @@ utils/timer.o: utils/timer.cpp.o
 
 # target to build an object file
 utils/timer.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/timer.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/timer.cpp.o
 .PHONY : utils/timer.cpp.o
 
 utils/timer.i: utils/timer.cpp.i
@@ -1288,7 +1288,7 @@ utils/timer.i: utils/timer.cpp.i
 
 # target to preprocess a source file
 utils/timer.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/timer.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/timer.cpp.i
 .PHONY : utils/timer.cpp.i
 
 utils/timer.s: utils/timer.cpp.s
@@ -1296,7 +1296,7 @@ utils/timer.s: utils/timer.cpp.s
 
 # target to generate assembly for a file
 utils/timer.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/timer.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/timer.cpp.s
 .PHONY : utils/timer.cpp.s
 
 utils/uri.o: utils/uri.cpp.o
@@ -1304,7 +1304,7 @@ utils/uri.o: utils/uri.cpp.o
 
 # target to build an object file
 utils/uri.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/uri.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/uri.cpp.o
 .PHONY : utils/uri.cpp.o
 
 utils/uri.i: utils/uri.cpp.i
@@ -1312,7 +1312,7 @@ utils/uri.i: utils/uri.cpp.i
 
 # target to preprocess a source file
 utils/uri.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/uri.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/uri.cpp.i
 .PHONY : utils/uri.cpp.i
 
 utils/uri.s: utils/uri.cpp.s
@@ -1320,7 +1320,7 @@ utils/uri.s: utils/uri.cpp.s
 
 # target to generate assembly for a file
 utils/uri.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/uri.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/utils/uri.cpp.s
 .PHONY : utils/uri.cpp.s
 
 var/input_record_repeat.o: var/input_record_repeat.cpp.o
@@ -1328,7 +1328,7 @@ var/input_record_repeat.o: var/input_record_repeat.cpp.o
 
 # target to build an object file
 var/input_record_repeat.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/input_record_repeat.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/input_record_repeat.cpp.o
 .PHONY : var/input_record_repeat.cpp.o
 
 var/input_record_repeat.i: var/input_record_repeat.cpp.i
@@ -1336,7 +1336,7 @@ var/input_record_repeat.i: var/input_record_repeat.cpp.i
 
 # target to preprocess a source file
 var/input_record_repeat.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/input_record_repeat.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/input_record_repeat.cpp.i
 .PHONY : var/input_record_repeat.cpp.i
 
 var/input_record_repeat.s: var/input_record_repeat.cpp.s
@@ -1344,7 +1344,7 @@ var/input_record_repeat.s: var/input_record_repeat.cpp.s
 
 # target to generate assembly for a file
 var/input_record_repeat.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/input_record_repeat.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/input_record_repeat.cpp.s
 .PHONY : var/input_record_repeat.cpp.s
 
 var/vars.o: var/vars.cpp.o
@@ -1352,7 +1352,7 @@ var/vars.o: var/vars.cpp.o
 
 # target to build an object file
 var/vars.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/vars.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/vars.cpp.o
 .PHONY : var/vars.cpp.o
 
 var/vars.i: var/vars.cpp.i
@@ -1360,7 +1360,7 @@ var/vars.i: var/vars.cpp.i
 
 # target to preprocess a source file
 var/vars.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/vars.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/vars.cpp.i
 .PHONY : var/vars.cpp.i
 
 var/vars.s: var/vars.cpp.s
@@ -1368,7 +1368,7 @@ var/vars.s: var/vars.cpp.s
 
 # target to generate assembly for a file
 var/vars.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/vars.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/var/vars.cpp.s
 .PHONY : var/vars.cpp.s
 
 video/drivers/debayer.o: video/drivers/debayer.cpp.o
@@ -1376,7 +1376,7 @@ video/drivers/debayer.o: video/drivers/debayer.cpp.o
 
 # target to build an object file
 video/drivers/debayer.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/debayer.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/debayer.cpp.o
 .PHONY : video/drivers/debayer.cpp.o
 
 video/drivers/debayer.i: video/drivers/debayer.cpp.i
@@ -1384,7 +1384,7 @@ video/drivers/debayer.i: video/drivers/debayer.cpp.i
 
 # target to preprocess a source file
 video/drivers/debayer.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/debayer.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/debayer.cpp.i
 .PHONY : video/drivers/debayer.cpp.i
 
 video/drivers/debayer.s: video/drivers/debayer.cpp.s
@@ -1392,7 +1392,7 @@ video/drivers/debayer.s: video/drivers/debayer.cpp.s
 
 # target to generate assembly for a file
 video/drivers/debayer.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/debayer.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/debayer.cpp.s
 .PHONY : video/drivers/debayer.cpp.s
 
 video/drivers/images.o: video/drivers/images.cpp.o
@@ -1400,7 +1400,7 @@ video/drivers/images.o: video/drivers/images.cpp.o
 
 # target to build an object file
 video/drivers/images.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images.cpp.o
 .PHONY : video/drivers/images.cpp.o
 
 video/drivers/images.i: video/drivers/images.cpp.i
@@ -1408,7 +1408,7 @@ video/drivers/images.i: video/drivers/images.cpp.i
 
 # target to preprocess a source file
 video/drivers/images.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images.cpp.i
 .PHONY : video/drivers/images.cpp.i
 
 video/drivers/images.s: video/drivers/images.cpp.s
@@ -1416,7 +1416,7 @@ video/drivers/images.s: video/drivers/images.cpp.s
 
 # target to generate assembly for a file
 video/drivers/images.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images.cpp.s
 .PHONY : video/drivers/images.cpp.s
 
 video/drivers/images_out.o: video/drivers/images_out.cpp.o
@@ -1424,7 +1424,7 @@ video/drivers/images_out.o: video/drivers/images_out.cpp.o
 
 # target to build an object file
 video/drivers/images_out.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images_out.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images_out.cpp.o
 .PHONY : video/drivers/images_out.cpp.o
 
 video/drivers/images_out.i: video/drivers/images_out.cpp.i
@@ -1432,7 +1432,7 @@ video/drivers/images_out.i: video/drivers/images_out.cpp.i
 
 # target to preprocess a source file
 video/drivers/images_out.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images_out.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images_out.cpp.i
 .PHONY : video/drivers/images_out.cpp.i
 
 video/drivers/images_out.s: video/drivers/images_out.cpp.s
@@ -1440,7 +1440,7 @@ video/drivers/images_out.s: video/drivers/images_out.cpp.s
 
 # target to generate assembly for a file
 video/drivers/images_out.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images_out.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/images_out.cpp.s
 .PHONY : video/drivers/images_out.cpp.s
 
 video/drivers/join.o: video/drivers/join.cpp.o
@@ -1448,7 +1448,7 @@ video/drivers/join.o: video/drivers/join.cpp.o
 
 # target to build an object file
 video/drivers/join.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/join.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/join.cpp.o
 .PHONY : video/drivers/join.cpp.o
 
 video/drivers/join.i: video/drivers/join.cpp.i
@@ -1456,7 +1456,7 @@ video/drivers/join.i: video/drivers/join.cpp.i
 
 # target to preprocess a source file
 video/drivers/join.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/join.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/join.cpp.i
 .PHONY : video/drivers/join.cpp.i
 
 video/drivers/join.s: video/drivers/join.cpp.s
@@ -1464,7 +1464,7 @@ video/drivers/join.s: video/drivers/join.cpp.s
 
 # target to generate assembly for a file
 video/drivers/join.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/join.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/join.cpp.s
 .PHONY : video/drivers/join.cpp.s
 
 video/drivers/json.o: video/drivers/json.cpp.o
@@ -1472,7 +1472,7 @@ video/drivers/json.o: video/drivers/json.cpp.o
 
 # target to build an object file
 video/drivers/json.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/json.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/json.cpp.o
 .PHONY : video/drivers/json.cpp.o
 
 video/drivers/json.i: video/drivers/json.cpp.i
@@ -1480,7 +1480,7 @@ video/drivers/json.i: video/drivers/json.cpp.i
 
 # target to preprocess a source file
 video/drivers/json.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/json.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/json.cpp.i
 .PHONY : video/drivers/json.cpp.i
 
 video/drivers/json.s: video/drivers/json.cpp.s
@@ -1488,7 +1488,7 @@ video/drivers/json.s: video/drivers/json.cpp.s
 
 # target to generate assembly for a file
 video/drivers/json.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/json.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/json.cpp.s
 .PHONY : video/drivers/json.cpp.s
 
 video/drivers/merge.o: video/drivers/merge.cpp.o
@@ -1496,7 +1496,7 @@ video/drivers/merge.o: video/drivers/merge.cpp.o
 
 # target to build an object file
 video/drivers/merge.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/merge.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/merge.cpp.o
 .PHONY : video/drivers/merge.cpp.o
 
 video/drivers/merge.i: video/drivers/merge.cpp.i
@@ -1504,7 +1504,7 @@ video/drivers/merge.i: video/drivers/merge.cpp.i
 
 # target to preprocess a source file
 video/drivers/merge.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/merge.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/merge.cpp.i
 .PHONY : video/drivers/merge.cpp.i
 
 video/drivers/merge.s: video/drivers/merge.cpp.s
@@ -1512,7 +1512,7 @@ video/drivers/merge.s: video/drivers/merge.cpp.s
 
 # target to generate assembly for a file
 video/drivers/merge.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/merge.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/merge.cpp.s
 .PHONY : video/drivers/merge.cpp.s
 
 video/drivers/mirror.o: video/drivers/mirror.cpp.o
@@ -1520,7 +1520,7 @@ video/drivers/mirror.o: video/drivers/mirror.cpp.o
 
 # target to build an object file
 video/drivers/mirror.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/mirror.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/mirror.cpp.o
 .PHONY : video/drivers/mirror.cpp.o
 
 video/drivers/mirror.i: video/drivers/mirror.cpp.i
@@ -1528,7 +1528,7 @@ video/drivers/mirror.i: video/drivers/mirror.cpp.i
 
 # target to preprocess a source file
 video/drivers/mirror.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/mirror.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/mirror.cpp.i
 .PHONY : video/drivers/mirror.cpp.i
 
 video/drivers/mirror.s: video/drivers/mirror.cpp.s
@@ -1536,7 +1536,7 @@ video/drivers/mirror.s: video/drivers/mirror.cpp.s
 
 # target to generate assembly for a file
 video/drivers/mirror.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/mirror.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/mirror.cpp.s
 .PHONY : video/drivers/mirror.cpp.s
 
 video/drivers/pango.o: video/drivers/pango.cpp.o
@@ -1544,7 +1544,7 @@ video/drivers/pango.o: video/drivers/pango.cpp.o
 
 # target to build an object file
 video/drivers/pango.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.o
 .PHONY : video/drivers/pango.cpp.o
 
 video/drivers/pango.i: video/drivers/pango.cpp.i
@@ -1552,7 +1552,7 @@ video/drivers/pango.i: video/drivers/pango.cpp.i
 
 # target to preprocess a source file
 video/drivers/pango.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.i
 .PHONY : video/drivers/pango.cpp.i
 
 video/drivers/pango.s: video/drivers/pango.cpp.s
@@ -1560,7 +1560,7 @@ video/drivers/pango.s: video/drivers/pango.cpp.s
 
 # target to generate assembly for a file
 video/drivers/pango.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.s
 .PHONY : video/drivers/pango.cpp.s
 
 video/drivers/pango_video_output.o: video/drivers/pango_video_output.cpp.o
@@ -1568,7 +1568,7 @@ video/drivers/pango_video_output.o: video/drivers/pango_video_output.cpp.o
 
 # target to build an object file
 video/drivers/pango_video_output.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango_video_output.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango_video_output.cpp.o
 .PHONY : video/drivers/pango_video_output.cpp.o
 
 video/drivers/pango_video_output.i: video/drivers/pango_video_output.cpp.i
@@ -1576,7 +1576,7 @@ video/drivers/pango_video_output.i: video/drivers/pango_video_output.cpp.i
 
 # target to preprocess a source file
 video/drivers/pango_video_output.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango_video_output.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango_video_output.cpp.i
 .PHONY : video/drivers/pango_video_output.cpp.i
 
 video/drivers/pango_video_output.s: video/drivers/pango_video_output.cpp.s
@@ -1584,7 +1584,7 @@ video/drivers/pango_video_output.s: video/drivers/pango_video_output.cpp.s
 
 # target to generate assembly for a file
 video/drivers/pango_video_output.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango_video_output.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pango_video_output.cpp.s
 .PHONY : video/drivers/pango_video_output.cpp.s
 
 video/drivers/pvn.o: video/drivers/pvn.cpp.o
@@ -1592,7 +1592,7 @@ video/drivers/pvn.o: video/drivers/pvn.cpp.o
 
 # target to build an object file
 video/drivers/pvn.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pvn.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pvn.cpp.o
 .PHONY : video/drivers/pvn.cpp.o
 
 video/drivers/pvn.i: video/drivers/pvn.cpp.i
@@ -1600,7 +1600,7 @@ video/drivers/pvn.i: video/drivers/pvn.cpp.i
 
 # target to preprocess a source file
 video/drivers/pvn.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pvn.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pvn.cpp.i
 .PHONY : video/drivers/pvn.cpp.i
 
 video/drivers/pvn.s: video/drivers/pvn.cpp.s
@@ -1608,7 +1608,7 @@ video/drivers/pvn.s: video/drivers/pvn.cpp.s
 
 # target to generate assembly for a file
 video/drivers/pvn.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pvn.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/pvn.cpp.s
 .PHONY : video/drivers/pvn.cpp.s
 
 video/drivers/shift.o: video/drivers/shift.cpp.o
@@ -1616,7 +1616,7 @@ video/drivers/shift.o: video/drivers/shift.cpp.o
 
 # target to build an object file
 video/drivers/shift.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/shift.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/shift.cpp.o
 .PHONY : video/drivers/shift.cpp.o
 
 video/drivers/shift.i: video/drivers/shift.cpp.i
@@ -1624,7 +1624,7 @@ video/drivers/shift.i: video/drivers/shift.cpp.i
 
 # target to preprocess a source file
 video/drivers/shift.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/shift.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/shift.cpp.i
 .PHONY : video/drivers/shift.cpp.i
 
 video/drivers/shift.s: video/drivers/shift.cpp.s
@@ -1632,7 +1632,7 @@ video/drivers/shift.s: video/drivers/shift.cpp.s
 
 # target to generate assembly for a file
 video/drivers/shift.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/shift.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/shift.cpp.s
 .PHONY : video/drivers/shift.cpp.s
 
 video/drivers/split.o: video/drivers/split.cpp.o
@@ -1640,7 +1640,7 @@ video/drivers/split.o: video/drivers/split.cpp.o
 
 # target to build an object file
 video/drivers/split.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/split.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/split.cpp.o
 .PHONY : video/drivers/split.cpp.o
 
 video/drivers/split.i: video/drivers/split.cpp.i
@@ -1648,7 +1648,7 @@ video/drivers/split.i: video/drivers/split.cpp.i
 
 # target to preprocess a source file
 video/drivers/split.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/split.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/split.cpp.i
 .PHONY : video/drivers/split.cpp.i
 
 video/drivers/split.s: video/drivers/split.cpp.s
@@ -1656,7 +1656,7 @@ video/drivers/split.s: video/drivers/split.cpp.s
 
 # target to generate assembly for a file
 video/drivers/split.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/split.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/split.cpp.s
 .PHONY : video/drivers/split.cpp.s
 
 video/drivers/test.o: video/drivers/test.cpp.o
@@ -1664,7 +1664,7 @@ video/drivers/test.o: video/drivers/test.cpp.o
 
 # target to build an object file
 video/drivers/test.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/test.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/test.cpp.o
 .PHONY : video/drivers/test.cpp.o
 
 video/drivers/test.i: video/drivers/test.cpp.i
@@ -1672,7 +1672,7 @@ video/drivers/test.i: video/drivers/test.cpp.i
 
 # target to preprocess a source file
 video/drivers/test.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/test.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/test.cpp.i
 .PHONY : video/drivers/test.cpp.i
 
 video/drivers/test.s: video/drivers/test.cpp.s
@@ -1680,7 +1680,7 @@ video/drivers/test.s: video/drivers/test.cpp.s
 
 # target to generate assembly for a file
 video/drivers/test.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/test.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/test.cpp.s
 .PHONY : video/drivers/test.cpp.s
 
 video/drivers/thread.o: video/drivers/thread.cpp.o
@@ -1688,7 +1688,7 @@ video/drivers/thread.o: video/drivers/thread.cpp.o
 
 # target to build an object file
 video/drivers/thread.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/thread.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/thread.cpp.o
 .PHONY : video/drivers/thread.cpp.o
 
 video/drivers/thread.i: video/drivers/thread.cpp.i
@@ -1696,7 +1696,7 @@ video/drivers/thread.i: video/drivers/thread.cpp.i
 
 # target to preprocess a source file
 video/drivers/thread.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/thread.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/thread.cpp.i
 .PHONY : video/drivers/thread.cpp.i
 
 video/drivers/thread.s: video/drivers/thread.cpp.s
@@ -1704,7 +1704,7 @@ video/drivers/thread.s: video/drivers/thread.cpp.s
 
 # target to generate assembly for a file
 video/drivers/thread.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/thread.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/thread.cpp.s
 .PHONY : video/drivers/thread.cpp.s
 
 video/drivers/unpack.o: video/drivers/unpack.cpp.o
@@ -1712,7 +1712,7 @@ video/drivers/unpack.o: video/drivers/unpack.cpp.o
 
 # target to build an object file
 video/drivers/unpack.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/unpack.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/unpack.cpp.o
 .PHONY : video/drivers/unpack.cpp.o
 
 video/drivers/unpack.i: video/drivers/unpack.cpp.i
@@ -1720,7 +1720,7 @@ video/drivers/unpack.i: video/drivers/unpack.cpp.i
 
 # target to preprocess a source file
 video/drivers/unpack.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/unpack.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/unpack.cpp.i
 .PHONY : video/drivers/unpack.cpp.i
 
 video/drivers/unpack.s: video/drivers/unpack.cpp.s
@@ -1728,7 +1728,7 @@ video/drivers/unpack.s: video/drivers/unpack.cpp.s
 
 # target to generate assembly for a file
 video/drivers/unpack.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/unpack.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/unpack.cpp.s
 .PHONY : video/drivers/unpack.cpp.s
 
 video/drivers/v4l.o: video/drivers/v4l.cpp.o
@@ -1736,7 +1736,7 @@ video/drivers/v4l.o: video/drivers/v4l.cpp.o
 
 # target to build an object file
 video/drivers/v4l.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/v4l.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/v4l.cpp.o
 .PHONY : video/drivers/v4l.cpp.o
 
 video/drivers/v4l.i: video/drivers/v4l.cpp.i
@@ -1744,7 +1744,7 @@ video/drivers/v4l.i: video/drivers/v4l.cpp.i
 
 # target to preprocess a source file
 video/drivers/v4l.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/v4l.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/v4l.cpp.i
 .PHONY : video/drivers/v4l.cpp.i
 
 video/drivers/v4l.s: video/drivers/v4l.cpp.s
@@ -1752,7 +1752,7 @@ video/drivers/v4l.s: video/drivers/v4l.cpp.s
 
 # target to generate assembly for a file
 video/drivers/v4l.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/v4l.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/drivers/v4l.cpp.s
 .PHONY : video/drivers/v4l.cpp.s
 
 video/stream_encoder_factory.o: video/stream_encoder_factory.cpp.o
@@ -1760,7 +1760,7 @@ video/stream_encoder_factory.o: video/stream_encoder_factory.cpp.o
 
 # target to build an object file
 video/stream_encoder_factory.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/stream_encoder_factory.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/stream_encoder_factory.cpp.o
 .PHONY : video/stream_encoder_factory.cpp.o
 
 video/stream_encoder_factory.i: video/stream_encoder_factory.cpp.i
@@ -1768,7 +1768,7 @@ video/stream_encoder_factory.i: video/stream_encoder_factory.cpp.i
 
 # target to preprocess a source file
 video/stream_encoder_factory.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/stream_encoder_factory.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/stream_encoder_factory.cpp.i
 .PHONY : video/stream_encoder_factory.cpp.i
 
 video/stream_encoder_factory.s: video/stream_encoder_factory.cpp.s
@@ -1776,7 +1776,7 @@ video/stream_encoder_factory.s: video/stream_encoder_factory.cpp.s
 
 # target to generate assembly for a file
 video/stream_encoder_factory.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/stream_encoder_factory.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/stream_encoder_factory.cpp.s
 .PHONY : video/stream_encoder_factory.cpp.s
 
 video/video.o: video/video.cpp.o
@@ -1784,7 +1784,7 @@ video/video.o: video/video.cpp.o
 
 # target to build an object file
 video/video.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video.cpp.o
 .PHONY : video/video.cpp.o
 
 video/video.i: video/video.cpp.i
@@ -1792,7 +1792,7 @@ video/video.i: video/video.cpp.i
 
 # target to preprocess a source file
 video/video.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video.cpp.i
 .PHONY : video/video.cpp.i
 
 video/video.s: video/video.cpp.s
@@ -1800,7 +1800,7 @@ video/video.s: video/video.cpp.s
 
 # target to generate assembly for a file
 video/video.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video.cpp.s
 .PHONY : video/video.cpp.s
 
 video/video_input.o: video/video_input.cpp.o
@@ -1808,7 +1808,7 @@ video/video_input.o: video/video_input.cpp.o
 
 # target to build an object file
 video/video_input.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_input.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_input.cpp.o
 .PHONY : video/video_input.cpp.o
 
 video/video_input.i: video/video_input.cpp.i
@@ -1816,7 +1816,7 @@ video/video_input.i: video/video_input.cpp.i
 
 # target to preprocess a source file
 video/video_input.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_input.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_input.cpp.i
 .PHONY : video/video_input.cpp.i
 
 video/video_input.s: video/video_input.cpp.s
@@ -1824,7 +1824,7 @@ video/video_input.s: video/video_input.cpp.s
 
 # target to generate assembly for a file
 video/video_input.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_input.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_input.cpp.s
 .PHONY : video/video_input.cpp.s
 
 video/video_interface_factory.o: video/video_interface_factory.cpp.o
@@ -1832,7 +1832,7 @@ video/video_interface_factory.o: video/video_interface_factory.cpp.o
 
 # target to build an object file
 video/video_interface_factory.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_interface_factory.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_interface_factory.cpp.o
 .PHONY : video/video_interface_factory.cpp.o
 
 video/video_interface_factory.i: video/video_interface_factory.cpp.i
@@ -1840,7 +1840,7 @@ video/video_interface_factory.i: video/video_interface_factory.cpp.i
 
 # target to preprocess a source file
 video/video_interface_factory.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_interface_factory.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_interface_factory.cpp.i
 .PHONY : video/video_interface_factory.cpp.i
 
 video/video_interface_factory.s: video/video_interface_factory.cpp.s
@@ -1848,7 +1848,7 @@ video/video_interface_factory.s: video/video_interface_factory.cpp.s
 
 # target to generate assembly for a file
 video/video_interface_factory.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_interface_factory.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_interface_factory.cpp.s
 .PHONY : video/video_interface_factory.cpp.s
 
 video/video_output.o: video/video_output.cpp.o
@@ -1856,7 +1856,7 @@ video/video_output.o: video/video_output.cpp.o
 
 # target to build an object file
 video/video_output.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output.cpp.o
 .PHONY : video/video_output.cpp.o
 
 video/video_output.i: video/video_output.cpp.i
@@ -1864,7 +1864,7 @@ video/video_output.i: video/video_output.cpp.i
 
 # target to preprocess a source file
 video/video_output.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output.cpp.i
 .PHONY : video/video_output.cpp.i
 
 video/video_output.s: video/video_output.cpp.s
@@ -1872,7 +1872,7 @@ video/video_output.s: video/video_output.cpp.s
 
 # target to generate assembly for a file
 video/video_output.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output.cpp.s
 .PHONY : video/video_output.cpp.s
 
 video/video_output_interface_factory.o: video/video_output_interface_factory.cpp.o
@@ -1880,7 +1880,7 @@ video/video_output_interface_factory.o: video/video_output_interface_factory.cpp
 
 # target to build an object file
 video/video_output_interface_factory.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.o
 .PHONY : video/video_output_interface_factory.cpp.o
 
 video/video_output_interface_factory.i: video/video_output_interface_factory.cpp.i
@@ -1888,7 +1888,7 @@ video/video_output_interface_factory.i: video/video_output_interface_factory.cpp
 
 # target to preprocess a source file
 video/video_output_interface_factory.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.i
 .PHONY : video/video_output_interface_factory.cpp.i
 
 video/video_output_interface_factory.s: video/video_output_interface_factory.cpp.s
@@ -1896,7 +1896,7 @@ video/video_output_interface_factory.s: video/video_output_interface_factory.cpp
 
 # target to generate assembly for a file
 video/video_output_interface_factory.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.s
 .PHONY : video/video_output_interface_factory.cpp.s
 
 # Help Target
@@ -2138,6 +2138,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

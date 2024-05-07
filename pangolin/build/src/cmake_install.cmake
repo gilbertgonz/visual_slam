@@ -1,4 +1,4 @@
-# Install script for directory: /home/gilberto/projects/pangolin/src
+# Install script for directory: /home/gilbertogonzalez/projects/visual_odom/pangolin/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -51,7 +51,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local/include/_pangolin" TYPE FILE FILES "/home/gilberto/projects/pangolin/build/src/include/_pangolin/config.h")
+  file(INSTALL DESTINATION "/usr/local/include/_pangolin" TYPE FILE FILES "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/include/_pangolin/config.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -63,7 +63,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local/include" TYPE DIRECTORY FILES "/home/gilberto/projects/pangolin/src/../include/pangolin")
+  file(INSTALL DESTINATION "/usr/local/include" TYPE DIRECTORY FILES "/home/gilbertogonzalez/projects/visual_odom/pangolin/src/../include/pangolin")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -75,13 +75,13 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gilberto/projects/pangolin/build/src/lib_pangolin.a")
+  file(INSTALL DESTINATION "/usr/local/lib" TYPE STATIC_LIBRARY FILES "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/lib_pangolin.a")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/Pangolin" TYPE FILE FILES
-    "/home/gilberto/projects/pangolin/build/src/CMakeFiles/PangolinConfig.cmake"
-    "/home/gilberto/projects/pangolin/build/src/PangolinConfigVersion.cmake"
+    "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/CMakeFiles/PangolinConfig.cmake"
+    "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/PangolinConfigVersion.cmake"
     )
 endif()
 
@@ -89,7 +89,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/Pangolin/PangolinTargets.cmake")
     file(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/Pangolin/PangolinTargets.cmake"
-         "/home/gilberto/projects/pangolin/build/src/CMakeFiles/Export/lib/cmake/Pangolin/PangolinTargets.cmake")
+         "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/CMakeFiles/Export/lib/cmake/Pangolin/PangolinTargets.cmake")
     if(EXPORT_FILE_CHANGED)
       file(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/Pangolin/PangolinTargets-*.cmake")
       if(OLD_CONFIG_FILES)
@@ -98,9 +98,9 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
     endif()
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/Pangolin" TYPE FILE FILES "/home/gilberto/projects/pangolin/build/src/CMakeFiles/Export/lib/cmake/Pangolin/PangolinTargets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/Pangolin" TYPE FILE FILES "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/CMakeFiles/Export/lib/cmake/Pangolin/PangolinTargets.cmake")
   if("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/Pangolin" TYPE FILE FILES "/home/gilberto/projects/pangolin/build/src/CMakeFiles/Export/lib/cmake/Pangolin/PangolinTargets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/Pangolin" TYPE FILE FILES "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/CMakeFiles/Export/lib/cmake/Pangolin/PangolinTargets-release.cmake")
   endif()
 endif()
 

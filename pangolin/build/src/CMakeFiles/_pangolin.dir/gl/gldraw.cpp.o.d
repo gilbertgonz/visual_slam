@@ -1,13 +1,13 @@
 src/CMakeFiles/_pangolin.dir/gl/gldraw.cpp.o: \
- /home/gilberto/projects/pangolin/src/gl/gldraw.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/gl/gldraw.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/gldraw.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glinclude.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glplatform.h \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/gldraw.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glinclude.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glplatform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -158,11 +158,11 @@ src/CMakeFiles/_pangolin.dir/gl/gldraw.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
  /usr/include/GL/gl.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glpangoglu.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glformattraits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glpangoglu.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glformattraits.h \
  /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
@@ -331,14 +331,14 @@ src/CMakeFiles/_pangolin.dir/gl/gldraw.cpp.o: \
  /usr/include/eigen3/Eigen/src/Core/StlIterators.h \
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/opengl_render_state.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/simple_math.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/opengl_render_state.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/simple_math.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc /usr/include/c++/11/math.h \
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/timer.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/timer.h \
  /usr/include/c++/11/chrono /usr/include/c++/11/ratio \
  /usr/include/c++/11/ctime /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \

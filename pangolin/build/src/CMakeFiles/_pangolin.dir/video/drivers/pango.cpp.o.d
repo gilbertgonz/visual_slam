@@ -1,7 +1,7 @@
 src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.o: \
- /home/gilberto/projects/pangolin/src/video/drivers/pango.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/video/drivers/pango.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/factory/factory_registry.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/factory/factory_registry.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -135,11 +135,11 @@ src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.o: \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/uri.h \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/uri.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/bits/char_traits.h \
  /usr/include/c++/11/cstdint /usr/include/c++/11/bits/localefwd.h \
@@ -181,13 +181,13 @@ src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/params.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/type_convert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/params.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/type_convert.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /home/gilberto/projects/pangolin/include/pangolin/compat/type_traits.h \
- /home/gilberto/projects/pangolin/include/pangolin/log/playback_session.h \
- /home/gilberto/projects/pangolin/include/pangolin/log/packetstream_reader.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/compat/type_traits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/playback_session.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/packetstream_reader.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
@@ -199,12 +199,12 @@ src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.o: \
  /usr/include/c++/11/bits/unique_lock.h /usr/include/c++/11/thread \
  /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/bits/this_thread_sleep.h \
- /home/gilberto/projects/pangolin/include/pangolin/log/packet.h \
- /home/gilberto/projects/pangolin/include/pangolin/log/packetstream.h \
- /home/gilberto/projects/pangolin/include/pangolin/log/packetstream_tags.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_utils.h \
- /home/gilberto/projects/pangolin/include/pangolin/log/packetstream_source.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/picojson.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/packet.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/packetstream.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/packetstream_tags.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_utils.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/packetstream_source.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/picojson.h \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
@@ -222,28 +222,28 @@ src/CMakeFiles/_pangolin.dir/video/drivers/pango.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h /usr/include/inttypes.h \
- /home/gilberto/projects/pangolin/include/pangolin/log/sync_time.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/signal_slot.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/registration.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/timer.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/sync_time.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/signal_slot.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/registration.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/timer.h \
  /usr/include/c++/11/atomic /usr/include/c++/11/condition_variable \
  /usr/include/c++/11/queue /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_queue.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_extension.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/drivers/pango.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/stream_encoder_factory.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image_io.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/typed_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/managed_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/memcpy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_extension.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/drivers/pango.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/stream_encoder_factory.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image_io.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/typed_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/managed_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/memcpy.h \
  /usr/include/c++/11/cstddef \
- /home/gilberto/projects/pangolin/include/pangolin/image/copy.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/pixel_format.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_exception.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_interface.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/stream_info.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_output_interface.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/iostream_operators.h
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/copy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/pixel_format.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_exception.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_interface.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/stream_info.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_output_interface.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/iostream_operators.h

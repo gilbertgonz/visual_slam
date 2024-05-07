@@ -8,12 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/gilberto/projects/pangolin/tools/VideoJson/main-print.cpp" "tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/main-print.cpp.o" "gcc" "tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/main-print.cpp.o.d"
+  "/home/gilbertogonzalez/projects/visual_odom/pangolin/tools/VideoJson/main-print.cpp" "tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/main-print.cpp.o" "gcc" "tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/main-print.cpp.o.d"
   )
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/gilberto/projects/pangolin/build/src/CMakeFiles/_pangolin.dir/DependInfo.cmake"
+  "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/CMakeFiles/_pangolin.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

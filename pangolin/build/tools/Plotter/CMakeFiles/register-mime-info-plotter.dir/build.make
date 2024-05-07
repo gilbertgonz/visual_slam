@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gilberto/projects/pangolin
+CMAKE_SOURCE_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
+CMAKE_BINARY_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin/build
 
 # Utility rule file for register-mime-info-plotter.
 
@@ -67,15 +67,15 @@ include tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/compiler_depend.
 include tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/progress.make
 
 tools/Plotter/CMakeFiles/register-mime-info-plotter: tools/Plotter/Plotter
-	cd /home/gilberto/projects/pangolin/build/tools/Plotter && mkdir -p /root/.local/share/mime/packages/
-	cd /home/gilberto/projects/pangolin/build/tools/Plotter && mkdir -p /root/.local/share/applications/
-	cd /home/gilberto/projects/pangolin/build/tools/Plotter && mkdir -p /root/.local/share/icons/hicolor/scalable/mimetypes/
-	cd /home/gilberto/projects/pangolin/build/tools/Plotter && cp /home/gilberto/projects/pangolin/tools/Plotter/application-x-pangoplot.xml /root/.local/share/mime/packages/
-	cd /home/gilberto/projects/pangolin/build/tools/Plotter && cp /home/gilberto/projects/pangolin/tools/Plotter/../VideoViewer/application-x-pango.svg /root/.local/share/icons/hicolor/scalable/mimetypes/
-	cd /home/gilberto/projects/pangolin/build/tools/Plotter && cp /home/gilberto/projects/pangolin/build/tools/Plotter/pangoplot.desktop /root/.local/share/applications/
-	cd /home/gilberto/projects/pangolin/build/tools/Plotter && gtk-update-icon-cache /root/.local/share/icons/hicolor -f -t
-	cd /home/gilberto/projects/pangolin/build/tools/Plotter && update-mime-database /root/.local/share/mime
-	cd /home/gilberto/projects/pangolin/build/tools/Plotter && update-desktop-database /root/.local/share/applications
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter && mkdir -p /root/.local/share/mime/packages/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter && mkdir -p /root/.local/share/applications/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter && mkdir -p /root/.local/share/icons/hicolor/scalable/mimetypes/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter && cp /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/Plotter/application-x-pangoplot.xml /root/.local/share/mime/packages/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter && cp /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/Plotter/../VideoViewer/application-x-pango.svg /root/.local/share/icons/hicolor/scalable/mimetypes/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter && cp /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter/pangoplot.desktop /root/.local/share/applications/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter && gtk-update-icon-cache /root/.local/share/icons/hicolor -f -t
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter && update-mime-database /root/.local/share/mime
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter && update-desktop-database /root/.local/share/applications
 
 register-mime-info-plotter: tools/Plotter/CMakeFiles/register-mime-info-plotter
 register-mime-info-plotter: tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/build.make
@@ -86,10 +86,10 @@ tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/build: register-mime-inf
 .PHONY : tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/build
 
 tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/clean:
-	cd /home/gilberto/projects/pangolin/build/tools/Plotter && $(CMAKE_COMMAND) -P CMakeFiles/register-mime-info-plotter.dir/cmake_clean.cmake
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter && $(CMAKE_COMMAND) -P CMakeFiles/register-mime-info-plotter.dir/cmake_clean.cmake
 .PHONY : tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/clean
 
 tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/depend:
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilberto/projects/pangolin /home/gilberto/projects/pangolin/tools/Plotter /home/gilberto/projects/pangolin/build /home/gilberto/projects/pangolin/build/tools/Plotter /home/gilberto/projects/pangolin/build/tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilbertogonzalez/projects/visual_odom/pangolin /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/Plotter /home/gilbertogonzalez/projects/visual_odom/pangolin/build /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/depend
 

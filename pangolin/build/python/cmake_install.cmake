@@ -1,4 +1,4 @@
-# Install script for directory: /home/gilberto/projects/pangolin/python
+# Install script for directory: /home/gilbertogonzalez/projects/visual_odom/pangolin/python
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

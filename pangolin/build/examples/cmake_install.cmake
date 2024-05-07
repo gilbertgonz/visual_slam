@@ -1,4 +1,4 @@
-# Install script for directory: /home/gilberto/projects/pangolin/examples
+# Install script for directory: /home/gilbertogonzalez/projects/visual_odom/pangolin/examples
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,15 +44,15 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gilberto/projects/pangolin/build/examples/HelloPangolin/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/examples/SimpleMultiDisplay/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/examples/SimpleDisplayImage/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/examples/SimpleScene/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/examples/SimplePlot/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/examples/SimpleDisplay/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/examples/SimpleVideo/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/examples/SimpleRecord/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/examples/SharedMemoryCamera/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/HelloPangolin/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleMultiDisplay/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleDisplayImage/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleScene/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimplePlot/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleDisplay/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleVideo/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SimpleRecord/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/SharedMemoryCamera/cmake_install.cmake")
 
 endif()
 

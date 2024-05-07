@@ -1,4 +1,4 @@
-# Install script for directory: /home/gilberto/projects/pangolin/examples/SimplePlot
+# Install script for directory: /home/gilbertogonzalez/projects/visual_odom/pangolin/examples/SimplePlot
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

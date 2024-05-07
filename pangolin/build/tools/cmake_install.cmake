@@ -1,4 +1,4 @@
-# Install script for directory: /home/gilberto/projects/pangolin/tools
+# Install script for directory: /home/gilbertogonzalez/projects/visual_odom/pangolin/tools
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,10 +44,10 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gilberto/projects/pangolin/build/tools/VideoViewer/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/tools/VideoConvert/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/tools/VideoJson/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/tools/Plotter/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoConvert/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/Plotter/cmake_install.cmake")
 
 endif()
 

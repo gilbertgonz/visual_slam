@@ -1,7 +1,7 @@
 src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.o: \
- /home/gilberto/projects/pangolin/src/log/packetstream_writer.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/log/packetstream_writer.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/log/packetstream_writer.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/packetstream_writer.h \
  /usr/include/c++/11/ostream /usr/include/c++/11/ios \
  /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -150,21 +150,21 @@ src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.o: \
  /usr/include/c++/11/bits/locale_facets.tcc \
  /usr/include/c++/11/bits/basic_ios.tcc \
  /usr/include/c++/11/bits/ostream.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/log/packetstream.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/packetstream.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/istream \
  /usr/include/c++/11/bits/istream.tcc /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
  /usr/include/c++/11/iostream \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
- /home/gilberto/projects/pangolin/include/pangolin/log/packetstream_tags.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_utils.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/packetstream_tags.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_utils.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
@@ -175,8 +175,8 @@ src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.o: \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
- /home/gilberto/projects/pangolin/include/pangolin/log/packetstream_source.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/picojson.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/log/packetstream_source.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/picojson.h \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
@@ -189,7 +189,7 @@ src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.o: \
  /usr/include/c++/11/bits/invoke.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/gilberto/projects/pangolin/include/pangolin/compat/type_traits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/compat/type_traits.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -200,7 +200,7 @@ src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h /usr/include/inttypes.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/threadedfilebuf.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/threadedfilebuf.h \
  /usr/include/c++/11/thread /usr/include/c++/11/bits/std_thread.h \
  /usr/include/c++/11/bits/refwrap.h /usr/include/c++/11/bits/unique_ptr.h \
  /usr/include/c++/11/bits/this_thread_sleep.h /usr/include/c++/11/chrono \
@@ -213,4 +213,4 @@ src/CMakeFiles/_pangolin.dir/log/packetstream_writer.cpp.o: \
  /usr/include/c++/11/bits/shared_ptr_base.h \
  /usr/include/c++/11/bits/allocated_ptr.h \
  /usr/include/c++/11/ext/concurrence.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/timer.h
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/timer.h

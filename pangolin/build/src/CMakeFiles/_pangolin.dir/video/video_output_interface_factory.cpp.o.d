@@ -1,7 +1,7 @@
 src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.o: \
- /home/gilberto/projects/pangolin/src/video/video_output_interface_factory.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/video/video_output_interface_factory.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_output_interface.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_output_interface.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_algobase.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -43,10 +43,10 @@ src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.o: \
  /usr/include/c++/11/bits/hash_bytes.h \
  /usr/include/c++/11/bits/range_access.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/c++/11/bits/stringfwd.h /usr/include/c++/11/bits/postypes.h \
@@ -159,10 +159,10 @@ src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/stream_info.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/memcpy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/stream_info.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/memcpy.h \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
@@ -172,8 +172,8 @@ src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.o: \
  /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/limits \
- /home/gilberto/projects/pangolin/include/pangolin/image/pixel_format.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/picojson.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/pixel_format.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/picojson.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
@@ -185,7 +185,7 @@ src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.o: \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/gilberto/projects/pangolin/include/pangolin/compat/type_traits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/compat/type_traits.h \
  /usr/include/c++/11/cmath /usr/include/math.h \
  /usr/include/x86_64-linux-gnu/bits/math-vector.h \
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -196,7 +196,7 @@ src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h /usr/include/inttypes.h \
- /home/gilberto/projects/pangolin/include/pangolin/factory/factory_registry.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/factory/factory_registry.h \
  /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -209,6 +209,6 @@ src/CMakeFiles/_pangolin.dir/video/video_output_interface_factory.cpp.o: \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/uri.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/params.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/type_convert.h
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/uri.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/params.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/type_convert.h

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gilberto/projects/pangolin
+CMAKE_SOURCE_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
+CMAKE_BINARY_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin/build
 
 # Include any dependencies generated for this target.
 include tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/depend.make
@@ -72,16 +72,16 @@ include tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/flags.make
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o: tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/flags.make
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o: ../tools/VideoJson/main-transform.cpp
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o: tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o"
-	cd /home/gilberto/projects/pangolin/build/tools/VideoJson && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o -MF CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o.d -o CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o -c /home/gilberto/projects/pangolin/tools/VideoJson/main-transform.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o"
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o -MF CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o.d -o CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o -c /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/VideoJson/main-transform.cpp
 
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.i"
-	cd /home/gilberto/projects/pangolin/build/tools/VideoJson && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gilberto/projects/pangolin/tools/VideoJson/main-transform.cpp > CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/VideoJson/main-transform.cpp > CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.i
 
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.s"
-	cd /home/gilberto/projects/pangolin/build/tools/VideoJson && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gilberto/projects/pangolin/tools/VideoJson/main-transform.cpp -o CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/VideoJson/main-transform.cpp -o CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.s
 
 # Object files for target VideoJsonTransform
 VideoJsonTransform_OBJECTS = \
@@ -99,18 +99,18 @@ tools/VideoJson/VideoJsonTransform: /usr/lib/x86_64-linux-gnu/libGLEW.so
 tools/VideoJson/VideoJsonTransform: /usr/lib/x86_64-linux-gnu/libX11.so
 tools/VideoJson/VideoJsonTransform: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 tools/VideoJson/VideoJsonTransform: tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable VideoJsonTransform"
-	cd /home/gilberto/projects/pangolin/build/tools/VideoJson && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VideoJsonTransform.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable VideoJsonTransform"
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/VideoJsonTransform.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build: tools/VideoJson/VideoJsonTransform
 .PHONY : tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build
 
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/clean:
-	cd /home/gilberto/projects/pangolin/build/tools/VideoJson && $(CMAKE_COMMAND) -P CMakeFiles/VideoJsonTransform.dir/cmake_clean.cmake
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson && $(CMAKE_COMMAND) -P CMakeFiles/VideoJsonTransform.dir/cmake_clean.cmake
 .PHONY : tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/clean
 
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/depend:
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilberto/projects/pangolin /home/gilberto/projects/pangolin/tools/VideoJson /home/gilberto/projects/pangolin/build /home/gilberto/projects/pangolin/build/tools/VideoJson /home/gilberto/projects/pangolin/build/tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilbertogonzalez/projects/visual_odom/pangolin /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/VideoJson /home/gilbertogonzalez/projects/visual_odom/pangolin/build /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/depend
 

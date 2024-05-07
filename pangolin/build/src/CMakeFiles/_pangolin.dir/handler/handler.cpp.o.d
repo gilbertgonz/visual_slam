@@ -1,12 +1,12 @@
 src/CMakeFiles/_pangolin.dir/handler/handler.cpp.o: \
- /home/gilberto/projects/pangolin/src/handler/handler.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/handler/handler.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/handler/handler.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/opengl_render_state.h \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/handler/handler.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/opengl_render_state.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -157,8 +157,8 @@ src/CMakeFiles/_pangolin.dir/handler/handler.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/simple_math.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/simple_math.h \
  /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
@@ -331,17 +331,17 @@ src/CMakeFiles/_pangolin.dir/handler/handler.cpp.o: \
  /usr/include/eigen3/Eigen/src/Core/StlIterators.h \
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
- /home/gilberto/projects/pangolin/include/pangolin/handler/handler_enums.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/display_internal.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/window.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/view.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/viewport.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glinclude.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glplatform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/handler/handler_enums.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/display_internal.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/window.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/view.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/viewport.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glinclude.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glplatform.h \
  /usr/include/GL/glew.h /usr/include/GL/glu.h /usr/include/GL/gl.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glpangoglu.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/attach.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/user_app.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glpangoglu.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/attach.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/user_app.h \
  /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -358,16 +358,16 @@ src/CMakeFiles/_pangolin.dir/handler/handler.cpp.o: \
  /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/queue \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_deque.h \
  /usr/include/c++/11/bits/deque.tcc /usr/include/c++/11/bits/stl_queue.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_output.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_output_interface.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/stream_info.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/memcpy.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/pixel_format.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/picojson.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_output.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_output_interface.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/stream_info.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/memcpy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/pixel_format.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/picojson.h \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
- /home/gilberto/projects/pangolin/include/pangolin/compat/type_traits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/compat/type_traits.h \
  /usr/include/inttypes.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/uri.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/params.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/type_convert.h
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/uri.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/params.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/type_convert.h

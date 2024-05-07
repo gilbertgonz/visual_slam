@@ -1,12 +1,12 @@
 src/CMakeFiles/_pangolin.dir/display/image_view.cpp.o: \
- /home/gilberto/projects/pangolin/src/display/image_view.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/display/image_view.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/image_view.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/display.h \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/image_view.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/display.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -157,28 +157,28 @@ src/CMakeFiles/_pangolin.dir/display/image_view.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glinclude.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glplatform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glinclude.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glplatform.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
  /usr/include/GL/gl.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glpangoglu.h \
- /home/gilberto/projects/pangolin/include/pangolin/handler/handler_enums.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/params.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/type_convert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glpangoglu.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/handler/handler_enums.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/params.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/type_convert.h \
  /usr/include/c++/11/functional /usr/include/c++/11/tuple \
  /usr/include/c++/11/utility /usr/include/c++/11/bits/stl_relops.h \
  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h \
- /home/gilberto/projects/pangolin/include/pangolin/compat/type_traits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/compat/type_traits.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/display/window.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glpixformat.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glformattraits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/window.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glpixformat.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glformattraits.h \
  /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
@@ -342,8 +342,8 @@ src/CMakeFiles/_pangolin.dir/display/image_view.cpp.o: \
  /usr/include/eigen3/Eigen/src/Core/StlIterators.h \
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/pixel_format.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glsl.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/pixel_format.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glsl.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
@@ -353,32 +353,32 @@ src/CMakeFiles/_pangolin.dir/display/image_view.cpp.o: \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/colour.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_utils.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/opengl_render_state.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/simple_math.h \
- /home/gilberto/projects/pangolin/include/pangolin/handler/handler_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image_utils.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/memcpy.h \
- /home/gilberto/projects/pangolin/include/pangolin/plot/range.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/colour.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_utils.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/opengl_render_state.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/simple_math.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/handler/handler_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image_utils.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/memcpy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/plot/range.h \
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/gl.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/viewport.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image_io.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/typed_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/managed_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/copy.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_extension.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/gl.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/viewport.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image_io.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/typed_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/managed_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/copy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_extension.h \
  /usr/include/c++/11/math.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/gl.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/display/view.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/attach.h \
- /home/gilberto/projects/pangolin/include/pangolin/handler/handler.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/gl.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/view.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/attach.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/handler/handler.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image_convert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/compontent_cast.h
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image_convert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/compontent_cast.h

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gilberto/projects/pangolin
+CMAKE_SOURCE_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
+CMAKE_BINARY_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin/build
 
 # Utility rule file for register-mime-info-videoviewer.
 
@@ -67,15 +67,15 @@ include tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/compiler
 include tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/progress.make
 
 tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer: tools/VideoViewer/VideoViewer
-	cd /home/gilberto/projects/pangolin/build/tools/VideoViewer && mkdir -p /root/.local/share/mime/packages/
-	cd /home/gilberto/projects/pangolin/build/tools/VideoViewer && mkdir -p /root/.local/share/applications/
-	cd /home/gilberto/projects/pangolin/build/tools/VideoViewer && mkdir -p /root/.local/share/icons/hicolor/scalable/mimetypes/
-	cd /home/gilberto/projects/pangolin/build/tools/VideoViewer && cp /home/gilberto/projects/pangolin/tools/VideoViewer/application-x-pango.xml /root/.local/share/mime/packages/
-	cd /home/gilberto/projects/pangolin/build/tools/VideoViewer && cp /home/gilberto/projects/pangolin/tools/VideoViewer/application-x-pango.svg /root/.local/share/icons/hicolor/scalable/mimetypes/
-	cd /home/gilberto/projects/pangolin/build/tools/VideoViewer && cp /home/gilberto/projects/pangolin/build/tools/VideoViewer/pango.desktop /root/.local/share/applications/
-	cd /home/gilberto/projects/pangolin/build/tools/VideoViewer && gtk-update-icon-cache /root/.local/share/icons/hicolor -f -t
-	cd /home/gilberto/projects/pangolin/build/tools/VideoViewer && update-mime-database /root/.local/share/mime
-	cd /home/gilberto/projects/pangolin/build/tools/VideoViewer && update-desktop-database /root/.local/share/applications
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer && mkdir -p /root/.local/share/mime/packages/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer && mkdir -p /root/.local/share/applications/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer && mkdir -p /root/.local/share/icons/hicolor/scalable/mimetypes/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer && cp /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/VideoViewer/application-x-pango.xml /root/.local/share/mime/packages/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer && cp /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/VideoViewer/application-x-pango.svg /root/.local/share/icons/hicolor/scalable/mimetypes/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer && cp /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer/pango.desktop /root/.local/share/applications/
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer && gtk-update-icon-cache /root/.local/share/icons/hicolor -f -t
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer && update-mime-database /root/.local/share/mime
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer && update-desktop-database /root/.local/share/applications
 
 register-mime-info-videoviewer: tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer
 register-mime-info-videoviewer: tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/build.make
@@ -86,10 +86,10 @@ tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/build: register-
 .PHONY : tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/build
 
 tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/clean:
-	cd /home/gilberto/projects/pangolin/build/tools/VideoViewer && $(CMAKE_COMMAND) -P CMakeFiles/register-mime-info-videoviewer.dir/cmake_clean.cmake
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer && $(CMAKE_COMMAND) -P CMakeFiles/register-mime-info-videoviewer.dir/cmake_clean.cmake
 .PHONY : tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/clean
 
 tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/depend:
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilberto/projects/pangolin /home/gilberto/projects/pangolin/tools/VideoViewer /home/gilberto/projects/pangolin/build /home/gilberto/projects/pangolin/build/tools/VideoViewer /home/gilberto/projects/pangolin/build/tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/gilbertogonzalez/projects/visual_odom/pangolin /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/VideoViewer /home/gilbertogonzalez/projects/visual_odom/pangolin/build /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/depend
 

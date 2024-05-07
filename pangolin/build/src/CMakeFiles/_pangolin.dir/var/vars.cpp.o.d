@@ -1,11 +1,11 @@
 src/CMakeFiles/_pangolin.dir/var/vars.cpp.o: \
- /home/gilberto/projects/pangolin/src/var/vars.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/var/vars.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varextra.h \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varextra.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/iosfwd \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -156,8 +156,8 @@ src/CMakeFiles/_pangolin.dir/var/vars.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/var.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/var.h \
  /usr/include/c++/11/memory /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_tempbuf.h \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
@@ -189,14 +189,14 @@ src/CMakeFiles/_pangolin.dir/var/vars.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
  /usr/include/x86_64-linux-gnu/bits/mathcalls-narrow.h \
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varvalue.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varvaluet.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varvaluegeneric.h \
- /home/gilberto/projects/pangolin/include/pangolin/compat/type_traits.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varwrapper.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/type_convert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varvalue.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varvaluet.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varvaluegeneric.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/compat/type_traits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varwrapper.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/type_convert.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varstate.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varstate.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
@@ -204,16 +204,16 @@ src/CMakeFiles/_pangolin.dir/var/vars.cpp.o: \
  /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_utils.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_utils.h \
  /usr/include/c++/11/algorithm /usr/include/c++/11/bits/stl_algo.h \
  /usr/include/c++/11/bits/algorithmfwd.h \
  /usr/include/c++/11/bits/stl_heap.h \
  /usr/include/c++/11/bits/uniform_int_dist.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/picojson.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/picojson.h \
  /usr/include/c++/11/cstring /usr/include/c++/11/iterator \
  /usr/include/c++/11/bits/stream_iterator.h /usr/include/c++/11/limits \
  /usr/include/inttypes.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/transform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/transform.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \

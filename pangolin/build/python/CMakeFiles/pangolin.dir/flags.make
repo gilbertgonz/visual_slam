@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -Dpangolin_EXPORTS
 
-CXX_INCLUDES = -I/home/gilberto/projects/pangolin/include -I/usr/include/eigen3 -I/home/gilberto/projects/pangolin/external/pybind11/include -I/usr/include/python3.10
+CXX_INCLUDES = -I/home/gilbertogonzalez/projects/visual_odom/pangolin/include -I/usr/include/eigen3 -I/home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include -I/usr/include/python3.10
 
 CXX_FLAGS = -std=c++14 -Wall -Wextra  -fPIC -O3 -DNDEBUG -fPIC -fvisibility=hidden   -w -std=c++14 -flto -fno-fat-lto-objects
 

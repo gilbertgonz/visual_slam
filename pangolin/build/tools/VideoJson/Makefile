@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gilberto/projects/pangolin
+CMAKE_SOURCE_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
+CMAKE_BINARY_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/gilberto/projects/pangolin/build && /usr/bin/cpack --config ./CPackConfig.cmake
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && /usr/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/gilberto/projects/pangolin/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/gilberto/projects/pangolin/build/CPackSourceConfig.cmake
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && /usr/bin/cpack --config ./CPackSourceConfig.cmake /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles /home/gilberto/projects/pangolin/build/tools/VideoJson//CMakeFiles/progress.marks
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles /home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson//CMakeFiles/progress.marks
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/clean
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/preinstall
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/preinstall
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/rule:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/rule
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/rule
 .PHONY : tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ VideoJsonPrint: tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/rule
 
 # fast build rule for target.
 VideoJsonPrint/fast:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build
 .PHONY : VideoJsonPrint/fast
 
 # Convenience name for target.
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/rule:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/rule
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/rule
 .PHONY : tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/rule
 
 # Convenience name for target.
@@ -206,7 +206,7 @@ VideoJsonTransform: tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/rule
 
 # fast build rule for target.
 VideoJsonTransform/fast:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build
 .PHONY : VideoJsonTransform/fast
 
 main-print.o: main-print.cpp.o
@@ -214,7 +214,7 @@ main-print.o: main-print.cpp.o
 
 # target to build an object file
 main-print.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/main-print.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/main-print.cpp.o
 .PHONY : main-print.cpp.o
 
 main-print.i: main-print.cpp.i
@@ -222,7 +222,7 @@ main-print.i: main-print.cpp.i
 
 # target to preprocess a source file
 main-print.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/main-print.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/main-print.cpp.i
 .PHONY : main-print.cpp.i
 
 main-print.s: main-print.cpp.s
@@ -230,7 +230,7 @@ main-print.s: main-print.cpp.s
 
 # target to generate assembly for a file
 main-print.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/main-print.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/main-print.cpp.s
 .PHONY : main-print.cpp.s
 
 main-transform.o: main-transform.cpp.o
@@ -238,7 +238,7 @@ main-transform.o: main-transform.cpp.o
 
 # target to build an object file
 main-transform.cpp.o:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.o
 .PHONY : main-transform.cpp.o
 
 main-transform.i: main-transform.cpp.i
@@ -246,7 +246,7 @@ main-transform.i: main-transform.cpp.i
 
 # target to preprocess a source file
 main-transform.cpp.i:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.i
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.i
 .PHONY : main-transform.cpp.i
 
 main-transform.s: main-transform.cpp.s
@@ -254,7 +254,7 @@ main-transform.s: main-transform.cpp.s
 
 # target to generate assembly for a file
 main-transform.cpp.s:
-	cd /home/gilberto/projects/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.s
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/main-transform.cpp.s
 .PHONY : main-transform.cpp.s
 
 # Help Target
@@ -290,6 +290,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/gilberto/projects/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/gilbertogonzalez/projects/visual_odom/pangolin/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

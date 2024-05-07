@@ -17,7 +17,7 @@ from scipy.sparse import lil_matrix
 
 
 def main(q, debug):
-    data_dir = '/home/gilberto/Downloads/KITTI_data_gray/dataset/sequences/09/'
+    data_dir = '/home/gilbertogonzalez/Downloads/KITTI_data_gray/dataset/sequences/09/'
     '''
     Sequences for demo:
         - sequence 09: 0-257
@@ -36,7 +36,7 @@ def main(q, debug):
     Q_arr_downsampled = []
     poses = []
 
-    vid = None #cv2.VideoCapture('/home/gilberto/Downloads/test.MOV')
+    vid = None #cv2.VideoCapture('/home/gilbertogonzalez/Downloads/test.MOV')
     vid_frame = None
     prev_frame = None
 
@@ -84,9 +84,22 @@ def main(q, debug):
             
             # Triangulate 3d points
             Q_local = []
-            for u_q1, u_q2 in zip(q1, q2):
-                Q_local.append(vo.triangulate(u_q1, u_q2, prev_pose, cur_pose))
-                Q.append(vo.triangulate(u_q1, u_q2, prev_pose, cur_pose))
+
+            ## Version 1
+            # for u_q1, u_q2 in zip(q1, q2):
+            #     Q_local.append(vo.triangulate(u_q1, u_q2, prev_pose, cur_pose))
+            #     Q.append(vo.triangulate(u_q1, u_q2, prev_pose, cur_pose))
+
+            ## Version 2
+            pts4d = vo.triangulate(q1, q2, prev_pose, cur_pose)
+            pts4d /= pts4d[:, 3:]
+            pts3d = pts4d[:, :3]
+
+            for pt in pts3d:
+                Q_local.append(pt)
+                Q.append(pt)
+    
+
             Q_local_arr = np.array(Q_local)
             Q_local_arr_downsampled = Q_local_arr[::3]
 
@@ -122,7 +135,7 @@ def main(q, debug):
 
             # Save all 3d points to txt file
             Q_arr = np.array(Q)
-            Q_arr_downsampled = Q_arr[::4]
+            Q_arr_downsampled = Q_arr[::2]
             if output_txt:
                 with open("3d_pts.txt", 'w') as file:
                     np.savetxt(file, Q_arr, fmt='%f')
@@ -150,7 +163,7 @@ def main(q, debug):
                 cv2.circle(frame, (int(q2[i][0]), int(q2[i][1])), 2, (0, 255, 0), -1)
                 cv2.line(frame, (int(q1[i][0]), int(q1[i][1])), (int(q2[i][0]), int(q2[i][1])), (0, 0, 255), 1)
                         
-            # cv2.imshow("Image", frame)
+            cv2.imshow("Image", frame)
 
             # Update previous frame ever m frames
             if counter % m == 0:

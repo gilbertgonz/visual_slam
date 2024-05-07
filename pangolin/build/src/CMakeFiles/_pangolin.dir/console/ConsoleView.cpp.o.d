@@ -1,5 +1,5 @@
 src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.o: \
- /home/gilberto/projects/pangolin/src/console/ConsoleView.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/src/console/ConsoleView.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/11/iterator \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -140,13 +140,13 @@ src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.o: \
  /usr/include/c++/11/bits/cxxabi_init_exception.h \
  /usr/include/c++/11/typeinfo /usr/include/c++/11/bits/nested_exception.h \
  /usr/include/c++/11/bits/streambuf.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/console/ConsoleView.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/console/ConsoleView.h \
  /usr/include/c++/11/deque /usr/include/c++/11/bits/stl_uninitialized.h \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/istream \
  /usr/include/c++/11/ios /usr/include/c++/11/bits/basic_ios.h \
  /usr/include/c++/11/bits/locale_facets.h /usr/include/c++/11/cwctype \
@@ -158,21 +158,21 @@ src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.o: \
  /usr/include/c++/11/bits/ostream.tcc \
  /usr/include/c++/11/bits/istream.tcc \
  /usr/include/c++/11/bits/sstream.tcc /usr/include/c++/11/iostream \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glfont.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/gltext.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/gl.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/viewport.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glinclude.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glplatform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glfont.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/gltext.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/gl.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/viewport.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glinclude.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glplatform.h \
  /usr/include/GL/glew.h /usr/include/c++/11/cstddef /usr/include/GL/glu.h \
  /usr/include/GL/gl.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glpangoglu.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image_io.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/typed_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/managed_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/memcpy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glpangoglu.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image_io.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/typed_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/managed_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/memcpy.h \
  /usr/include/c++/11/cstring /usr/include/string.h /usr/include/strings.h \
  /usr/include/x86_64-linux-gnu/bits/strings_fortified.h \
  /usr/include/x86_64-linux-gnu/bits/string_fortified.h \
@@ -181,9 +181,9 @@ src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.o: \
  /usr/include/c++/11/array /usr/include/c++/11/bits/uses_allocator.h \
  /usr/include/c++/11/bits/invoke.h /usr/include/c++/11/bits/refwrap.h \
  /usr/include/c++/11/bits/std_function.h /usr/include/c++/11/limits \
- /home/gilberto/projects/pangolin/include/pangolin/image/copy.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/pixel_format.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_extension.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/copy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/pixel_format.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_extension.h \
  /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
@@ -345,25 +345,25 @@ src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.o: \
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
  /usr/include/c++/11/math.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/gl.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glpixformat.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glformattraits.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/display.h \
- /home/gilberto/projects/pangolin/include/pangolin/handler/handler_enums.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/params.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/type_convert.h \
- /home/gilberto/projects/pangolin/include/pangolin/compat/type_traits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/gl.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glpixformat.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glformattraits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/display.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/handler/handler_enums.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/params.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/type_convert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/compat/type_traits.h \
  /usr/include/c++/11/vector /usr/include/c++/11/bits/stl_vector.h \
  /usr/include/c++/11/bits/stl_bvector.h \
  /usr/include/c++/11/bits/vector.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/display/window.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glchar.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/window.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glchar.h \
  /usr/include/c++/11/map /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/ext/aligned_buffer.h \
  /usr/include/c++/11/bits/stl_map.h \
  /usr/include/c++/11/bits/stl_multimap.h \
  /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/cstdarg \
- /home/gilberto/projects/pangolin/include/pangolin/var/var.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/var.h \
  /usr/include/c++/11/memory \
  /usr/include/c++/11/bits/stl_raw_storage_iter.h \
  /usr/include/c++/11/bits/align.h /usr/include/c++/11/bit \
@@ -374,18 +374,18 @@ src/CMakeFiles/_pangolin.dir/console/ConsoleView.cpp.o: \
  /usr/include/c++/11/ext/concurrence.h \
  /usr/include/c++/11/bits/shared_ptr_atomic.h \
  /usr/include/c++/11/backward/auto_ptr.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varvalue.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varvaluet.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varvaluegeneric.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varwrapper.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varstate.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_utils.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/view.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/attach.h \
- /home/gilberto/projects/pangolin/include/pangolin/handler/handler.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/opengl_render_state.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/simple_math.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/colour.h \
- /home/gilberto/projects/pangolin/include/pangolin/console/ConsoleInterpreter.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/picojson.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varvalue.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varvaluet.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varvaluegeneric.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varwrapper.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varstate.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_utils.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/view.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/attach.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/handler/handler.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/opengl_render_state.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/simple_math.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/colour.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/console/ConsoleInterpreter.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/picojson.h \
  /usr/include/inttypes.h

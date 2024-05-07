@@ -1,4 +1,4 @@
-# Install script for directory: /home/gilberto/projects/pangolin
+# Install script for directory: /home/gilbertogonzalez/projects/visual_odom/pangolin
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,12 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/gilberto/projects/pangolin/build/external/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/src/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/python/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/test/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/examples/cmake_install.cmake")
-  include("/home/gilberto/projects/pangolin/build/tools/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/external/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/src/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/python/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/test/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/examples/cmake_install.cmake")
+  include("/home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/cmake_install.cmake")
 
 endif()
 
@@ -61,5 +61,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/gilberto/projects/pangolin/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

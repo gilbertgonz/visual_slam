@@ -11,4 +11,4 @@ endif()
 
 SET( Pangolin_LIBRARIES    _pangolin )
 SET( Pangolin_LIBRARY      _pangolin )
-SET( Pangolin_CMAKEMODULES /home/gilberto/projects/pangolin/src/../CMakeModules )
+SET( Pangolin_CMAKEMODULES /home/gilbertogonzalez/projects/visual_odom/pangolin/src/../CMakeModules )

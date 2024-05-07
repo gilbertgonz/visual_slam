@@ -1,4 +1,4 @@
-# Install script for directory: /home/gilberto/projects/pangolin/tools/VideoJson
+# Install script for directory: /home/gilbertogonzalez/projects/visual_odom/pangolin/tools/VideoJson
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -57,7 +57,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/home/gilberto/projects/pangolin/build/tools/VideoJson/VideoJsonPrint")
+  file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson/VideoJsonPrint")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/VideoJsonPrint" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/VideoJsonPrint")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -81,7 +81,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/home/gilberto/projects/pangolin/build/tools/VideoJson/VideoJsonTransform")
+  file(INSTALL DESTINATION "/usr/local/bin" TYPE EXECUTABLE FILES "/home/gilbertogonzalez/projects/visual_odom/pangolin/build/tools/VideoJson/VideoJsonTransform")
   if(EXISTS "$ENV{DESTDIR}/usr/local/bin/VideoJsonTransform" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}/usr/local/bin/VideoJsonTransform")
     if(CMAKE_INSTALL_DO_STRIP)

@@ -1,11 +1,11 @@
 python/CMakeFiles/pangolin.dir/pangolin.cpp.o: \
- /home/gilberto/projects/pangolin/python/pangolin.cpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/pangolin.cpp \
  /usr/include/stdc-predef.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/pybind11.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/attr.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/cast.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/pytypes.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/detail/common.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/pybind11.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/attr.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/cast.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/pytypes.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/detail/common.h \
  /usr/include/python3.10/Python.h /usr/include/python3.10/patchlevel.h \
  /usr/include/python3.10/pyconfig.h \
  /usr/include/x86_64-linux-gnu/python3.10/pyconfig.h \
@@ -297,17 +297,17 @@ python/CMakeFiles/pangolin.dir/pangolin.cpp.o: \
  /usr/include/c++/11/bits/atomic_base.h \
  /usr/include/c++/11/bits/atomic_lockfree_defines.h \
  /usr/include/c++/11/backward/auto_ptr.h /usr/include/c++/11/typeindex \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/buffer_info.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/detail/typeid.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/buffer_info.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/detail/typeid.h \
  /usr/include/c++/11/cxxabi.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/cxxabi_tweaks.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/detail/descr.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/detail/internals.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/detail/descr.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/detail/internals.h \
  /usr/include/c++/11/limits \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/options.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/detail/class.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/detail/init.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/stl.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/options.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/detail/class.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/detail/init.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/stl.h \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_set.h \
  /usr/include/c++/11/bits/stl_multiset.h /usr/include/c++/11/map \
@@ -347,34 +347,34 @@ python/CMakeFiles/pangolin.dir/pangolin.cpp.o: \
  /usr/include/c++/11/bits/indirect_array.h \
  /usr/include/c++/11/experimental/optional \
  /usr/include/c++/11/experimental/bits/lfts_config.h \
- /home/gilberto/projects/pangolin/python/utils/params.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/utils/params.h \
- /home/gilberto/projects/pangolin/include/pangolin/platform.h \
- /home/gilberto/projects/pangolin/include/pangolin/config.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/assert.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/format_string.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/utils/params.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/params.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/platform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/config.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/assert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/format_string.h \
  /usr/include/c++/11/sstream /usr/include/c++/11/bits/sstream.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/utils/log.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/type_convert.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/log.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/type_convert.h \
  /usr/include/c++/11/functional /usr/include/c++/11/bits/std_function.h \
- /home/gilberto/projects/pangolin/include/pangolin/compat/type_traits.h \
- /home/gilberto/projects/pangolin/python/display/attach.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/display/attach.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/compat/type_traits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/display/attach.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/attach.h \
  /usr/include/GL/glew.h /usr/include/GL/glu.h /usr/include/GL/gl.h \
- /home/gilberto/projects/pangolin/python/display/window.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/display/window.h \
- /home/gilberto/projects/pangolin/python/display/user_app.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/display/user_app.h \
- /home/gilberto/projects/pangolin/python/display/viewport.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/display/viewport.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glinclude.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glplatform.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glpangoglu.h \
- /home/gilberto/projects/pangolin/python/display/view.hpp \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/functional.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/view.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/opengl_render_state.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/simple_math.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/display/window.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/window.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/display/user_app.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/user_app.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/display/viewport.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/viewport.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glinclude.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glplatform.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glpangoglu.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/display/view.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/functional.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/view.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/opengl_render_state.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/simple_math.h \
  /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
  /usr/include/eigen3/Eigen/src/Core/util/Macros.h \
@@ -510,12 +510,12 @@ python/CMakeFiles/pangolin.dir/pangolin.cpp.o: \
  /usr/include/eigen3/Eigen/src/Core/StlIterators.h \
  /usr/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
  /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
- /home/gilberto/projects/pangolin/include/pangolin/handler/handler.h \
- /home/gilberto/projects/pangolin/include/pangolin/handler/handler_enums.h \
- /home/gilberto/projects/pangolin/python/display/opengl_render_state.hpp \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/eigen.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/numpy.h \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/complex.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/handler/handler.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/handler/handler_enums.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/display/opengl_render_state.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/eigen.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/numpy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/complex.h \
  /usr/include/c++/11/numeric /usr/include/c++/11/bits/stl_numeric.h \
  /usr/include/eigen3/Eigen/SparseCore /usr/include/eigen3/Eigen/Core \
  /usr/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
@@ -552,69 +552,69 @@ python/CMakeFiles/pangolin.dir/pangolin.cpp.o: \
  /usr/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
  /usr/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
  /usr/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
- /home/gilberto/projects/pangolin/python/handler/handler_enums.hpp \
- /home/gilberto/projects/pangolin/python/handler/handler.hpp \
- /home/gilberto/projects/pangolin/python/handler/handler_image.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/handler/handler_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image_utils.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/memcpy.h \
- /home/gilberto/projects/pangolin/include/pangolin/plot/range.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/handler/handler_enums.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/handler/handler.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/handler/handler_image.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/handler/handler_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image_utils.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/memcpy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/plot/range.h \
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/gl.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/image_io.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/typed_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/managed_image.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/copy.h \
- /home/gilberto/projects/pangolin/include/pangolin/image/pixel_format.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_extension.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/gl.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glpixformat.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glformattraits.h \
- /home/gilberto/projects/pangolin/include/pangolin/display/display.h \
- /home/gilberto/projects/pangolin/python/var/varvaluegeneric.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/var/varvaluegeneric.h \
- /home/gilberto/projects/pangolin/python/var/varvaluet.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/var/varvaluet.h \
- /home/gilberto/projects/pangolin/python/var/varvalue.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/var/varvalue.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varwrapper.h \
- /home/gilberto/projects/pangolin/python/var/var.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/var/var.h \
- /home/gilberto/projects/pangolin/include/pangolin/var/varstate.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/file_utils.h \
- /home/gilberto/projects/pangolin/python/var/varextra.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/var/varextra.h \
- /home/gilberto/projects/pangolin/python/display/image_view.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/display/image_view.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glsl.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/gl.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/image_io.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/typed_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/managed_image.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/copy.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/image/pixel_format.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_extension.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/gl.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glpixformat.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glformattraits.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/display.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/var/varvaluegeneric.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varvaluegeneric.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/var/varvaluet.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varvaluet.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/var/varvalue.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varvalue.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varwrapper.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/var/var.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/var.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varstate.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/file_utils.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/var/varextra.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/var/varextra.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/display/image_view.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/image_view.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glsl.h \
  /usr/include/c++/11/fstream /usr/include/c++/11/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/gl/colour.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/colour.h \
  /usr/include/c++/11/mutex /usr/include/c++/11/chrono \
  /usr/include/c++/11/ratio /usr/include/c++/11/ctime \
  /usr/include/c++/11/bits/parse_numbers.h \
  /usr/include/c++/11/bits/std_mutex.h \
  /usr/include/c++/11/bits/unique_lock.h \
- /home/gilberto/projects/pangolin/python/display/display.hpp \
- /home/gilberto/projects/pangolin/python/display/widgets/widgets.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/display/widgets/widgets.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glfont.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/gltext.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glchar.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/display/display.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/display/widgets/widgets.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/display/widgets/widgets.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glfont.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/gltext.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glchar.h \
  /usr/include/c++/11/cstdarg \
- /home/gilberto/projects/pangolin/python/scene/scene.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/scene/interactive.h \
- /home/gilberto/projects/pangolin/include/pangolin/scene/renderable.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/scene/scene.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/scene/interactive.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/scene/renderable.h \
  /usr/include/c++/11/random /usr/include/c++/11/bits/random.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/opt_random.h \
  /usr/include/c++/11/bits/random.tcc \
- /home/gilberto/projects/pangolin/include/pangolin/scene/interactive_index.h \
- /home/gilberto/projects/pangolin/include/pangolin/scene/scenehandler.h \
- /home/gilberto/projects/pangolin/include/pangolin/scene/axis.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/gldraw.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/scene/interactive_index.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/scene/scenehandler.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/scene/axis.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/gldraw.h \
  /usr/include/eigen3/Eigen/Geometry /usr/include/eigen3/Eigen/SVD \
  /usr/include/eigen3/Eigen/QR /usr/include/eigen3/Eigen/Cholesky \
  /usr/include/eigen3/Eigen/Jacobi \
@@ -656,29 +656,29 @@ python/CMakeFiles/pangolin.dir/pangolin.cpp.o: \
  /usr/include/eigen3/Eigen/src/Geometry/AlignedBox.h \
  /usr/include/eigen3/Eigen/src/Geometry/Umeyama.h \
  /usr/include/eigen3/Eigen/src/Geometry/arch/Geometry_SIMD.h \
- /home/gilberto/projects/pangolin/python/plot/plotter.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/plot/plotter.h \
- /home/gilberto/projects/pangolin/include/pangolin/plot/datalog.h \
- /home/gilberto/projects/pangolin/python/plot/datalog.hpp \
- /home/gilberto/projects/pangolin/python/plot/range.hpp \
- /home/gilberto/projects/pangolin/external/pybind11/include/pybind11/operators.h \
- /home/gilberto/projects/pangolin/python/gl/gl.hpp \
- /home/gilberto/projects/pangolin/python/gl/colour.hpp \
- /home/gilberto/projects/pangolin/python/gl/gldraw.hpp \
- /home/gilberto/projects/pangolin/python/contrib.hpp \
- /home/gilberto/projects/pangolin/include/pangolin/pangolin.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glvbo.h \
- /home/gilberto/projects/pangolin/include/pangolin/gl/glstate.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/plot/plotter.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/plot/plotter.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/plot/datalog.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/plot/datalog.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/plot/range.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/external/pybind11/include/pybind11/operators.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/gl/gl.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/gl/colour.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/gl/gldraw.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/python/contrib.hpp \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/pangolin.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glvbo.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/gl/glstate.h \
  /usr/include/c++/11/stack /usr/include/c++/11/deque \
  /usr/include/c++/11/bits/stl_deque.h /usr/include/c++/11/bits/deque.tcc \
  /usr/include/c++/11/bits/stl_stack.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/uri.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_exception.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_interface.h \
- /home/gilberto/projects/pangolin/include/pangolin/utils/picojson.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/uri.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_exception.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_interface.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/utils/picojson.h \
  /usr/include/c++/11/iterator /usr/include/c++/11/bits/stream_iterator.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/stream_info.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_output_interface.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_input.h \
- /home/gilberto/projects/pangolin/include/pangolin/video/video_output.h
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/stream_info.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_output_interface.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_input.h \
+ /home/gilbertogonzalez/projects/visual_odom/pangolin/include/pangolin/video/video_output.h

@@ -54,10 +54,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/gilberto/projects/pangolin
+CMAKE_SOURCE_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/gilberto/projects/pangolin/build
+CMAKE_BINARY_DIR = /home/gilbertogonzalez/projects/visual_odom/pangolin/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -434,14 +434,14 @@ tools/VideoViewer/clean: tools/VideoViewer/CMakeFiles/register-mime-info-videovi
 CMakeFiles/uninstall.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/uninstall.dir/build.make CMakeFiles/uninstall.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num= "Built target uninstall"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num= "Built target uninstall"
 .PHONY : CMakeFiles/uninstall.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/uninstall.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/uninstall.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : CMakeFiles/uninstall.dir/rule
 
 # Convenience name for target.
@@ -460,14 +460,14 @@ CMakeFiles/uninstall.dir/clean:
 src/CMakeFiles/_pangolin.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/_pangolin.dir/build.make src/CMakeFiles/_pangolin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98 "Built target _pangolin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76,77,78,79,80,81,82,83,84,85,86,87,88,89,90,91,92,93,94,95,96,97,98 "Built target _pangolin"
 .PHONY : src/CMakeFiles/_pangolin.dir/all
 
 # Build rule for subdir invocation for target.
 src/CMakeFiles/_pangolin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 71
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 71
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/_pangolin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : src/CMakeFiles/_pangolin.dir/rule
 
 # Convenience name for target.
@@ -486,14 +486,14 @@ src/CMakeFiles/_pangolin.dir/clean:
 python/CMakeFiles/pangolin.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f python/CMakeFiles/pangolin.dir/build.make python/CMakeFiles/pangolin.dir/depend
 	$(MAKE) $(MAKESILENT) -f python/CMakeFiles/pangolin.dir/build.make python/CMakeFiles/pangolin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=99,100 "Built target pangolin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=99,100 "Built target pangolin"
 .PHONY : python/CMakeFiles/pangolin.dir/all
 
 # Build rule for subdir invocation for target.
 python/CMakeFiles/pangolin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 python/CMakeFiles/pangolin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : python/CMakeFiles/pangolin.dir/rule
 
 # Convenience name for target.
@@ -512,14 +512,14 @@ python/CMakeFiles/pangolin.dir/clean:
 examples/HelloPangolin/CMakeFiles/HelloPangolin.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/HelloPangolin/CMakeFiles/HelloPangolin.dir/build.make examples/HelloPangolin/CMakeFiles/HelloPangolin.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/HelloPangolin/CMakeFiles/HelloPangolin.dir/build.make examples/HelloPangolin/CMakeFiles/HelloPangolin.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=1 "Built target HelloPangolin"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=1 "Built target HelloPangolin"
 .PHONY : examples/HelloPangolin/CMakeFiles/HelloPangolin.dir/all
 
 # Build rule for subdir invocation for target.
 examples/HelloPangolin/CMakeFiles/HelloPangolin.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 72
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 72
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/HelloPangolin/CMakeFiles/HelloPangolin.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : examples/HelloPangolin/CMakeFiles/HelloPangolin.dir/rule
 
 # Convenience name for target.
@@ -538,14 +538,14 @@ examples/HelloPangolin/CMakeFiles/HelloPangolin.dir/clean:
 examples/SimpleMultiDisplay/CMakeFiles/SimpleMultiDisplay.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/SimpleMultiDisplay/CMakeFiles/SimpleMultiDisplay.dir/build.make examples/SimpleMultiDisplay/CMakeFiles/SimpleMultiDisplay.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/SimpleMultiDisplay/CMakeFiles/SimpleMultiDisplay.dir/build.make examples/SimpleMultiDisplay/CMakeFiles/SimpleMultiDisplay.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=10,11 "Built target SimpleMultiDisplay"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=10,11 "Built target SimpleMultiDisplay"
 .PHONY : examples/SimpleMultiDisplay/CMakeFiles/SimpleMultiDisplay.dir/all
 
 # Build rule for subdir invocation for target.
 examples/SimpleMultiDisplay/CMakeFiles/SimpleMultiDisplay.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleMultiDisplay/CMakeFiles/SimpleMultiDisplay.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : examples/SimpleMultiDisplay/CMakeFiles/SimpleMultiDisplay.dir/rule
 
 # Convenience name for target.
@@ -564,14 +564,14 @@ examples/SimpleMultiDisplay/CMakeFiles/SimpleMultiDisplay.dir/clean:
 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/build.make examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/build.make examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=8,9 "Built target SimpleDisplayImage"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=8,9 "Built target SimpleDisplayImage"
 .PHONY : examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/all
 
 # Build rule for subdir invocation for target.
 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/rule
 
 # Convenience name for target.
@@ -590,14 +590,14 @@ examples/SimpleDisplayImage/CMakeFiles/SimpleDisplayImage.dir/clean:
 examples/SimpleScene/CMakeFiles/SimpleScene.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/SimpleScene/CMakeFiles/SimpleScene.dir/build.make examples/SimpleScene/CMakeFiles/SimpleScene.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/SimpleScene/CMakeFiles/SimpleScene.dir/build.make examples/SimpleScene/CMakeFiles/SimpleScene.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=16,17 "Built target SimpleScene"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=16,17 "Built target SimpleScene"
 .PHONY : examples/SimpleScene/CMakeFiles/SimpleScene.dir/all
 
 # Build rule for subdir invocation for target.
 examples/SimpleScene/CMakeFiles/SimpleScene.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleScene/CMakeFiles/SimpleScene.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : examples/SimpleScene/CMakeFiles/SimpleScene.dir/rule
 
 # Convenience name for target.
@@ -616,14 +616,14 @@ examples/SimpleScene/CMakeFiles/SimpleScene.dir/clean:
 examples/SimplePlot/CMakeFiles/SimplePlot.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/SimplePlot/CMakeFiles/SimplePlot.dir/build.make examples/SimplePlot/CMakeFiles/SimplePlot.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/SimplePlot/CMakeFiles/SimplePlot.dir/build.make examples/SimplePlot/CMakeFiles/SimplePlot.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=12,13 "Built target SimplePlot"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=12,13 "Built target SimplePlot"
 .PHONY : examples/SimplePlot/CMakeFiles/SimplePlot.dir/all
 
 # Build rule for subdir invocation for target.
 examples/SimplePlot/CMakeFiles/SimplePlot.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimplePlot/CMakeFiles/SimplePlot.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : examples/SimplePlot/CMakeFiles/SimplePlot.dir/rule
 
 # Convenience name for target.
@@ -642,14 +642,14 @@ examples/SimplePlot/CMakeFiles/SimplePlot.dir/clean:
 examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build.make examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build.make examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=6,7 "Built target SimpleDisplay"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=6,7 "Built target SimpleDisplay"
 .PHONY : examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/all
 
 # Build rule for subdir invocation for target.
 examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/rule
 
 # Convenience name for target.
@@ -668,14 +668,14 @@ examples/SimpleDisplay/CMakeFiles/SimpleDisplay.dir/clean:
 examples/SimpleVideo/CMakeFiles/SimpleVideo.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/SimpleVideo/CMakeFiles/SimpleVideo.dir/build.make examples/SimpleVideo/CMakeFiles/SimpleVideo.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/SimpleVideo/CMakeFiles/SimpleVideo.dir/build.make examples/SimpleVideo/CMakeFiles/SimpleVideo.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=18,19 "Built target SimpleVideo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=18,19 "Built target SimpleVideo"
 .PHONY : examples/SimpleVideo/CMakeFiles/SimpleVideo.dir/all
 
 # Build rule for subdir invocation for target.
 examples/SimpleVideo/CMakeFiles/SimpleVideo.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleVideo/CMakeFiles/SimpleVideo.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : examples/SimpleVideo/CMakeFiles/SimpleVideo.dir/rule
 
 # Convenience name for target.
@@ -694,14 +694,14 @@ examples/SimpleVideo/CMakeFiles/SimpleVideo.dir/clean:
 examples/SimpleRecord/CMakeFiles/SimpleRecord.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/SimpleRecord/CMakeFiles/SimpleRecord.dir/build.make examples/SimpleRecord/CMakeFiles/SimpleRecord.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/SimpleRecord/CMakeFiles/SimpleRecord.dir/build.make examples/SimpleRecord/CMakeFiles/SimpleRecord.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=14,15 "Built target SimpleRecord"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=14,15 "Built target SimpleRecord"
 .PHONY : examples/SimpleRecord/CMakeFiles/SimpleRecord.dir/all
 
 # Build rule for subdir invocation for target.
 examples/SimpleRecord/CMakeFiles/SimpleRecord.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SimpleRecord/CMakeFiles/SimpleRecord.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : examples/SimpleRecord/CMakeFiles/SimpleRecord.dir/rule
 
 # Convenience name for target.
@@ -720,14 +720,14 @@ examples/SimpleRecord/CMakeFiles/SimpleRecord.dir/clean:
 examples/SharedMemoryCamera/CMakeFiles/SharedMemoryCamera.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f examples/SharedMemoryCamera/CMakeFiles/SharedMemoryCamera.dir/build.make examples/SharedMemoryCamera/CMakeFiles/SharedMemoryCamera.dir/depend
 	$(MAKE) $(MAKESILENT) -f examples/SharedMemoryCamera/CMakeFiles/SharedMemoryCamera.dir/build.make examples/SharedMemoryCamera/CMakeFiles/SharedMemoryCamera.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=4,5 "Built target SharedMemoryCamera"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=4,5 "Built target SharedMemoryCamera"
 .PHONY : examples/SharedMemoryCamera/CMakeFiles/SharedMemoryCamera.dir/all
 
 # Build rule for subdir invocation for target.
 examples/SharedMemoryCamera/CMakeFiles/SharedMemoryCamera.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 examples/SharedMemoryCamera/CMakeFiles/SharedMemoryCamera.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : examples/SharedMemoryCamera/CMakeFiles/SharedMemoryCamera.dir/rule
 
 # Convenience name for target.
@@ -746,14 +746,14 @@ examples/SharedMemoryCamera/CMakeFiles/SharedMemoryCamera.dir/clean:
 tools/VideoViewer/CMakeFiles/VideoViewer.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/VideoViewer/CMakeFiles/VideoViewer.dir/build.make tools/VideoViewer/CMakeFiles/VideoViewer.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/VideoViewer/CMakeFiles/VideoViewer.dir/build.make tools/VideoViewer/CMakeFiles/VideoViewer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=26,27 "Built target VideoViewer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=26,27 "Built target VideoViewer"
 .PHONY : tools/VideoViewer/CMakeFiles/VideoViewer.dir/all
 
 # Build rule for subdir invocation for target.
 tools/VideoViewer/CMakeFiles/VideoViewer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoViewer/CMakeFiles/VideoViewer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : tools/VideoViewer/CMakeFiles/VideoViewer.dir/rule
 
 # Convenience name for target.
@@ -772,14 +772,14 @@ tools/VideoViewer/CMakeFiles/VideoViewer.dir/clean:
 tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/all: tools/VideoViewer/CMakeFiles/VideoViewer.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/build.make tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/build.make tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num= "Built target register-mime-info-videoviewer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num= "Built target register-mime-info-videoviewer"
 .PHONY : tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/all
 
 # Build rule for subdir invocation for target.
 tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/rule
 
 # Convenience name for target.
@@ -798,14 +798,14 @@ tools/VideoViewer/CMakeFiles/register-mime-info-videoviewer.dir/clean:
 tools/VideoConvert/CMakeFiles/VideoConvert.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/VideoConvert/CMakeFiles/VideoConvert.dir/build.make tools/VideoConvert/CMakeFiles/VideoConvert.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/VideoConvert/CMakeFiles/VideoConvert.dir/build.make tools/VideoConvert/CMakeFiles/VideoConvert.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=20,21 "Built target VideoConvert"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=20,21 "Built target VideoConvert"
 .PHONY : tools/VideoConvert/CMakeFiles/VideoConvert.dir/all
 
 # Build rule for subdir invocation for target.
 tools/VideoConvert/CMakeFiles/VideoConvert.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoConvert/CMakeFiles/VideoConvert.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : tools/VideoConvert/CMakeFiles/VideoConvert.dir/rule
 
 # Convenience name for target.
@@ -824,14 +824,14 @@ tools/VideoConvert/CMakeFiles/VideoConvert.dir/clean:
 tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=22,23 "Built target VideoJsonPrint"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=22,23 "Built target VideoJsonPrint"
 .PHONY : tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/all
 
 # Build rule for subdir invocation for target.
 tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/rule
 
 # Convenience name for target.
@@ -850,14 +850,14 @@ tools/VideoJson/CMakeFiles/VideoJsonPrint.dir/clean:
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build.make tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=24,25 "Built target VideoJsonTransform"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=24,25 "Built target VideoJsonTransform"
 .PHONY : tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/all
 
 # Build rule for subdir invocation for target.
 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/rule
 
 # Convenience name for target.
@@ -876,14 +876,14 @@ tools/VideoJson/CMakeFiles/VideoJsonTransform.dir/clean:
 tools/Plotter/CMakeFiles/Plotter.dir/all: src/CMakeFiles/_pangolin.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/Plotter/CMakeFiles/Plotter.dir/build.make tools/Plotter/CMakeFiles/Plotter.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/Plotter/CMakeFiles/Plotter.dir/build.make tools/Plotter/CMakeFiles/Plotter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num=2,3 "Built target Plotter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num=2,3 "Built target Plotter"
 .PHONY : tools/Plotter/CMakeFiles/Plotter.dir/all
 
 # Build rule for subdir invocation for target.
 tools/Plotter/CMakeFiles/Plotter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/Plotter/CMakeFiles/Plotter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : tools/Plotter/CMakeFiles/Plotter.dir/rule
 
 # Convenience name for target.
@@ -902,14 +902,14 @@ tools/Plotter/CMakeFiles/Plotter.dir/clean:
 tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/all: tools/Plotter/CMakeFiles/Plotter.dir/all
 	$(MAKE) $(MAKESILENT) -f tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/build.make tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/depend
 	$(MAKE) $(MAKESILENT) -f tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/build.make tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilberto/projects/pangolin/build/CMakeFiles --progress-num= "Built target register-mime-info-plotter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles --progress-num= "Built target register-mime-info-plotter"
 .PHONY : tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/all
 
 # Build rule for subdir invocation for target.
 tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 73
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 73
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilberto/projects/pangolin/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/gilbertogonzalez/projects/visual_odom/pangolin/build/CMakeFiles 0
 .PHONY : tools/Plotter/CMakeFiles/register-mime-info-plotter.dir/rule
 
 # Convenience name for target.

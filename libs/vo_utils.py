@@ -158,19 +158,38 @@ class VisualOdometry():
 
         return self.form_transf(R, tvec.squeeze())
 
-    def triangulate(self, pts1, pts2, P1, P2, threshold=3.0):       
-        P1 = P1[:3, :]
-        P2 = P2[:3, :]
+    ## Version 1
+    # def triangulate(self, pts1, pts2, P1, P2, threshold=3.0):       
+    #     P1 = P1[:3, :]
+    #     P2 = P2[:3, :]
 
-        P1 = self.K @ P1
-        P2 = self.K @ P2
+    #     P1 = self.K @ P1
+    #     P2 = self.K @ P2
 
-        # Triangulate the 3D points
-        points_4D = cv2.triangulatePoints(P1, P2, pts1, pts2)
-        points_3D = points_4D / points_4D[3]  # Convert from homogeneous to Cartesian coordinates
-        points_3D = points_3D[:3, :].T
+    #     # Triangulate the 3D points
+    #     points_4D = cv2.triangulatePoints(P1, P2, pts1, pts2)
+    #     points_3D = points_4D / points_4D[3]  # Convert from homogeneous to Cartesian coordinates
+    #     points_3D = points_3D[:3, :].T
 
-        return points_3D.flatten()
+    #     return points_3D.flatten()
+    
+    ## Version 2
+    def triangulate(self, pts1, pts2, pose1, pose2):
+        # print(pose1, pose2, pts1, pts2)
+        
+        ret = np.zeros((pts1.shape[0], 4))
+        pose1 = np.linalg.inv(pose1)
+        pose2 = np.linalg.inv(pose2)
+        for i, p in enumerate(zip(pts1, pts2)):
+            A = np.zeros((4,4))
+            A[0] = p[0][0] * pose1[2] - pose1[0]
+            A[1] = p[0][1] * pose1[2] - pose1[1]
+            A[2] = p[1][0] * pose2[2] - pose2[0]
+            A[3] = p[1][1] * pose2[2] - pose2[1]
+            _, _, vt = np.linalg.svd(A)
+            ret[i] = vt[3]
+        return ret
+
     
     def calc_reprojection_error(self, K, D, rvec, tvec, objp, imgpoints):
         """Calculates reprojection error using 2D Euclidean distance
