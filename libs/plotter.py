@@ -40,7 +40,7 @@ class Plotter():
 
         self.pts_button = pangolin.VarBool('ui.Show Points', value=True, toggle=False)
         self.show_pts = False
-        self.gt_button = pangolin.VarBool('ui.Show GT', value=True, toggle=False)
+        self.gt_button = pangolin.VarBool('ui.Show GT', value=False, toggle=False)
         self.show_gt = False
         self.exit_button = pangolin.VarBool('ui.Exit', value=False, toggle=False)
 
@@ -51,7 +51,7 @@ class Plotter():
             self.ax_2d.clear()
             
             while not self.q.empty():
-                est, gt, Q, cur_pose, img = self.q.get()
+                est, gt, Q, cur_pose = self.q.get()
 
             # Extract coordinates of estimated_path
             x_est = [point[0] for point in est]
@@ -99,7 +99,7 @@ class Plotter():
         while True:
             ## 2D Plot
             while not self.q.empty():
-                est, gt, Q, cur_pose, img = self.q.get()
+                est, gt, Q, cur_pose = self.q.get()
 
             height, width = 800, 800  # Define image dimensions
             cx , cy = width/2, height/2
@@ -131,9 +131,8 @@ class Plotter():
     def plot_pang(self):        
         while True:
             while not self.q.empty():
-                est, gt, Q, poses, img = self.q.get() 
+                est, gt, Q, poses = self.q.get() 
 
-            flipped_img = cv2.flip(img, 0) 
             Q_reshaped = np.array(Q).reshape(-1, 3)*-1
             if gt:
                 gt_reshaped = np.array(gt).reshape(-1, 3)
@@ -143,7 +142,6 @@ class Plotter():
             gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
             gl.glClearColor(0.0, 0.0, 0.0, 0.0)
             self.dcam.Activate(self.scam) 
-            # self.update_model_view(self.scam.GetModelViewMatrix(), cur_pose)
             
             # Inversing pose to better match image perspective
             new_poses = []
@@ -191,16 +189,3 @@ class Plotter():
                 exit()
 
             pangolin.FinishFrame()
-
-    # Function to update the model view matrix based on camera pose
-    def update_model_view(self, model_view_matrix, camera_pose):
-        # Extract camera position and orientation from the pose
-        camera_position = camera_pose[0][:3]
-        look_at_point = camera_position + camera_pose[0][3:]  # Assuming camera pose includes orientation
-        print(f"{look_at_point[0] = }")
-
-        # Update the model view matrix to match the camera pose
-        model_view_matrix.Load(pangolin.ModelViewLookAt(
-            camera_position[0], camera_position[1], camera_position[2],  # camera position
-            0, 0, 0,  # look at point
-            pangolin.AxisDirection.AxisY))  # camera up direction
