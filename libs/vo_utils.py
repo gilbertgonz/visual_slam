@@ -17,9 +17,6 @@ class VisualOdometry():
         # SIFT
         self.sift = cv2.SIFT_create()
 
-        # FAST
-        self.fast = cv2.FastFeatureDetector_create(threshold = 25, nonmaxSuppression = True)
-
         # Matchers
         self.bf = cv2.BFMatcher()
 
@@ -125,24 +122,6 @@ class VisualOdometry():
             # Extract filtered keypoints
             q1 = np.float32([kps1[m.queryIdx].pt for m in good ])
             q2 = np.float32([kps2[m.trainIdx].pt for m in good ])
-
-            return q1, q2
-        if detector == "FAST": # not working at the moment
-            if self.debug:
-                print(detector)
-            if frame is not None:
-                kps1 = self.fast.detect(prev_frame)
-                kps1 = np.array([x.pt for x in kps1], dtype=np.float32).reshape(-1, 1, 2)
-            else:
-                kps1 = self.fast.detect(cv2.imread(self.image_paths[i - 1], cv2.IMREAD_GRAYSCALE))
-                kps1 = np.array([x.pt for x in kps1], dtype=np.float32).reshape(-1, 1, 2)
-
-            # Calculate optical flow between frames
-            kps2, status, err = cv2.calcOpticalFlowPyrLK(prev_frame, frame, kps1, None, winSize = (15,15), criteria = (cv2.TERM_CRITERIA_EPS | cv2.TERM_CRITERIA_COUNT, 30, 0.01))#, **self.lk_params)
-
-            # Extract filtered keypoints
-            q1 = kps1[status == 1]
-            q2 = kps2[status == 1]
 
             return q1, q2
             
