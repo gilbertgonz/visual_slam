@@ -1,6 +1,7 @@
 import os
 import numpy as np
 import cv2
+import json
 
 class VisualOdometry():
     def __init__(self, data_dir, debug):
@@ -10,6 +11,13 @@ class VisualOdometry():
         self.gt_poses    = self.load_poses(os.path.join(data_dir, 'poses.txt'))
         self.image_paths = self.load_image_paths(data_dir)
         self.debug      = debug
+
+        # # Import other calibration data
+        # with open('/home/gilbertogonzalez/projects/visual_slam/libs/cal.json', 'r') as file:
+        #     data = json.load(file)
+        # # Extract K and D from the JSON data
+        # self.K = np.array(data['camera_matrix'])
+        # self.D = np.array(data['distortion_coefficients'])
 
         # ORB
         self.orb = cv2.ORB_create(3000)
