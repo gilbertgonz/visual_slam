@@ -14,7 +14,7 @@ Welcome to my VSLAM project! This project aims to track the camera's motion and 
 $ docker build -t visual_odom .
 ```
 
-3. Run:
+4. Run:
 ```
 $ xhost +local:docker
 $ docker run --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix visual_odom
