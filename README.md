@@ -7,7 +7,9 @@ Welcome to my VSLAM project! This project aims to track the camera's motion and 
 ## To run:
 1. Install [docker](https://docs.docker.com/engine/install/)
 
-2. Build:
+2. Clone repo
+
+3. Build:
 ```
 $ docker build -t visual_odom .
 ```
