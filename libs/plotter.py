@@ -24,10 +24,12 @@ class Plotter():
         gl.glEnable(gl.GL_DEPTH_TEST)
 
         # Define Projection and initial ModelView matrix
-        self.scam = pangolin.OpenGlRenderState(
+        self.s_cam = pangolin.OpenGlRenderState(
             pangolin.ProjectionMatrix(window_h, window_w, 420, 420, window_h/2, window_w/2, 0.2, 1000),
-            pangolin.ModelViewLookAt(15, 50, 0, 0, 0, 25, pangolin.AxisDirection.AxisY))
-        handler = pangolin.Handler3D(self.scam)
+            pangolin.ModelViewLookAt(0, 100, 100,  # Camera position (x, y, z)
+                                     0, 0, 0,     # Look at point (x, y, z)
+                                     0, 0, 1))  # pangolin.AxisDirection.AxisY
+        handler = pangolin.Handler3D(self.s_cam)
 
         # Create Interactive View in window
         self.dcam = pangolin.CreateDisplay()
@@ -141,7 +143,7 @@ class Plotter():
             # Clear plot
             gl.glClear(gl.GL_COLOR_BUFFER_BIT | gl.GL_DEPTH_BUFFER_BIT)
             gl.glClearColor(0.0, 0.0, 0.0, 0.0)
-            self.dcam.Activate(self.scam) 
+            self.dcam.Activate(self.s_cam) 
             
             # Inversing pose to better match image perspective
             new_poses = []

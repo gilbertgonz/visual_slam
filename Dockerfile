@@ -22,7 +22,7 @@ COPY libs   /app/libs
 
 RUN chmod +x /app/vo.py
 
-### Final stage build
+# Final stage build
 FROM scratch
 
 COPY --from=build / /
